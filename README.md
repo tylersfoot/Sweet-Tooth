@@ -5,8 +5,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -29,8 +27,6 @@
     <a href="https://github.com/tylersfoot/Senior-Capstone-2023/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -58,26 +54,16 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-## BRODIE FILL THIS OUT
-
-Sweete Tooth is an action horror game set in Candyland. The game will feature procedullary generated environments which are edible (destructible) as well as enemy types that when eaten will grant the player abilties. The main mechanics of the game feature around defeating enemies throughout the different environemnts to bothe gain their abilties, unlock new ones, and create weapons in order to fight agains the evil necromancer and his army of rotting candy.
-
-Use the `BLANK_README.md` to get started.
+**Sweet Tooth** is an action horror game set in Candyland. The game features precedurally generated environments which are edible (destructible) as well as enemy types that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different environments to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![VSCode][VSCode.com]][VSCode-url]
 * [![Unity][Unity.com]][Unity-url]
@@ -85,11 +71,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![GitHub][GitHub.com]][GitHub-url]
 * [![Git][Git.com]][Git-url]
 
-Unity 2022.2.5f1
+**Unity 2022.2.5f1**
 
 * The game engine
 
-Visual Studio Code
+**Visual Studio Code**
 
 * Extensions:
   * Markdown All in One
@@ -108,76 +94,49 @@ Visual Studio Code
 * Supports (basically) all languages, most importantly c#
 * Used for writing the game scripts for Unity as there is no built-in code editor
 
-Blender 3.4.1
+**Blender 3.4.1**
 
 * 3D modeling and animations
 
-Paint.net 5.0.1
+**Paint.net 5.0.1**
 
 * Image editing and sprites
 
-Git 2.39.1 | GitHub Desktop
+**Git 2.39.1 / GitHub Desktop**
 
 * Version control
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
-## Getting Started
-
-this is a game its super easy to play
+## Installation/Usage
 
 ### Prerequisites
 
-windows machine
+This game has only been tested on Windows so far.
 
 ### Installation
 
-Download the latest release [here](https://github.com/tylersfoot/Senior-Capstone-2023/releases) and open the exe
+Download the latest release [here](https://github.com/tylersfoot/Senior-Capstone-2023/releases), extract the .zip file and run `SweetTooth.exe`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-Gaming, a way to relax.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-Follow development updates on our Trello page:
+Follow development updates on our Trello page and Discord server:
 
 [![Trello][Trello.com]][Trello-url]
-
-- [x] thing 1
-- [x] thing 2
-- [ ] thing 3
-    - [ ] thing thing 1
-    - [ ] thing thing 2
+[![Discord][Discord.com]][Discord-url]
 
 See the [open issues](https://github.com/tylersfoot/Senior-Capstone-2023/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Any contributions you make are **greatly appreciated**. If you have a suggestion that would make our game better, please fork the repo and create a pull request. You can also simply open an issue with the related tag.
+Any contributions you make are **greatly appreciated**. If you have a suggestion that would make our game or documentation better, please fork the repo and create a pull request. You can also simply open an issue with the related tag.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -187,8 +146,6 @@ Any contributions you make are **greatly appreciated**. If you have a suggestion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
 ## License
 
@@ -196,42 +153,24 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
 ## Contact
 
 Tyler D. - [@tylersfoot8](https://twitter.com/tylersfoot8) - tylerdepa8@gmail.com - tylersfoot#8888
 
-Brodie B. - brodiebest930@gmail.com - brodie#0000
+Brodie B. - brodiebest930@gmail.com - A Witty Gentleman#7979
 
 Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://github.com/tylersfoot/Senior-Capstone-2023)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-my stuff
-
-* [Awesome badges](https://dev.to/envoy_/150-badges-for-github-pnk#ide)
+* Dr. Bixler for supporting us through this project
+* [Awesome badges](https://dev.to/envoy_/150-badges-for-github-pnk#ide) for the different site badges
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -260,3 +199,5 @@ my stuff
 [Git-url]: https://git-scm.com
 [Trello.com]: https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white
 [Trello-url]: https://trello.com/b/6mFhzQon/2023-senior-capstone
+[Discord.com]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
+[Discord-url]: https://discord.gg/skdSReskvV
