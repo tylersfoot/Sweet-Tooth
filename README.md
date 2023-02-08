@@ -185,6 +185,19 @@ Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://githu
 [license-shield]: https://img.shields.io/github/license/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
 [license-url]: https://github.com/tylersfoot/Senior-Capstone-2023/blob/master/LICENSE.txt
 
+[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Senior-Capstone-2023
+[lastcommit-url]:
+
+[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Senior-Capstone-2023
+[commitfrequency-url]:
+
+[stars-shield] https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023
+[stars-url]: 
+
+![Files](https://img.shields.io/github/directory-file-count/tylersfoot/Senior-Capstone-2023)
+![Size](https://img.shields.io/github/repo-size/tylersfoot/Senior-Capstone-2023)
+![Language](https://img.shields.io/github/languages/top/tylersfoot/Senior-Capstone-2023)
+
 [product-screenshot]: assets/image.png
 
 [VSCode.com]: https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
