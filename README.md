@@ -1,47 +1,216 @@
-![epic banner](assets/image.png)
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-# Senior-Capstone-2023
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="assets/image.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Name(s):
+  <h1 align="center">Sweet Tooth</h3>
 
-- Candy Crush 2: This name is already taken by a popular mobile game. You may want to consider a different name.
-- Fifa 13: This name is also already taken by a popular sports game. You may want to consider a different name.
-- Supe Turboliciousr Amzeballs Candy World Extravaganza Borganza: This name is a mouthful and may be difficult for players to remember. You may want to consider a simpler and more memorable name.
+  <p align="center">
+    An awesome FPS game themed around candy!
+    <br />
+    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/wiki"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://tylersfoot.live/squirrel-harvester">View Demo [WIP]</a>
+    ·
+    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/issues">Request Feature</a>
+  </p>
+</div>
 
-## Main Concept:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-"Candyland" is a magical cute world full of wonder and magic. The munchkin people and all the other races live in peace and harmony with their environments. From the Lollipop forests to the tops of SnowCone mountain, the land is beautiful, and more importantly, safe. That is until the evil necromancer unleashes his hordes of undead and ravages the land with a gruesome fury, tearing apart the people and consuming their life force in order to empower his own corrupted creations. But that's where you come in - as the player, you must save Candyland and bring peace back to this world by defeating the evil necromancer and his undead minions.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### Enemies:
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-#### Undead minions:
-- These are the primary enemies in the game, summoned by the evil necromancer to wreak havoc on Candyland. They come in various forms, such as skeletons, zombies, and ghosts.
+**Sweet Tooth** is an action horror game set in Candyland. The game features precedurally generated environments which are edible (destructible) as well as enemy types that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different environments to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
 
-#### Evil necromancer:
-- The primary antagonist of the game, the evil necromancer is a powerful magician who has turned to dark magic in order to conquer Candyland. He commands the undead minions and will stop at nothing to achieve his goal.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Allies:
+### Built With
 
-#### Munchkin people:
-- The primary inhabitants of Candyland, the munchkin people are a peaceful and friendly race who have been caught up in the evil necromancer's plans. They will provide aid and assistance to the player as they try to save Candyland.
+* [![VSCode][VSCode.com]][VSCode-url]
+* [![Unity][Unity.com]][Unity-url]
+* [![Blender][Blender.com]][Blender-url]
+* [![GitHub][GitHub.com]][GitHub-url]
+* [![Git][Git.com]][Git-url]
 
-#### Other races:
-- There are other races in Candyland besides the munchkin people, such as the gummy bear people, the licorice people, and the chocolate people. Each race has their own unique abilities and characteristics, and will join forces with the player to defeat the evil necromancer.
+**Unity 2022.2.5f1**
 
-### Weapons:
+* The game engine
 
-#### Candy swords:
-- These are swords made out of different types of candy, such as lollipops, gumdrops, and candy canes. They are powerful against the undead minions and can be upgraded with different types of candy to increase their effectiveness.
+**Visual Studio Code**
 
-#### Magic wands:
-- These are powerful magical weapons that can cast spells to defeat enemies or heal allies. They can be imbued with different types of candy to increase their power.
+* Extensions:
+  * Markdown All in One
+  * markdownlint
+  * Markdown
+  * GitLens
+  * Git Graph
+  * gitignore
+  * C#
+  * Better Comments
+  * Unity Code Snippets
+  * MonoBehaviour Snippets
+  * ShaderlabVSCode(Free)
+  * Unity Tools
+* The Code IDE
+* Supports (basically) all languages, most importantly c#
+* Used for writing the game scripts for Unity as there is no built-in code editor
 
-#### Abilities:
-- tbd
+**Blender 3.4.1**
 
-Candy blast: This is a powerful magical attack that can be used to defeat multiple enemies at once. It is fueled by different types of candy and can be upgraded to increase its effectiveness.
-Healing magic: This is a magical ability that can be used to restore health to the player or their allies. It is fueled by different types of candy and can be upgraded to increase its effectiveness.
-Shape-shifting: This is the ability to transform into different forms, each with their own unique abilities and characteristics. For example, the player might be able to transform into a gummy bear form with increased strength or a licorice form with increased speed.
+* 3D modeling and animations
 
+**Paint.net 5.0.1**
 
+* Image editing and sprites
 
+**Git 2.39.1 / GitHub Desktop**
+
+* Version control
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Installation/Usage
+
+### Prerequisites
+
+This game has only been tested on Windows so far.
+
+### Installation
+
+Download the latest release [here](https://github.com/tylersfoot/Senior-Capstone-2023/releases), extract the .zip file and run `SweetTooth.exe`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+Follow development updates on our Trello page and Discord server:
+
+[![Trello][Trello.com]][Trello-url]
+[![Discord][Discord.com]][Discord-url]
+
+See the [open issues](https://github.com/tylersfoot/Senior-Capstone-2023/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Any contributions you make are **greatly appreciated**. If you have a suggestion that would make our game or documentation better, please fork the repo and create a pull request. You can also simply open an issue with the related tag.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Tyler D. - [@tylersfoot8](https://twitter.com/tylersfoot8) - tylerdepa8@gmail.com - tylersfoot#8888
+
+Brodie B. - brodiebest930@gmail.com - A Witty Gentleman#7979
+
+Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://github.com/tylersfoot/Senior-Capstone-2023)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* Dr. Bixler for supporting us through this project
+* [Awesome badges](https://dev.to/envoy_/150-badges-for-github-pnk#ide) for the different site badges
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
+[contributors-url]: https://github.com/tylersfoot/Senior-Capstone-2023/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
+[forks-url]: https://github.com/tylersfoot/Senior-Capstone-2023/network/members
+[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
+[stars-url]: https://github.com/tylersfoot/Senior-Capstone-2023/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
+[issues-url]: https://github.com/tylersfoot/Senior-Capstone-2023/issues
+[license-shield]: https://img.shields.io/github/license/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
+[license-url]: https://github.com/tylersfoot/Senior-Capstone-2023/blob/master/LICENSE.txt
+
+[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Senior-Capstone-2023
+[lastcommit-url]:
+
+[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Senior-Capstone-2023
+[commitfrequency-url]:
+
+[stars-shield] https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023
+[stars-url]: 
+
+![Files](https://img.shields.io/github/directory-file-count/tylersfoot/Senior-Capstone-2023)
+![Size](https://img.shields.io/github/repo-size/tylersfoot/Senior-Capstone-2023)
+![Language](https://img.shields.io/github/languages/top/tylersfoot/Senior-Capstone-2023)
+
+[product-screenshot]: assets/image.png
+
+[VSCode.com]: https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white
+[VSCode-url]: https://code.visualstudio.com
+[Unity.com]: https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white
+[Unity-url]: https://unity.com
+[Blender.com]: https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white
+[Blender-url]: https://blender.com
+[GitHub.com]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[GitHub-url]: https://github.com
+[Git.com]: https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white
+[Git-url]: https://git-scm.com
+[Trello.com]: https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white
+[Trello-url]: https://trello.com/b/6mFhzQon/2023-senior-capstone
+[Discord.com]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
+[Discord-url]: https://discord.gg/skdSReskvV
