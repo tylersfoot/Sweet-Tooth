@@ -4,6 +4,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Last Commit][lastcommit-shield]][issues-url]
+[![Commit Frequency][commitfrequency-shield]][issues-url]
+[![Stars][stars-shield]][issues-url]
+[![Files][files-shield]][issues-url]
+[![Repo Size][size-shield]][issues-url]
+[![Language][language-shield]][issues-url]
+
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -73,8 +81,6 @@
 
 **Unity 2022.2.5f1**
 
-* The game engine
-
 **Visual Studio Code**
 
 * Extensions:
@@ -90,21 +96,12 @@
   * MonoBehaviour Snippets
   * ShaderlabVSCode(Free)
   * Unity Tools
-* The Code IDE
-* Supports (basically) all languages, most importantly c#
-* Used for writing the game scripts for Unity as there is no built-in code editor
 
 **Blender 3.4.1**
 
-* 3D modeling and animations
-
 **Paint.net 5.0.1**
 
-* Image editing and sprites
-
 **Git 2.39.1 / GitHub Desktop**
-
-* Version control
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,18 +182,12 @@ Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://githu
 [license-shield]: https://img.shields.io/github/license/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
 [license-url]: https://github.com/tylersfoot/Senior-Capstone-2023/blob/master/LICENSE.txt
 
-[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Senior-Capstone-2023
-[lastcommit-url]:
-
-[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Senior-Capstone-2023
-[commitfrequency-url]:
-
-[stars-shield] https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023
-[stars-url]: 
-
-![Files](https://img.shields.io/github/directory-file-count/tylersfoot/Senior-Capstone-2023)
-![Size](https://img.shields.io/github/repo-size/tylersfoot/Senior-Capstone-2023)
-![Language](https://img.shields.io/github/languages/top/tylersfoot/Senior-Capstone-2023)
+[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[files-shield]: https://img.shields.io/github/directory-file-count/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[size-shield]: https://img.shields.io/github/repo-size/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[language-shield]: https://img.shields.io/github/languages/top/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
 
 [product-screenshot]: assets/image.png
 
