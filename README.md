@@ -16,7 +16,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/tylersfoot/Senior-Capstone-2023">
     <img src="assets/image.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -72,7 +72,7 @@
 * [![GitHub][GitHub.com]][GitHub-url]
 * [![Git][Git.com]][Git-url]
 
-**Unity 2022.2.5f1**
+**Unity 2021.3.18f1 `LTS` + OpenGL Support**
 
 **Visual Studio Code**
 
