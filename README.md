@@ -16,7 +16,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/tylersfoot/Senior-Capstone-2023">
+  <a href="https://github.com/tylersfoot/Sweet-Tooth">
     <img src="assets/image.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -25,14 +25,14 @@
   <p align="center">
     An awesome FPS game themed around candy!
     <br />
-    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/wiki"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tylersfoot/Sweet-Tooth/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://tylersfoot.live/squirrel-harvester">View Demo [WIP]</a>
     ·
-    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/issues">Report Bug</a>
+    <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Report Bug</a>
     ·
-    <a href="https://github.com/tylersfoot/Senior-Capstone-2023/issues">Request Feature</a>
+    <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Request Feature</a>
   </p>
 </div>
 
@@ -107,7 +107,7 @@ This game has only been tested on Windows so far.
 
 ### Installation
 
-Download the latest release [here](https://github.com/tylersfoot/Senior-Capstone-2023/releases), extract the .zip file and run `SweetTooth.exe`.
+Download the latest release [here](https://github.com/tylersfoot/Sweet-Tooth/releases), extract the .zip file and run `SweetTooth.exe`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +119,7 @@ Follow development updates on our Trello page and Discord server:
 [![Trello][Trello.com]][Trello-url]
 [![Discord][Discord.com]][Discord-url]
 
-See the [open issues](https://github.com/tylersfoot/Senior-Capstone-2023/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/tylersfoot/Sweet-Tooth/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +150,7 @@ Tyler D. - [@tylersfoot8](https://twitter.com/tylersfoot8) - tylerdepa8@gmail.co
 
 Brodie B. - brodiebest930@gmail.com - A Witty Gentleman#7979
 
-Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://github.com/tylersfoot/Senior-Capstone-2023)
+Project Link: [https://github.com/tylersfoot/Sweet-Tooth](https://github.com/tylersfoot/Sweet-Tooth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,23 +164,23 @@ Project Link: [https://github.com/tylersfoot/Senior-Capstone-2023](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
-[contributors-url]: https://github.com/tylersfoot/Senior-Capstone-2023/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
-[forks-url]: https://github.com/tylersfoot/Senior-Capstone-2023/network/members
-[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
-[stars-url]: https://github.com/tylersfoot/Senior-Capstone-2023/stargazers
-[issues-shield]: https://img.shields.io/github/issues/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
-[issues-url]: https://github.com/tylersfoot/Senior-Capstone-2023/issues
-[license-shield]: https://img.shields.io/github/license/tylersfoot/Senior-Capstone-2023.svg?style=for-the-badge
-[license-url]: https://github.com/tylersfoot/Senior-Capstone-2023/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/tylersfoot/Sweet-Tooth.svg?style=for-the-badge
+[contributors-url]: https://github.com/tylersfoot/Sweet-Tooth/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tylersfoot/Sweet-Tooth.svg?style=for-the-badge
+[forks-url]: https://github.com/tylersfoot/Sweet-Tooth/network/members
+[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Sweet-Tooth.svg?style=for-the-badge
+[stars-url]: https://github.com/tylersfoot/Sweet-Tooth/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tylersfoot/Sweet-Tooth.svg?style=for-the-badge
+[issues-url]: https://github.com/tylersfoot/Sweet-Tooth/issues
+[license-shield]: https://img.shields.io/github/license/tylersfoot/Sweet-Tooth.svg?style=for-the-badge
+[license-url]: https://github.com/tylersfoot/Sweet-Tooth/blob/master/LICENSE.txt
 
-[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
-[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
-[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
-[files-shield]: https://img.shields.io/github/directory-file-count/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
-[size-shield]: https://img.shields.io/github/repo-size/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
-[language-shield]: https://img.shields.io/github/languages/top/tylersfoot/Senior-Capstone-2023?style=for-the-badge&logo=appveyor
+[lastcommit-shield]: https://img.shields.io/github/last-commit/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
+[commitfrequency-shield]: https://img.shields.io/github/commit-activity/y/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
+[stars-shield]: https://img.shields.io/github/stars/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
+[files-shield]: https://img.shields.io/github/directory-file-count/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
+[size-shield]: https://img.shields.io/github/repo-size/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
+[language-shield]: https://img.shields.io/github/languages/top/tylersfoot/Sweet-Tooth?style=for-the-badge&logo=appveyor
 
 [product-screenshot]: assets/image.png
 
