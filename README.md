@@ -28,11 +28,9 @@
     <a href="https://github.com/tylersfoot/Sweet-Tooth/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://tylersfoot.live/squirrel-harvester">View Demo [WIP]</a>
+    <a href="https://tylersfoot.live/demo">View Demo [WIP]</a>
     ·
-    <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Request Feature</a>
+    <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Report Bug/Request Feature</a>
   </p>
 </div>
 
@@ -62,7 +60,7 @@
 
 **Sweet Tooth** is an action horror game set in Candyland. The game features precedurally generated environments which are edible (destructible) as well as enemy types that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different environments to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ### Built With
 
@@ -71,8 +69,9 @@
 * [![Blender][Blender.com]][Blender-url]
 * [![GitHub][GitHub.com]][GitHub-url]
 * [![Git][Git.com]][Git-url]
+* [![Audacity][Audacity.com]][Audacity-url]
 
-**Unity 2021.3.18f1 `LTS` + OpenGL Support**
+**Unity 2021.3.18f1 `LTS` + WebGL Support**
 
 **Visual Studio Code**
 
@@ -96,7 +95,13 @@
 
 **Git 2.39.1 / GitHub Desktop**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Audacity 3.2.4**
+
+**FL Studio 20.8.4**
+
+**Aseprite 1.2.40**
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- GETTING STARTED -->
 ## Installation/Usage
@@ -109,7 +114,7 @@ This game has only been tested on Windows so far.
 
 Download the latest release [here](https://github.com/tylersfoot/Sweet-Tooth/releases), extract the .zip file and run `SweetTooth.exe`.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -121,7 +126,7 @@ Follow development updates on our Trello page and Discord server:
 
 See the [open issues](https://github.com/tylersfoot/Sweet-Tooth/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -134,14 +139,14 @@ Any contributions you make are **greatly appreciated**. If you have a suggestion
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- CONTACT -->
 ## Contact
@@ -152,15 +157,16 @@ Brodie B. - brodiebest930@gmail.com - A Witty Gentleman#7979
 
 Project Link: [https://github.com/tylersfoot/Sweet-Tooth](https://github.com/tylersfoot/Sweet-Tooth)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * Dr. Bixler for supporting us through this project
 * [Awesome badges](https://dev.to/envoy_/150-badges-for-github-pnk#ide) for the different site badges
+* [Poly Pizza](https://poly.pizza) for free low-poly models and inspiration
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -198,3 +204,5 @@ Project Link: [https://github.com/tylersfoot/Sweet-Tooth](https://github.com/tyl
 [Trello-url]: https://trello.com/b/6mFhzQon/2023-senior-capstone
 [Discord.com]: https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white
 [Discord-url]: https://discord.gg/skdSReskvV
+[Audacity.com]: https://img.shields.io/badge/Audacity-0000CC?style=for-the-badge&logo=audacity&logoColor=white
+[Audacity-url]: https://audacity.com
