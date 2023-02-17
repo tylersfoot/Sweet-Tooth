@@ -108,7 +108,7 @@
 
 ### Prerequisites
 
-This game has only been tested on Windows so far.
+This game has only been tested on Windows so far. The game supports both keyboard+mouse and controller (controller not tested lol)
 
 ### Installation
 
@@ -131,13 +131,7 @@ See the [open issues](https://github.com/tylersfoot/Sweet-Tooth/issues) for a fu
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Any contributions you make are **greatly appreciated**. If you have a suggestion that would make our game or documentation better, please fork the repo and create a pull request. You can also simply open an issue with the related tag.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+If you would like to contribute to our project, either directly contact us or add an issue on this GitHub page. We are open to suggestions and they are greatly appreciated.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

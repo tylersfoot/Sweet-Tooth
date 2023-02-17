@@ -12,27 +12,78 @@ The Candy Corn Fields surround much of the land that make up the commonfolk of t
 
 ### Enemies
 
+- Crazy-corn `[Single-bite]` - A candy corn that has been corrupted by an influx of sugar.
+
+- Caramel Clops `[Multi-bite]` - Once great steeds used by farmers they now run loose stomping anything they find with their massive, sticky hooves.
+
+- Pumpkin Spice Scarecrow - Was just waiting around protecting its crops when it went to go accomplish something with its life, began studying at a prestigious school, started a small business, but came back after they found out they couldn’t pay for wifi.
+
+- Maple Pancake Bear - Largest creature laying with the forests of the fields. Laying in wait for one to come just close enough so that they may be devoured by its buttery goodness. Surviving on only the Bear necessities.
+
 ### Plant-Life
 
+- Candy-Corn Stalk - A stalk of corn, but there is candy corn growing instead of corn.
+
+- Candy-Apple Tree - Sweet apples covered in dripping caramel; A favorite of the Caramel-Clops
+
+- Maple - Just a maple tree but instead of regular leaves they are jars of maple syrup
+
 ### Structures
+
+- Farmhouse - A small farmhouse once used by the people that lived here, sadly they were kicked out, now who know what monstrosities live there
+
+- Fields - Fields of Candy-corn growing randomly, once gently controlled plains are now overrun by the wildness that was allowed to run free
 
 ## Peppermint Forest
 
 ### Summary
 
+The Peppermint Forest lies to the south of the Candy kingdom being the main source of hard materials for the use of buildings, walls, and other tools. The first feeling you get entering this land is a brisk breeze from the sheer amount of mint and a cooling feeling. On arrival you can see the vast forest lying between great mountains of frozen ice cream. In this land there is much to explore, but you must also be wary of the dangers that lie within. The creatures here have adapted to the harsh environment and are some of the most ferocious and resilient in candyland. Not only the animals, but the native people are especially aggressive towards outsiders resulting from multiple battles and geopolitical struggles between themselves and the Munchkin people.
+
 ### Enemies
+
+- Peppercorn `[Multi-bite]` - A unicorn but peppermint
+
+- Cane Stalker `[Multi-bite]` - Giant spider-like candy cane creature, seems to be a mutation from an influx of sugar.
+
+- Minty Fowl `[Single-bite]` -  An extremely aggressive chicken like creature
+
+- Sorbetiros `[Multi-bite]` -  The native people differentiated from the Munchkin people early on. They live solely on the Peppermint Forest’s resources and don’t take kindly to strangers. They are made of mint ice cream and offer a cool refreshing taste.
 
 ### Plant-Life
 
+- Ever-canes - Candy-cane shaped trees that grow in these harsh conditions, in some areas they are tall, in some they are short, in some they are moving bu- nope thats just a Cane Stalker coming to bite your head off.
+
+- Minty Bush - A bush made of mint leaves the typical place to find minty-fowl.
+
+
 ### Structures
+
+- Caneyard - A massive building that contains a lot of canes used in construction
+
+- Gelato Grotto - A cove built completely with ice cream that serves as a temporary base for some Sorbetiro lumberjacks
 
 ## Peanut Butter Swamp
 
 ### Summary
 
+One of the most delicious, but dangerous, lands. The Peanut Butter Swamp has one thing that the rest of candyland does not, nuts. Many of the sentient inhabitants of Candyland have found themselves allergic to nuts, having an adverse effect to anything touching them. However within the swamp there are a plentiful amount of creatures that call it home and use it to their advantage.
+
 ### Enemies
 
+- Peanut Butter Toad `[Multi-bite]` - Giant frog that inhabits the swamps
+
+- Brittle Snake `[Multi-bite]` - An enormous snake made of tough peanut brittle. If anyone's allergic to peanuts you better watch out.
+
+- Dark Mosquilate `[Single-bite]` - An intense aerialist insect that has a multi-view system and allows for the taking of nutrients from its pre--its a mosquito.
+
+- Chocodile `[Multi-bite]` -  Lives in the swamps, waiting, waiting….probably just taking a nap.
+
 ### Plant-Life
+
+- Dead Choco Tree - Once a thriving area of chocolate, this land has been sunken under an outrageous amount of peanut butter which has lead to the death of many a Choco Trees
+
+- Peanut Brittle - Giant shards of Peanut Brittle that come forth from the ground, an adverse affect resulting from the solidification of the peanut butter inside clumps of chocolate
 
 ### Structures
 
@@ -40,7 +91,14 @@ The Candy Corn Fields surround much of the land that make up the commonfolk of t
 
 ### Summary
 
+the most typical depiction of candyland full of sweets, treats, and all manner of delectables for you to munch on. From the massive Gumdrop Hills to the crystal candy caverns this is one of the most stunning, and bright, lands. Most of the land was once inhabited by the people of the candyland.
 ### Enemies
+
+- Gummy Bears `[Single-bite]` - 
+
+- Gumdrop Goo `[Multi-bite]` - Sentient rolling Gumdrop that eats by rolling over things
+
+- Suckerpunch `[Multi-bite]` - Lollipop golem-type enemy that’s only goal is to cause as much pain as possible
 
 ### Plant-life
 
