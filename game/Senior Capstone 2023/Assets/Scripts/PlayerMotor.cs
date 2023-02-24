@@ -6,12 +6,18 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 playerVelocity;
+    public Camera camera;
     private bool isGrounded;
     public bool lerpCrouch;
     public bool crouching;
     public bool sprinting;
     public float crouchTimer;
     public float speed = 5f;
+    public float walkSpeed = 5f;
+    public float crouchSpeed = 2f;
+    public float sprintSpeed = 8f;
+    public float walkFOV = 60f;
+    public float sprintFOV = 80f;
     public float gravity = -9.8f;
     public float jumpHeight = 1.5f;
 
@@ -68,16 +74,33 @@ public class PlayerMotor : MonoBehaviour
     public void Crouch()
     {
         crouching = !crouching;
+        if (crouching)
+        {
+            speed = crouchSpeed;
+        }
+        else
+        {
+            speed = walkSpeed;
+        }
         crouchTimer = 0;
         lerpCrouch = true;
     }
 
     public void Sprint()
     {
+        // toggle sprinting
         sprinting = !sprinting;
         if (sprinting)
-            speed = 8;
+        {
+            // increase speed and camera FOV
+            Camera.main.fieldOfView = sprintFOV;
+            speed = sprintSpeed;
+        }
         else
-            speed = 5;
+        {
+            // decrease speed and camera FOV
+            Camera.main.fieldOfView = walkFOV;
+            speed = walkSpeed;
+        }
     }
 }
