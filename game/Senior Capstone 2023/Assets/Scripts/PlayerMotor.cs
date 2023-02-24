@@ -12,14 +12,16 @@ public class PlayerMotor : MonoBehaviour
     public bool crouching;
     public bool sprinting;
     public float crouchTimer;
-    public float speed = 5f;
-    public float walkSpeed = 5f;
-    public float crouchSpeed = 2f;
-    public float sprintSpeed = 8f;
-    public float walkFOV = 60f;
-    public float sprintFOV = 80f;
-    public float gravity = -9.8f;
-    public float jumpHeight = 1.5f;
+    public float speed = 5f; // current speed
+    public float walkSpeed = 5f; // walking speed
+    public float crouchSpeed = 2f; // crouching speed
+    public float sprintSpeed = 8f; // sprinting speed
+    public float walkFOV = 60f; // walking FOV
+    public float sprintFOV = 80f; // sprinting FOV
+    public float fovDampTime = 0.1f; // time to reach target FOV
+    private float currentFOV; // current FOV
+    public float gravity = -9.8f; // gravity acceleration
+    public float jumpHeight = 1.5f; // jump height
 
     // Start is called before the first frame update
     void Start()
@@ -92,15 +94,33 @@ public class PlayerMotor : MonoBehaviour
         sprinting = !sprinting;
         if (sprinting)
         {
-            // increase speed and camera FOV
-            Camera.main.fieldOfView = sprintFOV;
+            // increase speed and smoothly change camera FOV
+            currentFOV = Camera.main.fieldOfView;
             speed = sprintSpeed;
         }
         else
         {
-            // decrease speed and camera FOV
-            Camera.main.fieldOfView = walkFOV;
+            // decrease speed and smoothly change camera FOV
+            currentFOV = Camera.main.fieldOfView;
             speed = walkSpeed;
+        }
+    }
+    
+    void LateUpdate()
+    {
+        if (sprinting)
+        {
+            // smoothly interpolate FOV towards target FOV
+            float targetFOV = sprintFOV;
+            currentFOV = Mathf.SmoothDamp(currentFOV, targetFOV, ref fovVelocity, fovDampTime);
+            Camera.main.fieldOfView = currentFOV;
+        }
+        else
+        {
+            // smoothly interpolate FOV towards target FOV
+            float targetFOV = walkFOV;
+            currentFOV = Mathf.SmoothDamp(currentFOV, targetFOV, ref fovVelocity, fovDampTime);
+            Camera.main.fieldOfView = currentFOV;
         }
     }
 }
