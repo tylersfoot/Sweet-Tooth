@@ -21,8 +21,13 @@ public class InputManager : MonoBehaviour
 
         onFoot.Jump.performed += ctx => motor.Jump();
 
+        // toggle crouching when pressing/releasing key
         onFoot.Crouch.performed += ctx => motor.Crouch();
-        onFoot.Sprint.performed += ctx => motor.Sprint();
+        onFoot.Crouch.canceled += ctx => motor.Crouch();
+        
+        // toggle sprint when pressing/releasing key
+        onFoot.Sprint.started += ctx => motor.Sprint();
+        onFoot.Sprint.canceled += ctx => motor.Sprint();
     }
 
     // Update is called once per frame
