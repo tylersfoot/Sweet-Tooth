@@ -114,7 +114,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tylersfoot\\Desktop\\Senior-Capstone-2023\\game\\Senior Capstone 2023",
+      "WriteTextFilePayload": "C:\\Users\\tylersfoot\\Desktop\\Sweet-Tooth\\game\\Senior Capstone 2023",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.AdditionalFile.txt"
@@ -2113,7 +2113,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tylersfoot\\Desktop\\Senior-Capstone-2023\\game\\Senior Capstone 2023",
+      "WriteTextFilePayload": "C:\\Users\\tylersfoot\\Desktop\\Sweet-Tooth\\game\\Senior Capstone 2023",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.AdditionalFile.txt"
