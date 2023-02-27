@@ -1,0 +1,424 @@
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1677455805220820, "dur":864, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805221689, "dur":19, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1677455805221722, "dur":10, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1677455805221732, "dur":256, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1677455805222014, "dur":428, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805222442, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307055, "dur":159, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307214, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307225, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307227, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307231, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307232, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307238, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307240, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307243, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307244, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307248, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307249, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307253, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307258, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805307324, "dur":2123, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1677455805222196, "dur":273, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805222471, "dur":3053, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805225532, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1677455805225537, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805226301, "dur":474, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1677455805226779, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1677455805226816, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805226990, "dur":2239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1677455805229232, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1677455805229315, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805229322, "dur":752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1677455805230104, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1677455805230274, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805230689, "dur":591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1677455805231309, "dur":225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1677455805231537, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805231545, "dur":1100, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1677455805232673, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":1, "ts":1677455805232734, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805232740, "dur":879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":1, "ts":1677455805233647, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1677455805233733, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805233739, "dur":1448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1677455805235216, "dur":481, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805235700, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805235895, "dur":966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805236889, "dur":363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth.exe" }}
+,{ "pid":12345, "tid":1, "ts":1677455805237255, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805237263, "dur":3553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth.exe" }}
+,{ "pid":12345, "tid":1, "ts":1677455805240841, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805240932, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805241005, "dur":520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805241549, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805241652, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805242474, "dur":7531, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805250031, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805250158, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805250163, "dur":1832, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252018, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252097, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252101, "dur":547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252671, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252785, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805252790, "dur":2009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805254820, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805254922, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805254930, "dur":5659, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805260637, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805260743, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805260752, "dur":2245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805263023, "dur":731, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805263756, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805263763, "dur":1889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805265682, "dur":731, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805266415, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805266420, "dur":1572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805268024, "dur":1300, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805269326, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805269333, "dur":1481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805270844, "dur":1552, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805272399, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805272404, "dur":3908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805276342, "dur":2036, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805278380, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805278386, "dur":848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805279258, "dur":1208, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805280468, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805280473, "dur":1874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805282372, "dur":892, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805283267, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805283274, "dur":1168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805284465, "dur":2241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805286723, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805286728, "dur":4758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805291510, "dur":5016, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805296530, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805296541, "dur":920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":1, "ts":1677455805297485, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1677455805297513, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805297536, "dur":1221, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1677455805298783, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1677455805298807, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805298812, "dur":1284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300128, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300206, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300210, "dur":464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300694, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300718, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805300721, "dur":862, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1677455805301607, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1677455805301629, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1677455805301633, "dur":622, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1677455805302280, "dur":4778, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805222291, "dur":215, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805222506, "dur":3047, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805225553, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1677455805225657, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805227035, "dur":2527, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1677455805229601, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1677455805229657, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805230030, "dur":6387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1677455805236451, "dur":18447, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805254900, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805254904, "dur":19089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805274084, "dur":1792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805275878, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805275884, "dur":1345, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805277251, "dur":1527, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805278780, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805278785, "dur":898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805279727, "dur":1350, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805281079, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805281085, "dur":2368, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805283472, "dur":3792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805287266, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805287272, "dur":1750, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805289054, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805289210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805289216, "dur":1232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805290472, "dur":14779, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805305253, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1677455805305260, "dur":1668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1677455805306952, "dur":87, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805222384, "dur":128, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805222512, "dur":3014, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805225532, "dur":225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1677455805225759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805227130, "dur":2237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":3, "ts":1677455805229390, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1677455805229530, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805229915, "dur":6498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1677455805236444, "dur":4878, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805241325, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805241370, "dur":6030, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805247428, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805247554, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805247562, "dur":2120, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805249709, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805249794, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805249802, "dur":1284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805251113, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805251246, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805251252, "dur":985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805252261, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805252338, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805252343, "dur":2374, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805254744, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805254834, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805254839, "dur":4936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805259806, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805260064, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805260072, "dur":949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805261048, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805261189, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805261206, "dur":2511, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805263750, "dur":987, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805264741, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805264752, "dur":1315, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805266087, "dur":964, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805267054, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805267059, "dur":1171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805268253, "dur":988, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805269243, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805269249, "dur":1113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805270382, "dur":1105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805271490, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805271495, "dur":4868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805276384, "dur":1997, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805278384, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805278389, "dur":966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805279375, "dur":1252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805280647, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805280653, "dur":2195, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805282872, "dur":1351, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805284226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805284232, "dur":1649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805285906, "dur":579, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805286487, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805286492, "dur":2113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805288632, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805288722, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805288727, "dur":915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805289666, "dur":1643, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805291311, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805291318, "dur":1629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805292970, "dur":1680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805294652, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805294657, "dur":1132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805295809, "dur":2707, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805298520, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805298530, "dur":644, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":3, "ts":1677455805299195, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1677455805299233, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805299238, "dur":693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1677455805299950, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1677455805300019, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805300023, "dur":575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":3, "ts":1677455805300634, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/level0.resS" }}
+,{ "pid":12345, "tid":3, "ts":1677455805300659, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805300663, "dur":658, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/level0.resS" }}
+,{ "pid":12345, "tid":3, "ts":1677455805301339, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":3, "ts":1677455805301360, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805301364, "dur":661, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":3, "ts":1677455805302046, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/boot.config" }}
+,{ "pid":12345, "tid":3, "ts":1677455805302119, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1677455805302123, "dur":451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/boot.config" }}
+,{ "pid":12345, "tid":3, "ts":1677455805302598, "dur":4442, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805222490, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805222490, "dur":3038, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805225532, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1677455805225668, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805227512, "dur":1979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1677455805229520, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1677455805229692, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805230042, "dur":6416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1677455805236485, "dur":827, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1677455805237314, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805237335, "dur":4186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1677455805241548, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805241647, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805248151, "dur":1542, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805249720, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805249807, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805249812, "dur":1136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805250976, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805251066, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805251073, "dur":1581, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805252678, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805252758, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805252762, "dur":1910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805254702, "dur":804, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805255509, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805255516, "dur":5489, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805261032, "dur":233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805261267, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805261272, "dur":2119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805263418, "dur":2319, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805265740, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805265748, "dur":790, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805266567, "dur":1927, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805268496, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805268502, "dur":1440, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805269967, "dur":604, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805270574, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805270581, "dur":2644, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805273244, "dur":972, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805274219, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805274240, "dur":3063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805277324, "dur":4565, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805281891, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805281904, "dur":2668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805284602, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805284695, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805284701, "dur":2694, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805287416, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805287553, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805287558, "dur":1753, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805289333, "dur":336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805289672, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805289676, "dur":1165, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805290860, "dur":3671, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805294533, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805294558, "dur":780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805295362, "dur":3691, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805299056, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1677455805299064, "dur":3339, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":4, "ts":1677455805302425, "dur":4629, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805222565, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805222565, "dur":2989, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805225554, "dur":212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805225769, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805227501, "dur":1809, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805229336, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1677455805229400, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805230065, "dur":740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":5, "ts":1677455805230834, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805230971, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805231016, "dur":464, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805231503, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805231631, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805231637, "dur":600, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1677455805232264, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1677455805232340, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805232348, "dur":5315, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1677455805237691, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":5, "ts":1677455805237750, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805239935, "dur":8637, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":5, "ts":1677455805248606, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805248720, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805248725, "dur":2114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805250864, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805250953, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805250957, "dur":1242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805252221, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805252327, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805252332, "dur":1629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805253989, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805254156, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805254163, "dur":1640, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805255828, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805256025, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805256029, "dur":5188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805261450, "dur":1775, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805263229, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805263235, "dur":2188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805265446, "dur":904, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805266354, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805266359, "dur":1720, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805268166, "dur":809, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805268978, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805268985, "dur":1079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805270088, "dur":602, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805270693, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805270698, "dur":5443, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805276170, "dur":655, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805276832, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805276839, "dur":920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805277780, "dur":1361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805279144, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805279149, "dur":701, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805279872, "dur":1109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805280984, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805280991, "dur":2391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805283407, "dur":622, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805284045, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805284052, "dur":1232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805285307, "dur":192, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805285502, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805285510, "dur":2387, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805287919, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805288054, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805288059, "dur":1241, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805289321, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805289420, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805289445, "dur":759, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805290227, "dur":3418, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805293647, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805293654, "dur":568, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805294242, "dur":3263, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805297507, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1677455805297514, "dur":4514, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1677455805302439, "dur":4618, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805222674, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805222674, "dur":2872, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805225546, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1677455805225762, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805227217, "dur":2157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":6, "ts":1677455805229403, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1677455805229465, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805229733, "dur":8401, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1677455805238172, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805238341, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805248164, "dur":1684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805249871, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805249992, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805249998, "dur":1701, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805251732, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805251928, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805251933, "dur":2285, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805254240, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805254361, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805254367, "dur":1295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805255688, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805255808, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805255814, "dur":5979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805261819, "dur":1028, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805262851, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805262860, "dur":2541, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805265429, "dur":834, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805266267, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805266274, "dur":807, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805267108, "dur":1295, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805268405, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805268412, "dur":1648, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805270087, "dur":570, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805270659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805270666, "dur":3634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805274323, "dur":1443, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805275768, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805275775, "dur":1482, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805277321, "dur":579, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805277918, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805277925, "dur":618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805278562, "dur":1291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805279856, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805279861, "dur":787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805280672, "dur":2038, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805282712, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805282721, "dur":1198, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805283953, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805284210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805284216, "dur":1471, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805285712, "dur":319, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805286033, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805286040, "dur":3652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805289715, "dur":15283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805305001, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1677455805305009, "dur":1989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.0/Sweet Tooth_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":6, "ts":1677455805307025, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":6, "ts":1677455805307027, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1677455805310380, "dur":1344, "ph":"X", "name": "ProfilerWriteOutput" }
+,
