@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Button : Interactable
 {
+    [SerializeField]
+    private GameObject door;
+    private bool doorOpen;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +21,7 @@ public class Button : Interactable
     // this function is where we design the interaction using code
     protected override void Interact()
     {
-        Debug.Log("Interacted with " + gameObject.name);
+        doorOpen = !doorOpen;
+        door.GetComponent<Animator>().SetBool("IsOpen", doorOpen);
     }
 }

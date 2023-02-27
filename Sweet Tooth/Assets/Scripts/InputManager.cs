@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook look;
+    private PlayerAbility ability;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,16 +19,20 @@ public class InputManager : MonoBehaviour
 
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        ability = GetComponent<PlayerAbility>();
 
         onFoot.Jump.performed += ctx => motor.Jump();
 
         // toggle crouching when pressing/releasing key
-        onFoot.Crouch.performed += ctx => motor.Crouch();
-        onFoot.Crouch.canceled += ctx => motor.Crouch();
+        onFoot.Crouch.performed += ctx => motor.Crouch(true);
+        onFoot.Crouch.canceled += ctx => motor.Crouch(false);
         
         // toggle sprint when pressing/releasing key
-        onFoot.Sprint.started += ctx => motor.Sprint();
-        onFoot.Sprint.canceled += ctx => motor.Sprint();
+        onFoot.Sprint.started += ctx => motor.Sprint(true);
+        onFoot.Sprint.canceled += ctx => motor.Sprint(false);
+
+        // activate ability
+        onFoot.Ability.started += ctx => ability.ActivateAbility("sugarRush");
     }
 
     // Update is called once per frame
