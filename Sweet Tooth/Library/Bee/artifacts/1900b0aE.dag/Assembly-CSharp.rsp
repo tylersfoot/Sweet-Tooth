@@ -324,6 +324,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 "Assets/Input/PlayerInput.cs"
 "Assets/Scripts/InputManager.cs"
+"Assets/Scripts/Interactable.cs"
+"Assets/Scripts/Interactables/Button.cs"
+"Assets/Scripts/PlayerInteract.cs"
 "Assets/Scripts/PlayerLook.cs"
 "Assets/Scripts/PlayerMotor.cs"
 -langversion:9.0
