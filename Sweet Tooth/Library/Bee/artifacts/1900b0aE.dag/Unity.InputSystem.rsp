@@ -115,10 +115,12 @@
 -define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:UNITY_INPUT_SYSTEM_ENABLE_VR
 -define:UNITY_INPUT_SYSTEM_ENABLE_XR
 -define:UNITY_INPUT_SYSTEM_ENABLE_PHYSICS
 -define:UNITY_INPUT_SYSTEM_ENABLE_PHYSICS2D
+-define:UNITY_INPUT_SYSTEM_ENABLE_UI
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
@@ -328,6 +330,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Library/PackageCache/com.unity.inputsystem@1.5.0/InputSystem/Actions/Composites/AxisComposite.cs"
 "Library/PackageCache/com.unity.inputsystem@1.5.0/InputSystem/Actions/Composites/ButtonWithOneModifier.cs"
 "Library/PackageCache/com.unity.inputsystem@1.5.0/InputSystem/Actions/Composites/ButtonWithTwoModifiers.cs"
