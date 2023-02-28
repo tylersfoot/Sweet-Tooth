@@ -115,6 +115,11 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll"
+-r:"Assets/Plugins/GitHub/Editor/GitHub.Logging.dll"
+-r:"Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll"
+-r:"Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll"
+-r:"Assets/Plugins/GitHub/Editor/sfw.net.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.19f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
