@@ -170,7 +170,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.AdditionalFile.txt"
@@ -1949,7 +1949,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.AdditionalFile.txt"
@@ -2484,7 +2484,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.AdditionalFile.txt"
@@ -3306,7 +3306,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.AdditionalFile.txt"
@@ -3830,7 +3830,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.AdditionalFile.txt"
@@ -4356,7 +4356,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.AdditionalFile.txt"
@@ -4884,7 +4884,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.AdditionalFile.txt"
@@ -5425,7 +5425,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor-firstpass.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor-firstpass.AdditionalFile.txt"
@@ -5968,7 +5968,7 @@
     {
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.AdditionalFile.txt",
       "ActionType": "WriteTextFile",
-      "WriteTextFilePayload": "C:\\Users\\tdepa\\Desktop\\Sweet-Tooth\\Sweet Tooth",
+      "WriteTextFilePayload": "C:\\Users\\bbest\\Documents\\GitHub\\Sweet-Tooth\\Sweet Tooth",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.AdditionalFile.txt"
