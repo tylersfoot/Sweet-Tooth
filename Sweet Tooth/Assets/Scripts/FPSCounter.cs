@@ -6,6 +6,7 @@ public class FPSCounter : MonoBehaviour
     public TextMeshProUGUI fpsText;
 
     private float deltaTime = 0.0f;
+    public string version = "v1.1";
 
     void Update()
     {
@@ -14,7 +15,7 @@ public class FPSCounter : MonoBehaviour
         float fps = 1.0f / deltaTime;
 
         // update the FPS text
-        fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS";
+        fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
 
         // scale the font size based on the screen height
         float screenHeight = Screen.height;

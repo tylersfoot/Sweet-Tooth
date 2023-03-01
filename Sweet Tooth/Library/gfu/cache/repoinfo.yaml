@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2023-02-28T09:53:15.575-05:00
-  initializedAtString: 2023-02-28T09:53:15.575-05:00
+  lastUpdatedAtString: 2023-03-01T09:09:22.600-05:00
+  initializedAtString: 2023-03-01T09:09:22.600-05:00
   currentGitRemote:
     name: origin
     url: https://github.com/tylersfoot/Sweet-Tooth.git
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: unity-project
-    tracking: origin/unity-project
+    name: main
+    tracking: origin/main
   currentConfigBranch:
-    name: unity-project
+    name: main
     remote:
       name: origin
       url: https://github.com/tylersfoot/Sweet-Tooth.git
-    trackingBranch: unity-project
+    trackingBranch: main
   currentConfigRemote:
     name: origin
     url: https://github.com/tylersfoot/Sweet-Tooth.git
