@@ -1,91 +1,62 @@
 using UnityEngine;
-    using UnityEngine.AI;
+using UnityEngine.AI;
 
-
-
-
-public class EnemyAi : Monobehavior
+public class EnemyAi : MonoBehaviour
 {
     public NavMeshAgent agent;
-
-
     public Transform player;
+    public LayerMask whatIsGround, whatIsPlayer;
 
-
-    public LayerMaskl whatIsGround, whatIsPlayer;
-
-
-    //Patrolling (for later)
+    // patrolling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-
-    //Attacking
+    // attacking
     public float timeAttack;
     bool alreadyAttacked;
 
-
-    //States
+    // states
     public float attackRange, sightRange;
     bool playerInAttackRange, playerInSightRange;
 
-
-    private Void Awake() {
-        player = GameObject.Find("PlayerObj").transform:
+    private void Awake() {
+        player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
-
-
     }
 
-
     private void Update() {
-        //Checks for player in sight range
-        playerInSightRange = Physics.CheckSphere(transfrom.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transfrom.position, sightRange, whatIsPlayer);
+        // checks for player in sight range
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
        
        if (!playerInSightRange && !playerInAttackRange) Patrolling();
        if (playerInSightRange && !playerInAttackRange) chasePlayer();
        if (playerInSightRange && playerInAttackRange) attackPlayer();
-
-
     }
-
 
     private void Patrolling() {
 
-
-
-
     }
-
 
     private void chasePlayer() {
-
-//Approaches player position
-agent.SetDestination(player.position);
-
+        // approaches player position
+        agent.SetDestination(player.position);
 
     }
-
 
     private void attackPlayer() {
-        //This stops enemy when attacking
-        agent.setDestination(transform.position);
-    transform.lookAt(player);
+        // stops enemy when attacking
 
+        // agent.setDestination(transform.position);
+        // transform.lookAt(player);
 
-    if (!alreadyattacked) {
-        alreadyattacked = True;
-        
+        if (!alreadyAttacked) {
+            alreadyAttacked = true; 
+        }
     }
-    }
 
-    private void alreadyAttacked() {
-
+    private void alreadyAttackedPlayer() {
 
     }
 }
-
-
-
