@@ -3,10 +3,10 @@ using UnityEngine;
 public class Tool : MonoBehaviour
 {
     // the position of the tool relative to the player
-    public Vector3 defaultPosition = new Vector3(1f, 0.5f, 0f);
+    public Vector3 defaultPosition = new Vector3(1f, -0.45f, 1f);
 
     // the rotation of the tool relative to the player
-    public Vector3 defaultRotation = new Vector3(0f, 90f, 0f);
+    public Vector3 defaultRotation = new Vector3(0f, 0f, 0f);
 
     private Transform playerTransform;
 
@@ -15,14 +15,23 @@ public class Tool : MonoBehaviour
     public float range; // range of the tool
     public AudioClip[] audioClips; // audio clips to play when the tool is used
 
+    // basically just teleports the tool to the player and positions it right
     private void Start()
     {
+        // get all the child transforms of this object
+        Transform[] children = transform.GetComponentsInChildren<Transform>();
+
+        // iterate through all the child transforms and set their position to zero
+        foreach (Transform child in children)
+        {
+            child.localPosition = Vector3.zero;
+        }
+
         // get the player's transform
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // set the tool's position and rotation relative to the player
+        // set the tool's position relative to the player
         transform.position = playerTransform.position + playerTransform.TransformVector(defaultPosition);
-        transform.rotation = playerTransform.rotation * Quaternion.Euler(defaultRotation);
     }
 
     // method to use the tool
