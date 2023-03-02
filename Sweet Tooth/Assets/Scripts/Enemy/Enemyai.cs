@@ -62,6 +62,7 @@ public class EnemyAi : Monobehavior
 
     private void chasePlayer() {
 
+//Approaches player position
 agent.SetDestination(player.position);
 
 
@@ -69,8 +70,18 @@ agent.SetDestination(player.position);
 
 
     private void attackPlayer() {
+        //This stops enemy when attacking
+        agent.setDestination(transform.position);
+    transform.lookAt(player);
 
 
+    if (!alreadyattacked) {
+        alreadyattacked = True;
+        
+    }
+    }
+
+    private void alreadyAttacked() {
 
 
     }
