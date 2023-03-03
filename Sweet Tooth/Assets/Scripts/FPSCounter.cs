@@ -6,7 +6,7 @@ public class FPSCounter : MonoBehaviour
     public TextMeshProUGUI fpsText;
 
     private float deltaTime = 0.0f;
-    public string version = "v1.1";
+    public string version = "v1.2";
 
     void Update()
     {

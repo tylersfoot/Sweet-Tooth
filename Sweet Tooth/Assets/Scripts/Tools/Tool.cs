@@ -29,6 +29,7 @@ public class Tool : MonoBehaviour
 
         // get the player's transform
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log(playerTransform);
 
         // set the tool's position relative to the player
         transform.position = playerTransform.position + playerTransform.TransformVector(defaultPosition);
