@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Tool : MonoBehaviour
 {
     // the position of the tool relative to the player
-    public Vector3 defaultPosition = new Vector3(1f, -0.45f, 1f);
+    public Vector3 defaultPosition = new Vector3(1f, 0f, 0f);
 
     // the rotation of the tool relative to the player
     public Vector3 defaultRotation = new Vector3(0f, 0f, 0f);
@@ -16,7 +17,7 @@ public class Tool : MonoBehaviour
     public AudioClip[] audioClips; // audio clips to play when the tool is used
 
     // basically just teleports the tool to the player and positions it right
-    private void Start()
+    void Start()
     {
         // get all the child transforms of this object
         Transform[] children = transform.GetComponentsInChildren<Transform>();
@@ -27,12 +28,16 @@ public class Tool : MonoBehaviour
             child.localPosition = Vector3.zero;
         }
 
-        // get the player's transform
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.Log(playerTransform);
 
-        // set the tool's position relative to the player
-        transform.position = playerTransform.position + playerTransform.TransformVector(defaultPosition);
+        //! none of this works and I don't know why just change the values in the inspector lol
+        // get the parent constraint component on the tool
+        // ParentConstraint parentConstraint = GetComponent<ParentConstraint>();
+        // set the position offset
+        // Debug.Log(parentConstraint.translationOffsets[0]);
+        // Debug.Log(defaultPosition);
+        // parentConstraint.translationOffsets[0] = new Vector3(1f, 0f, 0f);
+        // Debug.Log(parentConstraint.translationOffsets[0]);
+
     }
 
     // method to use the tool

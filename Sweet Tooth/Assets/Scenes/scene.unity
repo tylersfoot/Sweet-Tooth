@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -815,8 +815,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254100933}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 1.8, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254d0d39e1d1e7442a64c7c4c91cd157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPosition: {x: 1, y: -0.45, z: 1}
+  defaultPosition: {x: 1, y: 0, z: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   damage: 0
   attackSpeed: 0
@@ -851,10 +851,10 @@ ParentConstraint:
   m_GameObject: {fileID: 254100933}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 2, z: 0}
+  m_TranslationAtRest: {x: 0.5, y: 1.8, z: 0.6}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
+  - {x: 0.5, y: -0.79999995, z: 0.6}
   m_RotationOffsets:
   - {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
@@ -866,7 +866,7 @@ ParentConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 0
   m_Sources:
-  - sourceTransform: {fileID: 314080690}
+  - sourceTransform: {fileID: 735266211}
     weight: 1
 --- !u!1 &255890176
 GameObject:
@@ -1075,11 +1075,6 @@ MonoBehaviour:
   playerMotor: {fileID: 0}
   abilityDuration: 3
   abilitySugarRush: 0
---- !u!4 &314080690 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8853784774129686550, guid: 56ae4e8ca78041c4ea5bd70e3ffde257, type: 3}
-  m_PrefabInstance: {fileID: 8853784773250594705}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321651074
 GameObject:
   m_ObjectHideFlags: 0
