@@ -38,7 +38,7 @@ public class InputManager : MonoBehaviour
         onFoot.Ability.started += ctx => abilityScript.ActivateAbility("sugarRush");
 
         // use tool
-        onFoot.UseToolPrimary.started += ctx => toolScript.Use();
+        onFoot.UseToolPrimary.performed += ctx => toolScript.Use();
     }
 
     // Update is called once per frame
