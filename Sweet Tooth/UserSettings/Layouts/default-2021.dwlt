@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1521.6
     height: 766.4
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 6590
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 6550
+  controlID: 52
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 6551
+  controlID: 53
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 226.4
     height: 426.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -270,15 +270,15 @@ MonoBehaviour:
     y: 426.4
     width: 1196
     height: 290.00003
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,8 +298,8 @@ MonoBehaviour:
     y: 0
     width: 325.59998
     height: 716.4
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -428,9 +428,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c460000
-      m_LastClickedID: 17932
-      m_ExpandedIDs: e0faffff0c4600001e4600008c470000
+      m_SelectedIDs: 6a470000
+      m_LastClickedID: 18282
+      m_ExpandedIDs: 16fbffffdc4500006a470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -509,9 +509,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -331, y: 0}
+      snapOffset: {x: -331, y: -356}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-scene-view-toolbar
       index: 0
       layout: 1
@@ -712,9 +712,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.8685231, y: 4.9616437, z: 7.984842}
+    m_Target: {x: 0.38166744, y: 1.8145648, z: 0.9189544}
     speed: 2
-    m_Value: {x: -3.8685231, y: 4.9616437, z: 7.984842}
+    m_Value: {x: 0.45247102, y: 0.9495635, z: 0.66044605}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -761,13 +761,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08903793, y: 0.9030345, z: -0.3532822, w: 0.22759911}
+    m_Target: {x: 0.07828575, y: 0.92083335, z: -0.24832858, w: 0.29029995}
     speed: 2
-    m_Value: {x: 0.08903754, y: 0.9030305, z: -0.35328066, w: 0.22759812}
+    m_Value: {x: 0.0782856, y: 0.9208316, z: -0.2483281, w: 0.2902994}
   m_Size:
-    m_Target: 1.1494513
+    m_Target: 0.9685591
     speed: 2
-    m_Value: 1.1494513
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -812,10 +812,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 229.6
-    y: 73.6
-    width: 514.80005
-    height: 467
+    x: 233.6
+    y: 80.8
+    width: 468.4
+    height: 405.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -844,9 +844,9 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e62c806
-    m_LastClickedID: 113795694
-    m_ExpandedIDs: 5fa32683328651408da84d5c
+    m_SelectedIDs: 0b364ce7
+    m_LastClickedID: -414435829
+    m_ExpandedIDs: 5fa326830b364ce7328651408da84d5cc2f0166c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -868,10 +868,16 @@ MonoBehaviour:
     m_AdvancedDropdownState:
       states:
       - itemId: 371857150
-        selectedIndex: 7
+        selectedIndex: 2
         scroll: {x: 0, y: 0}
       - itemId: 656259478
-        selectedIndex: 11
+        selectedIndex: 0
+        scroll: {x: 0, y: 0}
+      - itemId: -654788001
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1275948795
+        selectedIndex: -1
         scroll: {x: 0, y: 0}
     m_ManualPathEditMode: 0
   m_ActionAssetManager:
@@ -908,6 +914,14 @@ MonoBehaviour:
       \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
       },\n                {\n                    \"name\": \"Ability\",\n                   
       \"type\": \"Button\",\n                    \"id\": \"a988e88d-00af-4b7b-8b82-91bb9bec3319\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"UseToolPrimary\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"f475f1d7-b78e-4fa6-9243-718809f5b45f\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"UseToolSecondary\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"e3774f24-78dc-4366-b8f5-fef54bf4a3b2\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
       }\n            ],\n            \"bindings\": [\n                {\n                   
@@ -1015,6 +1029,21 @@ MonoBehaviour:
       \"path\": \"<Keyboard>/t\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"Ability\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"73cc7aec-f8bb-4b3c-80d5-a25e30c832be\",\n                   
+      \"path\": \"<Keyboard>/f\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"UseToolPrimary\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"b2e88003-65d3-49d2-a3b3-c25ef01a3dea\",\n                   
+      \"path\": \"<Mouse>/leftButton\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"UseToolPrimary\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"d8611c87-65e6-4cfb-a9bd-72d6791153f2\",\n                   
+      \"path\": \"\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"UseToolSecondary\",\n                    \"isComposite\": false,\n                   
       \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
       {\n            \"name\": \"UI\",\n            \"id\": \"f22e8917-e7b0-475e-a884-b9ded85e92fb\",\n           
       \"actions\": [\n                {\n                    \"name\": \"Navigate\",\n                   
@@ -1386,22 +1415,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\tdepa\Desktop\Sweet-Tooth\Sweet Tooth
+  m_LastProjectPath: C:\Users\tylersfoot\Desktop\Sweet-Tooth\Sweet Tooth
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 27}
-    m_SelectedIDs: 58490000
-    m_LastClickedID: 18776
-    m_ExpandedIDs: 00000000de480000
+    scrollPos: {x: 0, y: 22.99997}
+    m_SelectedIDs: 144b0000
+    m_LastClickedID: 19220
+    m_ExpandedIDs: 00000000d6480000144b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1429,7 +1458,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de480000
+    m_ExpandedIDs: 00000000d6480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1454,8 +1483,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c8460000
-    m_LastClickedInstanceID: 18120
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -1543,7 +1572,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17932
+  m_LastSelectedObjectID: 18282
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

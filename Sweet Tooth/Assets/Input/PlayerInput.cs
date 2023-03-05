@@ -89,6 +89,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseToolPrimary"",
+                    ""type"": ""Button"",
+                    ""id"": ""f475f1d7-b78e-4fa6-9243-718809f5b45f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseToolSecondary"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3774f24-78dc-4366-b8f5-fef54bf4a3b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -320,6 +338,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Ability"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""73cc7aec-f8bb-4b3c-80d5-a25e30c832be"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseToolPrimary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2e88003-65d3-49d2-a3b3-c25ef01a3dea"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseToolPrimary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d8611c87-65e6-4cfb-a9bd-72d6791153f2"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseToolSecondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -853,6 +904,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_Sprint = m_OnFoot.FindAction("Sprint", throwIfNotFound: true);
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
         m_OnFoot_Ability = m_OnFoot.FindAction("Ability", throwIfNotFound: true);
+        m_OnFoot_UseToolPrimary = m_OnFoot.FindAction("UseToolPrimary", throwIfNotFound: true);
+        m_OnFoot_UseToolSecondary = m_OnFoot.FindAction("UseToolSecondary", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -933,6 +986,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Sprint;
     private readonly InputAction m_OnFoot_Interact;
     private readonly InputAction m_OnFoot_Ability;
+    private readonly InputAction m_OnFoot_UseToolPrimary;
+    private readonly InputAction m_OnFoot_UseToolSecondary;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -944,6 +999,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_OnFoot_Sprint;
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
         public InputAction @Ability => m_Wrapper.m_OnFoot_Ability;
+        public InputAction @UseToolPrimary => m_Wrapper.m_OnFoot_UseToolPrimary;
+        public InputAction @UseToolSecondary => m_Wrapper.m_OnFoot_UseToolSecondary;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -974,6 +1031,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Ability.started += instance.OnAbility;
             @Ability.performed += instance.OnAbility;
             @Ability.canceled += instance.OnAbility;
+            @UseToolPrimary.started += instance.OnUseToolPrimary;
+            @UseToolPrimary.performed += instance.OnUseToolPrimary;
+            @UseToolPrimary.canceled += instance.OnUseToolPrimary;
+            @UseToolSecondary.started += instance.OnUseToolSecondary;
+            @UseToolSecondary.performed += instance.OnUseToolSecondary;
+            @UseToolSecondary.canceled += instance.OnUseToolSecondary;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -999,6 +1062,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Ability.started -= instance.OnAbility;
             @Ability.performed -= instance.OnAbility;
             @Ability.canceled -= instance.OnAbility;
+            @UseToolPrimary.started -= instance.OnUseToolPrimary;
+            @UseToolPrimary.performed -= instance.OnUseToolPrimary;
+            @UseToolPrimary.canceled -= instance.OnUseToolPrimary;
+            @UseToolSecondary.started -= instance.OnUseToolSecondary;
+            @UseToolSecondary.performed -= instance.OnUseToolSecondary;
+            @UseToolSecondary.canceled -= instance.OnUseToolSecondary;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1143,6 +1212,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAbility(InputAction.CallbackContext context);
+        void OnUseToolPrimary(InputAction.CallbackContext context);
+        void OnUseToolSecondary(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

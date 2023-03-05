@@ -67,6 +67,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UseToolPrimary",
+                    "type": "Button",
+                    "id": "f475f1d7-b78e-4fa6-9243-718809f5b45f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseToolSecondary",
+                    "type": "Button",
+                    "id": "e3774f24-78dc-4366-b8f5-fef54bf4a3b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -298,6 +316,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Ability",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73cc7aec-f8bb-4b3c-80d5-a25e30c832be",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseToolPrimary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2e88003-65d3-49d2-a3b3-c25ef01a3dea",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseToolPrimary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8611c87-65e6-4cfb-a9bd-72d6791153f2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseToolSecondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
