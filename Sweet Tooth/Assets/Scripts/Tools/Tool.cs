@@ -50,11 +50,11 @@ public class Tool : MonoBehaviour
     }
 
     // method to use the tool
-    public void Use()
+    public void Use(bool key)
     {
         if (activeTool == "BubblegumBlaster")
         {
-            BubblegumBlasterScript.Shoot();
+            BubblegumBlasterScript.isKeyDown = key;
         }
         // play audio clip
         // if (audioClips.Length > 0)

@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
         onFoot.Jump.performed += ctx => motorScript.Jump();
 
         // toggle crouching when pressing/releasing key
-        onFoot.Crouch.performed += ctx => motorScript.Crouch(true);
+        onFoot.Crouch.started += ctx => motorScript.Crouch(true);
         onFoot.Crouch.canceled += ctx => motorScript.Crouch(false);
         
         // toggle sprint when pressing/releasing key
@@ -38,7 +38,8 @@ public class InputManager : MonoBehaviour
         onFoot.Ability.started += ctx => abilityScript.ActivateAbility("sugarRush");
 
         // use tool
-        onFoot.UseToolPrimary.performed += ctx => toolScript.Use();
+        onFoot.UseToolPrimary.started += ctx => toolScript.Use(true);
+        onFoot.UseToolPrimary.canceled += ctx => toolScript.Use(false);
     }
 
     // Update is called once per frame

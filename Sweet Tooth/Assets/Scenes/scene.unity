@@ -4854,8 +4854,10 @@ MonoBehaviour:
   projectileSpawn: {fileID: 466309663}
   shootForce: 50
   damage: 10
-  fireRate: 0.5
+  fireRate: 0.2
   range: 100
+  lifespan: 5
+  isKeyDown: 0
   colors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
