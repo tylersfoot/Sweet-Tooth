@@ -2877,7 +2877,6 @@ GameObject:
   - component: {fileID: 1091860945}
   - component: {fileID: 1091860948}
   - component: {fileID: 1091860947}
-  - component: {fileID: 1091860946}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -2900,19 +2899,6 @@ Transform:
   m_Father: {fileID: 466309663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1091860946
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091860944}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1091860947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4261,7 +4247,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &1890050218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7871881531335585284, guid: b056f5b34052db240b1427a82f3f1c11, type: 3}
@@ -4857,6 +4843,7 @@ MonoBehaviour:
   fireRate: 0.2
   range: 100
   lifespan: 5
+  spread: 1
   isKeyDown: 0
   colors:
   - {r: 1, g: 0, b: 0, a: 1}
