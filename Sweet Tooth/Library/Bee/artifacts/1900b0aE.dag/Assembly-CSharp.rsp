@@ -340,6 +340,7 @@
 "Assets/Scripts/Player/PlayerLook.cs"
 "Assets/Scripts/Player/PlayerMotor.cs"
 "Assets/Scripts/Player/PlayerUI.cs"
+"Assets/Scripts/TerrainGeneration.cs"
 "Assets/Scripts/Tools/BubblegumBlaster.cs"
 "Assets/Scripts/Tools/Tool.cs"
 -langversion:9.0
