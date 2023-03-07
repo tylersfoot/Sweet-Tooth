@@ -28,7 +28,7 @@
     <a href="https://github.com/tylersfoot/Sweet-Tooth/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://tylersfoot.live/demo">View Demo [WIP]</a>
+    <a href="https://tylersfoot.live/Sweet-Tooth/Builds/2023.3.6.1/WebGL">View Demo [v2023.3.6.1]</a>
     ·
     <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Report Bug/Request Feature</a>
   </p>

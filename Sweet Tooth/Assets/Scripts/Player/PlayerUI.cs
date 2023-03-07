@@ -11,16 +11,8 @@ public class PlayerUI : MonoBehaviour
     void Start()
     {
         // hides and locks the cursor when the game starts
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            Application.Quit();
-        }
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     public void UpdateText(string promptMessage)

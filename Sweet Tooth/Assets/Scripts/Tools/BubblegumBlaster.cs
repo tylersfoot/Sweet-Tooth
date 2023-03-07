@@ -33,6 +33,7 @@ public class BubblegumBlaster : MonoBehaviour
         if (isKeyDown && Time.time >= fireCooldown)
         {
             Shoot();
+
             // reset cooldown
             fireCooldown = Time.time + fireRate;
         }

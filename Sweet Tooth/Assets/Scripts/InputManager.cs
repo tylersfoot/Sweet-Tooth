@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     private PlayerLook lookScript;
     private PlayerAbility abilityScript;
     public Tool toolScript;
+    public PauseMenu pauseMenuScript;
     // Start is called before the first frame update
     void Awake()
     {
@@ -21,9 +22,10 @@ public class InputManager : MonoBehaviour
         motorScript = GetComponent<PlayerMotor>();
         lookScript = GetComponent<PlayerLook>();
         abilityScript = GetComponent<PlayerAbility>();
-        // finds "Tools" GameObject by looking for its tag and grabs Tool.cs
+        // finds "Tools" GameObject by looking for its tag and grabs Tool.cs and other scripts
         toolScript = GameObject.FindGameObjectWithTag("ToolsTag").GetComponent<Tool>();
-
+        pauseMenuScript = GameObject.FindGameObjectWithTag("PauseMenuTag").GetComponent<PauseMenu>();
+        // jump
         onFoot.Jump.performed += ctx => motorScript.Jump();
 
         // toggle crouching when pressing/releasing key
@@ -35,11 +37,25 @@ public class InputManager : MonoBehaviour
         onFoot.Sprint.canceled += ctx => motorScript.Sprint(false);
 
         // activate ability
-        onFoot.Ability.started += ctx => abilityScript.ActivateAbility("sugarRush");
+        onFoot.Ability.started += ctx => {
+            if (!pauseMenuScript.isPaused) {
+                abilityScript.ActivateAbility("sugarRush");
+            }
+        };
 
         // use tool
-        onFoot.UseToolPrimary.started += ctx => toolScript.Use(true);
-        onFoot.UseToolPrimary.canceled += ctx => toolScript.Use(false);
+        onFoot.UseToolPrimary.started += ctx => {
+            if (!pauseMenuScript.isPaused) {
+                toolScript.Use(true);
+            }
+        };
+        onFoot.UseToolPrimary.canceled += ctx => {
+            if (!pauseMenuScript.isPaused) {
+                toolScript.Use(false);
+            }
+        };
+        // pause game
+        onFoot.Pause.started += ctx => pauseMenuScript.Pause();
     }
 
     // Update is called once per frame

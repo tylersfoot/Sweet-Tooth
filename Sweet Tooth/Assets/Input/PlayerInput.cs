@@ -107,6 +107,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""38a37076-a6d2-4370-bf26-2973eeefda5b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -371,6 +380,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""UseToolSecondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf24843e-64e0-4bb4-bde5-26463ad58a15"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d066aff1-1b13-4851-bbb6-14b7007a909d"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -906,6 +937,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_Ability = m_OnFoot.FindAction("Ability", throwIfNotFound: true);
         m_OnFoot_UseToolPrimary = m_OnFoot.FindAction("UseToolPrimary", throwIfNotFound: true);
         m_OnFoot_UseToolSecondary = m_OnFoot.FindAction("UseToolSecondary", throwIfNotFound: true);
+        m_OnFoot_Pause = m_OnFoot.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -988,6 +1020,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Ability;
     private readonly InputAction m_OnFoot_UseToolPrimary;
     private readonly InputAction m_OnFoot_UseToolSecondary;
+    private readonly InputAction m_OnFoot_Pause;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -1001,6 +1034,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Ability => m_Wrapper.m_OnFoot_Ability;
         public InputAction @UseToolPrimary => m_Wrapper.m_OnFoot_UseToolPrimary;
         public InputAction @UseToolSecondary => m_Wrapper.m_OnFoot_UseToolSecondary;
+        public InputAction @Pause => m_Wrapper.m_OnFoot_Pause;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1037,6 +1071,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseToolSecondary.started += instance.OnUseToolSecondary;
             @UseToolSecondary.performed += instance.OnUseToolSecondary;
             @UseToolSecondary.canceled += instance.OnUseToolSecondary;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -1068,6 +1105,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseToolSecondary.started -= instance.OnUseToolSecondary;
             @UseToolSecondary.performed -= instance.OnUseToolSecondary;
             @UseToolSecondary.canceled -= instance.OnUseToolSecondary;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1214,6 +1254,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnAbility(InputAction.CallbackContext context);
         void OnUseToolPrimary(InputAction.CallbackContext context);
         void OnUseToolSecondary(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

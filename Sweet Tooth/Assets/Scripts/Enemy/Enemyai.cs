@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAi : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform player;
@@ -18,6 +18,9 @@ public class EnemyAi : MonoBehaviour
     }
 
     void Update() {
+        // if player distance is 10 metres away {
+        //     playerInSightRange = true
+        // }
     // checks for player in sight range
        if (playerInSightRange && !playerInAttackRange)
        {
