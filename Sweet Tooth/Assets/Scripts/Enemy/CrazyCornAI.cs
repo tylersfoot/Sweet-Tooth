@@ -1,13 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public class CrazyCornAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;
-    public float sightRange = 10f;
-   
-   
+    public float sightRange; // distance the enemy can see the player
 
     void Start() {
         // target = player
@@ -17,11 +15,11 @@ public class EnemyAI : MonoBehaviour
 
     void Update() {
         float distance = Vector3.Distance(target.position, transform.position);
-    // checks for player in sight range
-       if (distance <= sightRange)
-       {
-        chasePlayer();
-       }
+        // checks for player in sight range
+        if (distance <= sightRange)
+        {
+            chasePlayer();
+        }
     }
 
     void chasePlayer() {

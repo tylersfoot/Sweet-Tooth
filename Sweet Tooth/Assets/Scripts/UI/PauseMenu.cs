@@ -5,24 +5,22 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject canvas;
+    public SettingsMenu settingsMenu; // for changing screens
     public bool isPaused = false;
+    public string currentScreen = "none"; // which screen is the player seeing
 
     void Start()
     {
-        DisableCanvas();
+        canvas.SetActive(false);
     }
 
     void Update()
     {
+        // backspace pressed, close game
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            Quit();
+            Application.Quit();
         }
-    }
-
-    void DisableCanvas()
-    {
-        canvas.SetActive(false);
     }
 
     public void Pause()
@@ -33,6 +31,7 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0f;
             canvas.SetActive(true);
             isPaused = true;
+            currentScreen = "pauseMenu";
         }
         else
         {
@@ -48,21 +47,21 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
             canvas.SetActive(false);
             isPaused = false;
+            currentScreen = "none";
         }
     }
 
     public void SettingsButton()
     {
-        Debug.Log("Settings menu opened!");
+        if (currentScreen == "pauseMenu")
+        {
+            currentScreen = "settingsMenu";
+            canvas.SetActive(false);
+            settingsMenu.canvas.SetActive(true);
+        }
     }
 
     public void QuitButton()
-    {
-        // what happens when quit button is pressed
-        Quit();
-    }
-
-    void Quit()
     {
         // closes the game without hesitation
         Application.Quit();
