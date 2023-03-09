@@ -43,9 +43,10 @@ public class PauseMenu : MonoBehaviour
     {
         if (isPaused)
         {
-            // resumes the game
-            Time.timeScale = 1f;
-            canvas.SetActive(false);
+           
+            settingsMenu.Back(); // closes settings screen if open
+            Time.timeScale = 1f; // resumes time
+            canvas.SetActive(false); // disables pause menu canvas
             isPaused = false;
             currentScreen = "none";
         }

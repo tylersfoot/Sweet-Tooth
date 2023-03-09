@@ -3,13 +3,16 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BubblegumBlaster
     - Button
+    - CrazyCornAI
     - FPSCounter
     - InputManager
+    - PauseMenu
     - PlayerAbility
     - PlayerInteract
     - PlayerLook
     - PlayerMotor
     - PlayerUI
+    - SettingsMenu
     - TerrainGeneration
     - Tool
     Unity.InputSystem.dll:
@@ -36,14 +39,18 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   serializedClasses:
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
@@ -90,15 +97,41 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Style
     - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
-  methodsToPreserve: []
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.Slider/SliderEvent
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: QuitButton
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: ResumeButton
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetYSensitivity
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: SettingsButton
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: SetXSensitivity
   sceneClasses:
     Assets/Scenes/scene.unity:
     - Class: 1
@@ -123,6 +156,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 72
@@ -142,68 +177,80 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1580}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 1686}
+      Script: {instanceID: 1710}
     - Class: 114
-      Script: {instanceID: 1694}
+      Script: {instanceID: 1718}
     - Class: 114
-      Script: {instanceID: 1782}
+      Script: {instanceID: 1778}
     - Class: 114
-      Script: {instanceID: 1842}
+      Script: {instanceID: 1808}
     - Class: 114
-      Script: {instanceID: 1858}
+      Script: {instanceID: 1868}
     - Class: 114
-      Script: {instanceID: 1878}
+      Script: {instanceID: 1884}
     - Class: 114
-      Script: {instanceID: 2054}
+      Script: {instanceID: 1904}
     - Class: 114
-      Script: {instanceID: 2102}
+      Script: {instanceID: 1910}
     - Class: 114
-      Script: {instanceID: 2114}
+      Script: {instanceID: 2082}
     - Class: 114
-      Script: {instanceID: 2240}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 2312}
+      Script: {instanceID: 2142}
     - Class: 114
-      Script: {instanceID: 2338}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2356}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 2438}
+      Script: {instanceID: 2366}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2384}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2550}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2534}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 2722}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 2678}
     - Class: 114
-      Script: {instanceID: 2950}
+      Script: {instanceID: 2752}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 2784}
+    - Class: 114
+      Script: {instanceID: 2980}
+    - Class: 114
+      Script: {instanceID: 2986}
+    - Class: 114
+      Script: {instanceID: 2998}
+    - Class: 114
+      Script: {instanceID: 3060}
+    - Class: 114
+      Script: {instanceID: 3130}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -212,6 +259,8 @@ ScriptsOnlyBuild:
     - Class: 156
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -224,6 +273,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 1773428102
       Script: {instanceID: 0}
@@ -302,7 +353,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: ead58eb40baf2584f5002ff2ca223e39
+      Hash: b1be1b666b017af7bdf08b80ed720261
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InputManager
@@ -408,6 +459,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAbility
+  - hash:
+      serializedVersion: 2
+      Hash: f25c5f2f740f3aff33cbfd8eba642167
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 27ec3360f0c0a6803ba71cc3106480b8
@@ -518,7 +575,7 @@ ScriptsOnlyBuild:
     className: InputActionEditorWindow
   - hash:
       serializedVersion: 2
-      Hash: 391652d66238c04fe36dd1f63eab622b
+      Hash: 968c3edc72d7238b6164bfd3a9147d31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BubblegumBlaster
@@ -614,10 +671,16 @@ ScriptsOnlyBuild:
     className: PlayerInteract
   - hash:
       serializedVersion: 2
-      Hash: df0a32f7203a90f6bda6f4f08dda6e9f
+      Hash: 738a0a726bfbbcd0755545990cf1d23e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerLook
+  - hash:
+      serializedVersion: 2
+      Hash: a6fca9e2db67173ea94d50cf1b038161
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenu
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -696,6 +759,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
+      Hash: e4e8a866d18165508b98ec373dc78d13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrazyCornAI
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -867,4 +936,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/scene.unity
-  playerPath: C:/Users/tylersfoot/Desktop/Sweet-Tooth/Builds/1.2/Windows/Sweet Tooth.exe
+  playerPath: C:/Users/tdepa/Desktop/Sweet-Tooth/Builds/2023.3.9.1/Windows/Sweet
+    Tooth.exe

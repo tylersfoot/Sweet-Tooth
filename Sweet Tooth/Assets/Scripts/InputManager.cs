@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     private PlayerLook lookScript;
     private PlayerAbility abilityScript;
     public Tool toolScript;
-    public PauseMenu pauseMenuScript;
+    public PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,9 +22,8 @@ public class InputManager : MonoBehaviour
         motorScript = GetComponent<PlayerMotor>();
         lookScript = GetComponent<PlayerLook>();
         abilityScript = GetComponent<PlayerAbility>();
-        // finds "Tools" GameObject by looking for its tag and grabs Tool.cs and other scripts
+        // finds "Tools" GameObject by looking for its tag and grabs Tool.cs
         toolScript = GameObject.FindGameObjectWithTag("ToolsTag").GetComponent<Tool>();
-        pauseMenuScript = GameObject.FindGameObjectWithTag("PauseMenuTag").GetComponent<PauseMenu>();
         // jump
         onFoot.Jump.performed += ctx => motorScript.Jump();
 
@@ -38,24 +37,24 @@ public class InputManager : MonoBehaviour
 
         // activate ability
         onFoot.Ability.started += ctx => {
-            if (!pauseMenuScript.isPaused) {
+            if (!pauseMenu.isPaused) {
                 abilityScript.ActivateAbility("sugarRush");
             }
         };
 
         // use tool
         onFoot.UseToolPrimary.started += ctx => {
-            if (!pauseMenuScript.isPaused) {
+            if (!pauseMenu.isPaused) {
                 toolScript.Use(true);
             }
         };
         onFoot.UseToolPrimary.canceled += ctx => {
-            if (!pauseMenuScript.isPaused) {
+            if (!pauseMenu.isPaused) {
                 toolScript.Use(false);
             }
         };
         // pause game
-        onFoot.Pause.started += ctx => pauseMenuScript.Pause();
+        onFoot.Pause.started += ctx => pauseMenu.Pause();
     }
 
     // Update is called once per frame

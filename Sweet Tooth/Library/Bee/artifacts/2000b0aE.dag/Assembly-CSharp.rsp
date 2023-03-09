@@ -309,6 +309,8 @@
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Input/PlayerInput.cs"
+"Assets/Scripts/Enemy/CrazyCornAI.cs"
+"Assets/Scripts/Enemy/GummyBear.cs"
 "Assets/Scripts/FPSCounter.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/Interactable.cs"
@@ -318,6 +320,11 @@
 "Assets/Scripts/Player/PlayerLook.cs"
 "Assets/Scripts/Player/PlayerMotor.cs"
 "Assets/Scripts/Player/PlayerUI.cs"
+"Assets/Scripts/TerrainGeneration.cs"
+"Assets/Scripts/Tools/BubblegumBlaster.cs"
+"Assets/Scripts/Tools/Tool.cs"
+"Assets/Scripts/UI/PauseMenu.cs"
+"Assets/Scripts/UI/SettingsMenu.cs"
 -langversion:9.0
 
 /deterministic

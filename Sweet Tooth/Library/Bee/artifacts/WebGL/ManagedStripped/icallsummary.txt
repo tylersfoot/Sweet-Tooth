@@ -9,6 +9,7 @@ Unity.Jobs.JobHandle::ScheduleBatchedJobs
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::CreateMarker
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::BeginSample
 Unity.Profiling.LowLevel.Unsafe.ProfilerUnsafeUtility::EndSample
+UnityEngine.AI.NavMeshAgent::SetDestination_Injected
 UnityEngine.AnimationCurve::Internal_Equals
 UnityEngine.AnimationCurve::AddKey_Internal_Injected
 UnityEngine.AnimationCurve::get_length
@@ -164,8 +165,6 @@ UnityEngine.Cubemap::get_isReadable
 UnityEngine.CubemapArray::Internal_CreateImpl
 UnityEngine.CubemapArray::get_isReadable
 UnityEngine.Cursor::SetCursor_Injected
-UnityEngine.Cursor::set_lockState
-UnityEngine.Cursor::set_visible
 UnityEngine.Cursor::get_lockState
 UnityEngine.Debug::ExtractStackTraceNoAlloc
 UnityEngine.Debug::DrawLine_Injected
@@ -236,6 +235,8 @@ UnityEngine.GameObject::GetComponentInParent
 UnityEngine.GameObject::Internal_AddComponentWithType
 UnityEngine.GameObject::TryGetComponentInternal
 UnityEngine.GameObject::CreatePrimitive
+UnityEngine.GameObject::Find
+UnityEngine.GameObject::FindGameObjectWithTag
 UnityEngine.GameObject::get_transform
 UnityEngine.Gizmos::DrawCube_Injected
 UnityEngine.Gizmos::DrawLine_Injected
@@ -418,6 +419,7 @@ UnityEngine.Mathf::IsPowerOfTwo
 UnityEngine.Mathf::ClosestPowerOfTwo
 UnityEngine.Mathf::NextPowerOfTwo
 UnityEngine.Mathf::GammaToLinearSpace
+UnityEngine.Mathf::PerlinNoise
 UnityEngine.Mathf::CorrelatedColorTemperatureToRGB_Injected
 UnityEngine.Matrix4x4::Inverse3DAffine_Injected
 UnityEngine.Matrix4x4::DecomposeProjection_Injected
@@ -475,6 +477,8 @@ UnityEngine.Object::set_hideFlags
 UnityEngine.Object::get_hideFlags
 UnityEngine.Object::FindObjectFromInstanceID
 UnityEngine.Object::Internal_CloneSingle
+UnityEngine.Object::Internal_InstantiateSingleWithParent_Injected
+UnityEngine.Object::Internal_InstantiateSingle_Injected
 UnityEngine.ObjectGUIState::Internal_Create
 UnityEngine.ObjectGUIState::Internal_Destroy
 UnityEngine.Physics::get_defaultPhysicsScene_Injected
@@ -504,6 +508,9 @@ UnityEngine.QualitySettings::get_activeColorSpace
 UnityEngine.Quaternion::AngleAxis_Injected
 UnityEngine.Quaternion::Internal_FromEulerRad_Injected
 UnityEngine.Quaternion::Inverse_Injected
+UnityEngine.Random::RandomRangeInt
+UnityEngine.Random::Range
+UnityEngine.Random::InitState
 UnityEngine.RectOffset::get_bottom
 UnityEngine.RectOffset::get_horizontal
 UnityEngine.RectOffset::get_left
@@ -622,6 +629,7 @@ UnityEngine.Resources::GetBuiltinResource
 UnityEngine.ResourcesAPIInternal::Load
 UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll
 UnityEngine.ResourcesAPIInternal::FindShaderByName
+UnityEngine.Rigidbody::AddForce_Injected
 UnityEngine.ScalableBufferManager::get_heightScaleFactor
 UnityEngine.ScalableBufferManager::get_widthScaleFactor
 UnityEngine.SceneManagement.Scene::GetIsLoadedInternal
@@ -684,6 +692,18 @@ UnityEngine.SystemInfo::GetGraphicsFormat
 UnityEngine.SystemInfo::GetOperatingSystemFamily
 UnityEngine.SystemInfo::GetCopyTextureSupport
 UnityEngine.SystemInfo::GetGraphicsDeviceType
+UnityEngine.Terrain::get_allowAutoConnect
+UnityEngine.Terrain::get_groupingID
+UnityEngine.Terrain::SetNeighbors
+UnityEngine.Terrain::get_terrainData
+UnityEngine.Terrain::get_activeTerrains
+UnityEngine.TerrainData::GetBoundaryValue
+UnityEngine.TerrainData::get_internalHeightmapResolution
+UnityEngine.TerrainData::GetAlphamapResolutionInternal
+UnityEngine.TerrainData::Internal_Create
+UnityEngine.TerrainData::Internal_SetHeights
+UnityEngine.TerrainData::get_size_Injected
+UnityEngine.TerrainData::get_users
 UnityEngine.TextAsset::get_bytes
 UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphToTexture_Internal
 UnityEngine.TextCore.LowLevel.FontEngine::TryAddGlyphsToTexture_Internal
@@ -746,8 +766,10 @@ UnityEngine.Time::get_renderedFrameCount
 UnityEngine.Time::get_deltaTime
 UnityEngine.Time::get_fixedUnscaledTime
 UnityEngine.Time::get_realtimeSinceStartup
+UnityEngine.Time::get_time
 UnityEngine.Time::get_unscaledDeltaTime
 UnityEngine.Time::get_unscaledTime
+UnityEngine.Time::set_timeScale
 UnityEngine.TouchScreenKeyboard::get_active
 UnityEngine.TouchScreenKeyboard::get_canGetSelection
 UnityEngine.TouchScreenKeyboard::get_canSetSelection
@@ -780,6 +802,7 @@ UnityEngine.Transform::set_hasChanged
 UnityEngine.Transform::set_localPosition_Injected
 UnityEngine.Transform::set_localRotation_Injected
 UnityEngine.Transform::set_localScale_Injected
+UnityEngine.Transform::set_position_Injected
 UnityEngine.Transform::set_rotation_Injected
 UnityEngine.Transform::FindRelativeTransformWithPath
 UnityEngine.Transform::GetChild

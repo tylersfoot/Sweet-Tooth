@@ -41,14 +41,14 @@ public class CrazyCornAI : MonoBehaviour
     }
 
     void attackPlayer() {
-        //stops approaching
+        // stops approaching
         agent.SetDestination(transform.position);
 
-        //I need the code for the damage here and animation
+        // I need the code for the damage here and animation
     }
     void patrol() {
-        //
-        agent.transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        // ! this throws an error every frame so I commented it out lol
+        // agent.transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
     }
 }
 

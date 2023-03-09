@@ -5,6 +5,7 @@ public class BubblegumBlaster : MonoBehaviour
 {
     public GameObject projectilePrefab; // loads in projectile prefab
     public Transform projectileSpawn; // loads in the projectile spawn GameObject
+    public PauseMenu pauseMenu; // for checking if game is paused
 
     public float shootForce; // initial speed of projectile
     public float damage; // damage of projectile
@@ -30,10 +31,10 @@ public class BubblegumBlaster : MonoBehaviour
 
     void Update()
     {
-        if (isKeyDown && Time.time >= fireCooldown)
+        // if key is being pressed, cooldown is done, and not paused
+        if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused)
         {
             Shoot();
-
             // reset cooldown
             fireCooldown = Time.time + fireRate;
         }
@@ -62,13 +63,13 @@ public class BubblegumBlaster : MonoBehaviour
         projectileRenderer.material.color = randomColor;
 
         // destroy the projectile after the specified lifespan
-        StartCoroutine(DestroyAfterTime(newProjectile, lifespan));
+        StartCoroutine(Despawn(newProjectile, lifespan));
     }
 
-    private IEnumerator DestroyAfterTime(GameObject obj, float time)
+    private IEnumerator Despawn(GameObject obj, float timeSeconds)
     {
-        // this function destroys the gumball after `delay` seconds
-        yield return new WaitForSeconds(time);
+        // this function destroys the gumball after `time` seconds
+        yield return new WaitForSeconds(timeSeconds);
         Destroy(obj);
     }
 }

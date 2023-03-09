@@ -9,18 +9,19 @@ public class PlayerLook : MonoBehaviour
 
     public float xSensitivity = 80f;
     public float ySensitivity = 60f;
+    public float screenSizeFactor = 1f;
 
     void Start()
     {
-        // Get the base screen width and height
+        // get the base screen width and height
         int baseScreenWidth = 1920;
         int baseScreenHeight = 1080;
 
-        // Calculate the screen size factor
-        float screenSizeFactor = (float)Screen.width / baseScreenWidth + (float)Screen.height / baseScreenHeight;
+        // calculate the screen size factor
+        screenSizeFactor = (float)Screen.width / baseScreenWidth + (float)Screen.height / baseScreenHeight;
         screenSizeFactor /= 2f;
 
-        // Adjust the sensitivity based on the screen size factor
+        // adjust the sensitivity based on the screen size factor
         xSensitivity *= screenSizeFactor;
         ySensitivity *= screenSizeFactor;
     }
