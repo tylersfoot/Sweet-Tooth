@@ -310,7 +310,7 @@
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Input/PlayerInput.cs"
 "Assets/Scripts/Enemy/CrazyCornAI.cs"
-"Assets/Scripts/Enemy/GummyBear.cs"
+"Assets/Scripts/Enemy/GummyBearAI.cs"
 "Assets/Scripts/FPSCounter.cs"
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/Interactable.cs"
