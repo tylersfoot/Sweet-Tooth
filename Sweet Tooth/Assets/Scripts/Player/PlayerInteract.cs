@@ -9,13 +9,12 @@ public class PlayerInteract : MonoBehaviour
     private float distance = 3f;
     [SerializeField]
     private LayerMask mask;
-    private PlayerUI playerUI;
+    public HUD playerHUD;
     private InputManager inputManager;
     // Start is called before the first frame update
     void Start()
     {
         camera = GetComponent<PlayerLook>().camera;
-        playerUI = GetComponent<PlayerUI>();
         inputManager = GetComponent<InputManager>();
         
     }
@@ -23,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerUI.UpdateText(string.Empty);
+        playerHUD.UpdateText(string.Empty);
         // create a ray at center of camera shooting outwards
         Ray ray = new Ray(camera.transform.position, camera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * distance);   
@@ -33,7 +32,7 @@ public class PlayerInteract : MonoBehaviour
             if(hitInfo.collider.GetComponent<Interactable>() != null)
             {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-                playerUI.UpdateText(interactable.promptMessage);
+                playerHUD.UpdateText(interactable.promptMessage);
                 if (inputManager.onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();

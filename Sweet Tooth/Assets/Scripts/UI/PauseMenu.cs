@@ -32,6 +32,8 @@ public class PauseMenu : MonoBehaviour
             canvas.SetActive(true);
             isPaused = true;
             currentScreen = "pauseMenu";
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else
         {
@@ -49,6 +51,8 @@ public class PauseMenu : MonoBehaviour
             canvas.SetActive(false); // disables pause menu canvas
             isPaused = false;
             currentScreen = "none";
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
