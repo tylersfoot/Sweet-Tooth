@@ -336,6 +336,8 @@
 "Assets/Scripts/InputManager.cs"
 "Assets/Scripts/Interactable.cs"
 "Assets/Scripts/Interactables/Button.cs"
+"Assets/Scripts/Interactables/DamageCube.cs"
+"Assets/Scripts/Interactables/HealCube.cs"
 "Assets/Scripts/Player/PlayerAbility.cs"
 "Assets/Scripts/Player/PlayerInteract.cs"
 "Assets/Scripts/Player/PlayerLook.cs"

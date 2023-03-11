@@ -8,10 +8,10 @@ public class InputManager : MonoBehaviour
     private PlayerInput playerInput;
     public PlayerInput.OnFootActions onFoot;
 
-    private PlayerMotor motorScript;
-    private PlayerLook lookScript;
-    private PlayerAbility abilityScript;
-    public Tool toolScript;
+    private PlayerMotor motor;
+    private PlayerLook look;
+    private PlayerAbility ability;
+    public Tool tool;
     public PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Awake()
@@ -19,38 +19,37 @@ public class InputManager : MonoBehaviour
         playerInput = new PlayerInput();
         onFoot = playerInput.OnFoot;
 
-        motorScript = GetComponent<PlayerMotor>();
-        lookScript = GetComponent<PlayerLook>();
-        abilityScript = GetComponent<PlayerAbility>();
-        // finds "Tools" GameObject by looking for its tag and grabs Tool.cs
-        toolScript = GameObject.FindGameObjectWithTag("ToolsTag").GetComponent<Tool>();
+        motor = GetComponent<PlayerMotor>();
+        look = GetComponent<PlayerLook>();
+        ability = GetComponent<PlayerAbility>();
+    
         // jump
-        onFoot.Jump.performed += ctx => motorScript.Jump();
+        onFoot.Jump.performed += ctx => motor.Jump();
 
         // toggle crouching when pressing/releasing key
-        onFoot.Crouch.started += ctx => motorScript.Crouch(true);
-        onFoot.Crouch.canceled += ctx => motorScript.Crouch(false);
+        onFoot.Crouch.started += ctx => motor.Crouch(true);
+        onFoot.Crouch.canceled += ctx => motor.Crouch(false);
         
         // toggle sprint when pressing/releasing key
-        onFoot.Sprint.started += ctx => motorScript.Sprint(true);
-        onFoot.Sprint.canceled += ctx => motorScript.Sprint(false);
+        onFoot.Sprint.started += ctx => motor.Sprint(true);
+        onFoot.Sprint.canceled += ctx => motor.Sprint(false);
 
         // activate ability
         onFoot.Ability.started += ctx => {
             if (!pauseMenu.isPaused) {
-                abilityScript.ActivateAbility("sugarRush");
+                ability.ActivateAbility("sugarRush");
             }
         };
 
         // use tool
         onFoot.UseToolPrimary.started += ctx => {
             if (!pauseMenu.isPaused) {
-                toolScript.Use(true);
+                tool.Use(true);
             }
         };
         onFoot.UseToolPrimary.canceled += ctx => {
             if (!pauseMenu.isPaused) {
-                toolScript.Use(false);
+                tool.Use(false);
             }
         };
         // pause game
@@ -61,14 +60,14 @@ public class InputManager : MonoBehaviour
     void FixedUpdate()
     {
         // tell the playermotor to move using the value from our movement action
-        motorScript.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
 
         
     }
     void LateUpdate()
     {
         // tell the playermotor to look using the value from our look action
-        lookScript.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
     }
 
     private void OnEnable()
