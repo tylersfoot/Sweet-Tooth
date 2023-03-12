@@ -3,31 +3,24 @@ using UnityEngine.Animations;
 
 public class Tool : MonoBehaviour
 {
-    //! doesn't work
-    // the position of the tool relative to the player
-    // public Vector3 defaultPosition = new Vector3(0f, 0f, 0f);
-    // the rotation of the tool relative to the player
-    // public Vector3 defaultRotation = new Vector3(0f, 0f, 0f);
 
-    // initialize tool scripts
-    public BubblegumBlaster BubblegumBlasterScript;
+    // tool scripts
+    public BubblegumBlaster bubblegumBlaster;
+    public PeanutBrittleShotty peanutBrittleShotty;
 
-    private Transform playerTransform;
+    public GameObject player;
+    public Vector3 positionOffset;
+    private string targetTool;
+    public string activeTool;
+    public string[] tools;
+    public int activeToolIndex = 0;
 
-    public string activeTool = "BubblegumBlaster";
-
-    public float damage; // damage the tool inflicts
-    public float attackSpeed; // speed at which the tool can attack
-    public float range; // range of the tool
     public AudioClip[] audioClips; // audio clips to play when the tool is used
 
     // basically just teleports the tool to the player and positions it right
     void Start()
     {
-        // initialize all tool scripts 
-        BubblegumBlasterScript = GameObject.Find("BubblegumBlaster").GetComponent<BubblegumBlaster>();
-
-        // get all the direct children (tools) and set their position to zero
+        // get all the direct children (tools) and set their position to the player's position
         // this is so we can set the tools really far away in the editor so they are not in the way
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -37,30 +30,62 @@ public class Tool : MonoBehaviour
                 child.localPosition = Vector3.zero;
             }
         }
+        // set the "Tools" GameObject to the player's position + an offset
+        transform.position = player.transform.position + positionOffset;
+    }
 
-        //! none of this works and I don't know why just change the values in the inspector lol
-        // get the parent constraint component on the tool
-        // ParentConstraint parentConstraint = GetComponent<ParentConstraint>();
-        // set the position offset
-        // Debug.Log(parentConstraint.translationOffsets[0]);
-        // Debug.Log(defaultPosition);
-        // parentConstraint.translationOffsets[0] = new Vector3(1f, 0f, 0f);
-        // Debug.Log(parentConstraint.translationOffsets[0]);
+    public void SwitchTool(int num)
+    {
+        // if the number is over or under the index, for use with scroll wheel
+        if (num < 1)
+        {
+            num = tools.Length;
+        }
+        if (num > tools.Length)
+        {
+            num = 1;
+        }
 
+        // switches the tool
+        switch (num)
+        {
+        case 1:
+            targetTool = "Hands";
+            break;
+        case 2:
+            targetTool = "BubblegumBlaster";
+            break;
+        case 3:
+            targetTool = "PeanutBrittleShotty";
+            break;
+        default:
+            // do nothing
+            break;
+        }
+        GameObject currentToolObject = transform.Find(activeTool).gameObject;
+        GameObject targetToolObject = transform.Find(targetTool).gameObject;
+        if (currentToolObject?.name != targetToolObject?.name)
+        {
+            currentToolObject.SetActive(false);
+            targetToolObject.SetActive(true);
+            activeTool = targetTool;
+        }
     }
 
     // method to use the tool
     public void Use(bool key)
     {
-        if (activeTool == "BubblegumBlaster")
+        switch (activeTool)
         {
-            BubblegumBlasterScript.isKeyDown = key;
+        case "BubblegumBlaster":
+            bubblegumBlaster.isKeyDown = key;
+            break;
+        case "PeanutBrittleShotty":
+            peanutBrittleShotty.isKeyDown = key;
+            break;
+        default:
+            // do nothing, maybe hands in the future?
+            break;
         }
-        // play audio clip
-        // if (audioClips.Length > 0)
-        // {
-        //     int clipIndex = Random.Range(0, audioClips.Length);
-        //     AudioSource.PlayClipAtPoint(audioClips[clipIndex], transform.position);
-        // }
     }
 }

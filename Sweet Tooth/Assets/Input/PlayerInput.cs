@@ -116,6 +116,42 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToolOne"",
+                    ""type"": ""Button"",
+                    ""id"": ""b9398689-9b88-42aa-8d79-c96d4376eef7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToolTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""e02e7d99-73d7-47dc-87c8-396be0d3d0bf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToolThree"",
+                    ""type"": ""Button"",
+                    ""id"": ""02d9ef31-5462-49cf-b813-80fad45e944d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""947a2594-6d26-48e7-a5a3-8b1f37627f80"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -402,6 +438,50 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b03552ad-d6f5-402f-adcb-6283714506fe"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToolOne"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fbfc3fb5-ff2f-40b2-b442-8f0bb10a7140"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToolTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fd668a47-b597-4dbb-bb94-7767ee176c50"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToolThree"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85759d0d-8b23-4200-a430-8f51624db944"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -938,6 +1018,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_UseToolPrimary = m_OnFoot.FindAction("UseToolPrimary", throwIfNotFound: true);
         m_OnFoot_UseToolSecondary = m_OnFoot.FindAction("UseToolSecondary", throwIfNotFound: true);
         m_OnFoot_Pause = m_OnFoot.FindAction("Pause", throwIfNotFound: true);
+        m_OnFoot_ToolOne = m_OnFoot.FindAction("ToolOne", throwIfNotFound: true);
+        m_OnFoot_ToolTwo = m_OnFoot.FindAction("ToolTwo", throwIfNotFound: true);
+        m_OnFoot_ToolThree = m_OnFoot.FindAction("ToolThree", throwIfNotFound: true);
+        m_OnFoot_Scroll = m_OnFoot.FindAction("Scroll", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1021,6 +1105,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_UseToolPrimary;
     private readonly InputAction m_OnFoot_UseToolSecondary;
     private readonly InputAction m_OnFoot_Pause;
+    private readonly InputAction m_OnFoot_ToolOne;
+    private readonly InputAction m_OnFoot_ToolTwo;
+    private readonly InputAction m_OnFoot_ToolThree;
+    private readonly InputAction m_OnFoot_Scroll;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -1035,6 +1123,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @UseToolPrimary => m_Wrapper.m_OnFoot_UseToolPrimary;
         public InputAction @UseToolSecondary => m_Wrapper.m_OnFoot_UseToolSecondary;
         public InputAction @Pause => m_Wrapper.m_OnFoot_Pause;
+        public InputAction @ToolOne => m_Wrapper.m_OnFoot_ToolOne;
+        public InputAction @ToolTwo => m_Wrapper.m_OnFoot_ToolTwo;
+        public InputAction @ToolThree => m_Wrapper.m_OnFoot_ToolThree;
+        public InputAction @Scroll => m_Wrapper.m_OnFoot_Scroll;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1074,6 +1166,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @ToolOne.started += instance.OnToolOne;
+            @ToolOne.performed += instance.OnToolOne;
+            @ToolOne.canceled += instance.OnToolOne;
+            @ToolTwo.started += instance.OnToolTwo;
+            @ToolTwo.performed += instance.OnToolTwo;
+            @ToolTwo.canceled += instance.OnToolTwo;
+            @ToolThree.started += instance.OnToolThree;
+            @ToolThree.performed += instance.OnToolThree;
+            @ToolThree.canceled += instance.OnToolThree;
+            @Scroll.started += instance.OnScroll;
+            @Scroll.performed += instance.OnScroll;
+            @Scroll.canceled += instance.OnScroll;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -1108,6 +1212,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @ToolOne.started -= instance.OnToolOne;
+            @ToolOne.performed -= instance.OnToolOne;
+            @ToolOne.canceled -= instance.OnToolOne;
+            @ToolTwo.started -= instance.OnToolTwo;
+            @ToolTwo.performed -= instance.OnToolTwo;
+            @ToolTwo.canceled -= instance.OnToolTwo;
+            @ToolThree.started -= instance.OnToolThree;
+            @ToolThree.performed -= instance.OnToolThree;
+            @ToolThree.canceled -= instance.OnToolThree;
+            @Scroll.started -= instance.OnScroll;
+            @Scroll.performed -= instance.OnScroll;
+            @Scroll.canceled -= instance.OnScroll;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1255,6 +1371,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnUseToolPrimary(InputAction.CallbackContext context);
         void OnUseToolSecondary(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnToolOne(InputAction.CallbackContext context);
+        void OnToolTwo(InputAction.CallbackContext context);
+        void OnToolThree(InputAction.CallbackContext context);
+        void OnScroll(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

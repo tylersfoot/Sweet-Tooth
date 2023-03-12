@@ -24,15 +24,35 @@ public class InputManager : MonoBehaviour
         ability = GetComponent<PlayerAbility>();
     
         // jump
-        onFoot.Jump.performed += ctx => motor.Jump();
+        onFoot.Jump.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                motor.Jump();
+            }
+        };
 
         // toggle crouching when pressing/releasing key
-        onFoot.Crouch.started += ctx => motor.Crouch(true);
-        onFoot.Crouch.canceled += ctx => motor.Crouch(false);
+        onFoot.Crouch.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                motor.Crouch(true);
+            }
+        };
+        onFoot.Crouch.canceled += ctx => {
+            if (!pauseMenu.isPaused) {
+                motor.Crouch(false);
+            }
+        };
         
         // toggle sprint when pressing/releasing key
-        onFoot.Sprint.started += ctx => motor.Sprint(true);
-        onFoot.Sprint.canceled += ctx => motor.Sprint(false);
+        onFoot.Sprint.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                motor.Sprint(true);
+            }
+        };
+        onFoot.Sprint.canceled += ctx => {
+            if (!pauseMenu.isPaused) {
+                motor.Sprint(false);
+            }
+        };
 
         // activate ability
         onFoot.Ability.started += ctx => {
@@ -50,6 +70,37 @@ public class InputManager : MonoBehaviour
         onFoot.UseToolPrimary.canceled += ctx => {
             if (!pauseMenu.isPaused) {
                 tool.Use(false);
+            }
+        };
+
+        // switch tools using scroll wheel
+        onFoot.Scroll.performed += ctx => {
+            if (!pauseMenu.isPaused) {
+                float scrollValue = ctx.ReadValue<float>();
+                if (scrollValue > 0) {
+                    // scroll up - switch to the next tool in order
+                    tool.SwitchTool(tool.activeToolIndex + 1);
+                } else if (scrollValue < 0) {
+                    // scroll down - switch to the previous tool in order
+                    tool.SwitchTool(tool.activeToolIndex - 1);
+                }
+            }
+        };
+
+        // switch tools using keyboard
+        onFoot.ToolOne.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                tool.SwitchTool(1);
+            }
+        };
+        onFoot.ToolTwo.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                tool.SwitchTool(2);
+            }
+        };
+        onFoot.ToolThree.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                tool.SwitchTool(3);
             }
         };
         // pause game

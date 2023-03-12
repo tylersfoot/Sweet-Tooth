@@ -9,16 +9,21 @@ public class HUD : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI promptText;
     public TextMeshProUGUI fpsText;
+    public TextMeshProUGUI healthText;
     public Image redHealthBar; // instantly changes to health
     public Image pinkHealthBar; // lerps to change with playerHealthDisplay
 
-    public float playerMaxHealth = 100; // max health
-    public float playerHealth = 100; // player's health
-    public float playerHealthDisplay = 100; // the displayed version, lerped
+    public float playerMaxHealth; // max health
+    public float playerHealth; // player's health
+    public float playerHealthDisplay; // the displayed version, lerped
 
-    public float lerpSpeed = 5f; // the lerp speed of the health bars
-    private bool isDamaged = false;
-    private Coroutine pinkBarLerpCoroutine;
+    public bool isDamaged = false; // for stopping pink bar progress
+    public float pinkLerpSpeed; // the lerp speed of the pink health bar
+    public float pinkWaitTime; // time until pink bar starts updating
+    private float pinkCurrentTime; 
+    private float pinkLerpedFillAmount;
+    public float redLerpSpeed; 
+    // private float redLerpedFillAmount = 0;
 
     private float deltaTime = 0.0f; // for calculating fps
     public string version;
@@ -28,16 +33,24 @@ public class HUD : MonoBehaviour
         // calculate the FPS
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-
         // update the FPS text
         fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
 
-        // lerp the pink health bar towards the red health bar
-        // float lerpedFillAmount = Mathf.Lerp(pinkHealthBar.fillAmount, redHealthBar.fillAmount, Time.deltaTime * 5f);
-        // pinkHealthBar.fillAmount = lerpedFillAmount;
+        // smooth the red bar
+        playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerHealth, Time.deltaTime * redLerpSpeed);
+        redHealthBar.fillAmount = playerHealthDisplay / playerMaxHealth;
+        // redLerpedFillAmount = Mathf.Lerp(redHealthBar.fillAmount, playerHealth/playerMaxHealth, Time.deltaTime * redLerpSpeed);
+        // redHealthBar.fillAmount = redLerpedFillAmount;
 
-        // update the playerHealthDisplay variable
-        // playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerHealth, Time.deltaTime * 5f);
+        pinkCurrentTime += Time.deltaTime;
+        if (pinkCurrentTime >= pinkWaitTime)
+        {
+            // lerp the pink health bar towards the red health bar
+            pinkLerpedFillAmount = Mathf.Lerp(pinkHealthBar.fillAmount, redHealthBar.fillAmount, Time.deltaTime * pinkLerpSpeed);
+        }
+        pinkHealthBar.fillAmount = pinkLerpedFillAmount;
+        // update the health text
+        healthText.text = Mathf.RoundToInt(playerHealthDisplay).ToString() + "/" + playerMaxHealth;
     }
 
     // Start is called before the first frame update
@@ -61,11 +74,7 @@ public class HUD : MonoBehaviour
             PlayerDeath(source);
         }
 
-        // set the red bar fill amount exactly to the current health
-        redHealthBar.fillAmount = playerHealth/playerMaxHealth;
-
-        // update the pink bar fill amount using Lerp
-        StartCoroutine(UpdatePinkHealthBar());
+        pinkCurrentTime = 0f; // reset pink bar timer
     }
 
     public void HealPlayer(float amount, string source)
@@ -76,40 +85,6 @@ public class HUD : MonoBehaviour
         if (playerHealth > playerMaxHealth)
         {
             playerHealth = playerMaxHealth;
-        }
-
-        // set the pink bar fill amount exactly to the current health
-        pinkHealthBar.fillAmount = playerHealth/playerMaxHealth;
-
-        // update the red bar fill amount using Lerp
-        StartCoroutine(UpdateRedHealthBar());
-    }
-
-    private IEnumerator UpdateRedHealthBar()
-    {
-        float t = 0f;
-        float startFill = redHealthBar.fillAmount;
-        float endFill = playerHealth/playerMaxHealth;
-
-        while (t < 1f)
-        {
-            t += Time.deltaTime * lerpSpeed;
-            redHealthBar.fillAmount = Mathf.Lerp(startFill, endFill, t);
-            yield return null;
-        }
-    }
-
-    private IEnumerator UpdatePinkHealthBar()
-    {
-        float t = 0f;
-        float startFill = pinkHealthBar.fillAmount;
-        float endFill = playerHealth/playerMaxHealth;
-
-        while (t < 1f)
-        {
-            t += Time.deltaTime * lerpSpeed;
-            pinkHealthBar.fillAmount = Mathf.Lerp(startFill, endFill, t);
-            yield return null;
         }
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BubblegumBlaster : MonoBehaviour
+public class PeanutBrittleShotty : MonoBehaviour
 {
     public GameObject projectilePrefab; // loads in projectile prefab
     public Transform projectileSpawn; // loads in the projectile spawn GameObject
@@ -14,6 +14,7 @@ public class BubblegumBlaster : MonoBehaviour
     public float range; // how far the projectile travels
     public float lifespan; // how long until the projectile despawns
     public float spread; // max spread angle deviation in degrees
+    public float shotAmount; // amount of shots to be fired
     private float fireCooldown = 0f; // time until next shot
     public bool isKeyDown = false;
 
@@ -23,6 +24,7 @@ public class BubblegumBlaster : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
+
     }
 
     void Update()
@@ -30,7 +32,10 @@ public class BubblegumBlaster : MonoBehaviour
         // if key is being pressed, cooldown is done, and not paused
         if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused)
         {
-            Shoot();
+            for (int i = 0; i < shotAmount; i++)
+            {
+                Shoot();
+            }
             // reset cooldown
             fireCooldown = Time.time + fireRate;
         }
