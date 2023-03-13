@@ -12,6 +12,7 @@ public class Tool : MonoBehaviour
     public Vector3 positionOffset;
     private string targetTool;
     public string activeTool;
+    public string ammoDisplay;
     public string[] tools;
     public int activeToolIndex = 0;
 
@@ -32,6 +33,23 @@ public class Tool : MonoBehaviour
         }
         // set the "Tools" GameObject to the player's position + an offset
         transform.position = player.transform.position + positionOffset;
+    }
+
+    void Update()
+    {
+        switch (activeTool)
+        {
+        case "BubblegumBlaster":
+            ammoDisplay = bubblegumBlaster.ammo.ToString();
+            break;
+        case "PeanutBrittleShotty":
+            ammoDisplay = peanutBrittleShotty.ammo.ToString();
+            break;
+        default:
+            ammoDisplay = "";
+            break;
+        }
+        
     }
 
     public void SwitchTool(int num)

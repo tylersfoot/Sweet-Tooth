@@ -10,8 +10,13 @@ public class HUD : MonoBehaviour
     private TextMeshProUGUI promptText;
     public TextMeshProUGUI fpsText;
     public TextMeshProUGUI healthText;
+    public TextMeshProUGUI ammoText;
     public Image redHealthBar; // instantly changes to health
     public Image pinkHealthBar; // lerps to change with playerHealthDisplay
+    public Image sugarRushBar; // changes over time
+
+    public Tool tool;
+    public PlayerAbility playerAbility;
 
     public float playerMaxHealth; // max health
     public float playerHealth; // player's health
@@ -35,6 +40,12 @@ public class HUD : MonoBehaviour
         float fps = 1.0f / deltaTime;
         // update the FPS text
         fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
+
+        // update ammo text
+        ammoText.text = tool.ammoDisplay;
+
+        // sugar rush bar
+        sugarRushBar.fillAmount = playerAbility.abilitySugarRushProgress;
 
         // smooth the red bar
         playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerHealth, Time.deltaTime * redLerpSpeed);

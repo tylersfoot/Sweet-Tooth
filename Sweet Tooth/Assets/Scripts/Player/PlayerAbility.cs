@@ -8,6 +8,8 @@ public class PlayerAbility : MonoBehaviour
     public PlayerMotor playerMotor;
     private PostProcessLayer postProcessLayer;
     public float abilityDuration = 3f; // default ability length in seconds
+    public float abilitySugarRushProgress;
+    public float abilitySugarRushSpeed; // fill speed
     public bool abilitySugarRush = false;
 
     private Coroutine activeAbilityCoroutine; // reference to active ability coroutine
@@ -19,11 +21,25 @@ public class PlayerAbility : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        if (abilitySugarRushProgress >= 1)
+        {
+            abilitySugarRushProgress = 1;
+        }
+        else
+        {
+            abilitySugarRushProgress += abilitySugarRushSpeed * Time.deltaTime;
+        }
+    }
+
+
     public void ActivateAbility(string ability)
     {
-        if (ability == "sugarRush" && !abilitySugarRush)
+        if (ability == "sugarRush" && !abilitySugarRush && abilitySugarRushProgress == 1)
         {
             activeAbilityCoroutine = StartCoroutine(SugarRushAbilityCoroutine()); // if ability is not active, start ability
+            abilitySugarRushProgress = 0;
         }
     }
 
