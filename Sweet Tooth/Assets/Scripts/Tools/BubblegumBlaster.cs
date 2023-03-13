@@ -14,7 +14,8 @@ public class BubblegumBlaster : MonoBehaviour
     public float range; // how far the projectile travels
     public float lifespan; // how long until the projectile despawns
     public float spread; // max spread angle deviation in degrees
-    public float ammo; // how much ammo the player has
+    public float currentAmmo; // how much ammo the player has
+    public float maxAmmo; // max ammo
     private float fireCooldown = 0f; // time until next shot
     public bool isKeyDown = false;
 
@@ -23,15 +24,16 @@ public class BubblegumBlaster : MonoBehaviour
 
     void Start()
     {
+        currentAmmo = maxAmmo;
         gameObject.SetActive(false);
     }
 
     void Update()
     {
         // if key is being pressed, cooldown is done, and not paused
-        if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused && ammo > 0)
+        if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused && currentAmmo > 0)
         {
-            ammo -= 1;
+            currentAmmo -= 1;
             Shoot();
             // reset cooldown
             fireCooldown = Time.time + fireRate;

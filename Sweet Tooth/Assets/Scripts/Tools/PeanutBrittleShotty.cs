@@ -15,25 +15,26 @@ public class PeanutBrittleShotty : MonoBehaviour
     public float lifespan; // how long until the projectile despawns
     public float spread; // max spread angle deviation in degrees
     public float shotAmount; // amount of shots to be fired
-    public float ammo; // how much ammo the player has
+    public float currentAmmo; // how much ammo the player has
+    public float maxAmmo; // max ammo
     private float fireCooldown = 0f; // time until next shot
     public bool isKeyDown = false;
-
+    
     // array of colors for the gumball
     public Color[] colors = new Color[] {Color.red, Color.green, Color.blue, Color.yellow};
 
     void Start()
     {
+        currentAmmo = maxAmmo;
         gameObject.SetActive(false);
-
     }
 
     void Update()
     {
         // if key is being pressed, cooldown is done, and not paused
-        if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused && ammo > 0)
+        if (isKeyDown && Time.time >= fireCooldown && !pauseMenu.isPaused && currentAmmo > 0)
         {
-            ammo -= 1;
+            currentAmmo -= 1;
             for (int i = 0; i < shotAmount; i++)
             {
                 Shoot();

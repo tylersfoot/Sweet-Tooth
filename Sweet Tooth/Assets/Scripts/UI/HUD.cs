@@ -23,6 +23,9 @@ public class HUD : MonoBehaviour
     public float playerHealthDisplay; // the displayed version, lerped
 
     public bool isDamaged = false; // for stopping pink bar progress
+    public float healWaitTime; // time until player starts naturally healing
+    public float healCurrentTime;
+    public float healSpeed;
     public float pinkLerpSpeed; // the lerp speed of the pink health bar
     public float pinkWaitTime; // time until pink bar starts updating
     private float pinkCurrentTime; 
@@ -42,10 +45,23 @@ public class HUD : MonoBehaviour
         fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
 
         // update ammo text
-        ammoText.text = tool.ammoDisplay;
+        if (tool.currentAmmoDisplay == "")
+        {
+            ammoText.text = "";
+        }
+        else
+        {
+            ammoText.text = tool.currentAmmoDisplay + "/" + tool.maxAmmoDisplay;
+        }
 
         // sugar rush bar
         sugarRushBar.fillAmount = playerAbility.abilitySugarRushProgress;
+
+        healCurrentTime += Time.deltaTime;
+        if (healCurrentTime >= healWaitTime)
+        {
+             HealPlayer(healSpeed * Mathf.Pow(healCurrentTime, 1.5f) * Time.deltaTime, "naturalRegen");
+        }
 
         // smooth the red bar
         playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerHealth, Time.deltaTime * redLerpSpeed);
@@ -86,11 +102,12 @@ public class HUD : MonoBehaviour
         }
 
         pinkCurrentTime = 0f; // reset pink bar timer
+        healCurrentTime = 0f; // reset natural healing
     }
 
     public void HealPlayer(float amount, string source)
     {
-        Debug.Log("Healed player " + amount + " HP");
+        // Debug.Log("Healed player " + amount + " HP");
         playerHealth += amount;
 
         if (playerHealth > playerMaxHealth)

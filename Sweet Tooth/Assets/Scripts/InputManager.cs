@@ -73,6 +73,12 @@ public class InputManager : MonoBehaviour
             }
         };
 
+        onFoot.Reload.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                tool.Reload();
+            }
+        };
+
         // switch tools using scroll wheel
         onFoot.Scroll.performed += ctx => {
             if (!pauseMenu.isPaused) {

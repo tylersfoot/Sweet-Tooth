@@ -152,6 +152,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""e64426e8-640d-45b2-8805-8233d3f91333"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -482,6 +491,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba2d4d01-94ef-48c0-aebc-1e39fe1d2491"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1022,6 +1042,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_ToolTwo = m_OnFoot.FindAction("ToolTwo", throwIfNotFound: true);
         m_OnFoot_ToolThree = m_OnFoot.FindAction("ToolThree", throwIfNotFound: true);
         m_OnFoot_Scroll = m_OnFoot.FindAction("Scroll", throwIfNotFound: true);
+        m_OnFoot_Reload = m_OnFoot.FindAction("Reload", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1109,6 +1130,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_ToolTwo;
     private readonly InputAction m_OnFoot_ToolThree;
     private readonly InputAction m_OnFoot_Scroll;
+    private readonly InputAction m_OnFoot_Reload;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -1127,6 +1149,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ToolTwo => m_Wrapper.m_OnFoot_ToolTwo;
         public InputAction @ToolThree => m_Wrapper.m_OnFoot_ToolThree;
         public InputAction @Scroll => m_Wrapper.m_OnFoot_Scroll;
+        public InputAction @Reload => m_Wrapper.m_OnFoot_Reload;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1178,6 +1201,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Scroll.started += instance.OnScroll;
             @Scroll.performed += instance.OnScroll;
             @Scroll.canceled += instance.OnScroll;
+            @Reload.started += instance.OnReload;
+            @Reload.performed += instance.OnReload;
+            @Reload.canceled += instance.OnReload;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -1224,6 +1250,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Scroll.started -= instance.OnScroll;
             @Scroll.performed -= instance.OnScroll;
             @Scroll.canceled -= instance.OnScroll;
+            @Reload.started -= instance.OnReload;
+            @Reload.performed -= instance.OnReload;
+            @Reload.canceled -= instance.OnReload;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1375,6 +1404,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnToolTwo(InputAction.CallbackContext context);
         void OnToolThree(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

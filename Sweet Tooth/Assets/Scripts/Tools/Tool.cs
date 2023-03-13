@@ -12,7 +12,8 @@ public class Tool : MonoBehaviour
     public Vector3 positionOffset;
     private string targetTool;
     public string activeTool;
-    public string ammoDisplay;
+    public string currentAmmoDisplay;
+    public string maxAmmoDisplay;
     public string[] tools;
     public int activeToolIndex = 0;
 
@@ -40,13 +41,16 @@ public class Tool : MonoBehaviour
         switch (activeTool)
         {
         case "BubblegumBlaster":
-            ammoDisplay = bubblegumBlaster.ammo.ToString();
+            currentAmmoDisplay = bubblegumBlaster.currentAmmo.ToString();
+            maxAmmoDisplay = bubblegumBlaster.maxAmmo.ToString();
             break;
         case "PeanutBrittleShotty":
-            ammoDisplay = peanutBrittleShotty.ammo.ToString();
+            currentAmmoDisplay = peanutBrittleShotty.currentAmmo.ToString();
+            maxAmmoDisplay = peanutBrittleShotty.maxAmmo.ToString();
             break;
         default:
-            ammoDisplay = "";
+            currentAmmoDisplay = "";
+            maxAmmoDisplay = "";
             break;
         }
         
@@ -104,6 +108,24 @@ public class Tool : MonoBehaviour
         default:
             // do nothing, maybe hands in the future?
             break;
+        }
+    }
+
+    public void Reload()
+    {
+        if (float.Parse(currentAmmoDisplay) < float.Parse(maxAmmoDisplay))
+        {
+            switch (activeTool)
+            {
+            case "BubblegumBlaster":
+                bubblegumBlaster.currentAmmo = bubblegumBlaster.maxAmmo;
+                break;
+            case "PeanutBrittleShotty":
+                peanutBrittleShotty.currentAmmo = peanutBrittleShotty.maxAmmo;
+                break;
+            default:
+                break;
+            }
         }
     }
 }
