@@ -6,7 +6,7 @@ public class CrazyCornAI : MonoBehaviour
     NavMeshAgent agent;
     Transform target;
     public float sightRange = 10f; // distance the enemy can see the player
-    public float attackRange = 1f; // distance the enemy can attack the player
+    public float attackRange = 3f; // distance the enemy can attack the player
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
@@ -44,8 +44,10 @@ public class CrazyCornAI : MonoBehaviour
     void attackPlayer() {
         // stops approaching
         agent.SetDestination(transform.position);
+        
 
         // I need the code for the damage here and animation
+        
     }
     void patrol() {
         
