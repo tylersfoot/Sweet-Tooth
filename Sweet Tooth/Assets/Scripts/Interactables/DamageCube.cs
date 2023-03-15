@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class DamageCube : Interactable
 {
-    public HUD HUDScript;
+    public PlayerStats playerStats;
     private int amount = 20;
 
     protected override void Interact()
     {
-        HUDScript.DamagePlayer(amount, "damageCube");
+        playerStats.DamagePlayer(amount, "damageCube");
     }
 }

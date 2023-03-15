@@ -7,6 +7,8 @@ public class BubblegumBlaster : MonoBehaviour
     public GameObject projectilePrefab; // loads in projectile prefab
     public Transform projectileSpawn; // loads in the projectile spawn GameObject
     public PauseMenu pauseMenu; // for checking if game is paused
+    public Tool tool; // for despawning projectiles
+    public SoundManager soundManager; // for playing sound
 
     public float shootForce; // initial speed of projectile
     public float damage; // damage of projectile
@@ -18,6 +20,8 @@ public class BubblegumBlaster : MonoBehaviour
     public float maxAmmo; // max ammo
     private float fireCooldown = 0f; // time until next shot
     public bool isKeyDown = false;
+
+    public AudioClip shootSound;
 
     // array of colors for the gumball
     public Color[] colors = new Color[] {Color.red, Color.green, Color.blue, Color.yellow};
@@ -57,19 +61,14 @@ public class BubblegumBlaster : MonoBehaviour
 
         // get the Renderer component of the new projectile
         Renderer projectileRenderer = newProjectile.GetComponent<Renderer>();
-        // choose a random color from the colors array
+        // choose a random color from the colors arrayd
         Color randomColor = colors[Random.Range(0, colors.Length)];
         // set the color of the projectile to the random color
         projectileRenderer.material.color = randomColor;
 
         // destroy the projectile after the specified lifespan
-        StartCoroutine(Despawn(newProjectile, lifespan));
-    }
+        tool.Despawn(newProjectile, lifespan);
 
-    private IEnumerator Despawn(GameObject obj, float timeSeconds)
-    {
-        // this function destroys the gumball after `time` seconds
-        yield return new WaitForSeconds(timeSeconds);
-        Destroy(obj);
+        soundManager.PlaySound(shootSound);
     }
 }

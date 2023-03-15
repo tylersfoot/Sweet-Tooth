@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class PlayerAbility : MonoBehaviour
 {
     public PlayerMotor playerMotor;
+    public PlayerStats playerStats;
     private PostProcessLayer postProcessLayer;
     public float abilityDuration = 3f; // default ability length in seconds
     public float abilitySugarRushProgress;
@@ -48,10 +49,10 @@ public class PlayerAbility : MonoBehaviour
         // perform some action when ability starts
         postProcessLayer.enabled = true;
         abilitySugarRush = true;
-        float walkSpeedBefore = playerMotor.walkSpeed;
+        float walkSpeedBefore = playerStats.walkSpeed;
         float walkFOVBefore = playerMotor.walkFOV;
         float walkJumpHeightBefore = playerMotor.walkJumpHeight;
-        playerMotor.walkSpeed = 10;
+        playerStats.walkSpeed = 10;
         playerMotor.walkFOV = 90;
         playerMotor.walkJumpHeight = 2f;
             
@@ -59,7 +60,7 @@ public class PlayerAbility : MonoBehaviour
         // perform some action when ability ends
         postProcessLayer.enabled = false;
         abilitySugarRush = false;
-        playerMotor.walkSpeed = walkSpeedBefore;
+        playerStats.walkSpeed = walkSpeedBefore;
         playerMotor.walkFOV = walkFOVBefore;
         playerMotor.walkJumpHeight = walkJumpHeightBefore;
     }

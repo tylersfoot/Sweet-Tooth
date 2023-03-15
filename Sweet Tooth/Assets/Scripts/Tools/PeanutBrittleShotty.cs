@@ -7,6 +7,8 @@ public class PeanutBrittleShotty : MonoBehaviour
     public GameObject projectilePrefab; // loads in projectile prefab
     public Transform projectileSpawn; // loads in the projectile spawn GameObject
     public PauseMenu pauseMenu; // for checking if game is paused
+    public Tool tool; // for despawning projectiles
+    public SoundManager soundManager; // for playing sound
 
     public float shootForce; // initial speed of projectile
     public float damage; // damage of projectile
@@ -19,9 +21,8 @@ public class PeanutBrittleShotty : MonoBehaviour
     public float maxAmmo; // max ammo
     private float fireCooldown = 0f; // time until next shot
     public bool isKeyDown = false;
-    
-    // array of colors for the gumball
-    public Color[] colors = new Color[] {Color.red, Color.green, Color.blue, Color.yellow};
+
+    public AudioClip shootSound;
 
     void Start()
     {
@@ -38,6 +39,8 @@ public class PeanutBrittleShotty : MonoBehaviour
             for (int i = 0; i < shotAmount; i++)
             {
                 Shoot();
+                soundManager.PlaySound(shootSound);
+                soundManager.PlaySound(shootSound);
             }
             // reset cooldown
             fireCooldown = Time.time + fireRate;
@@ -50,30 +53,20 @@ public class PeanutBrittleShotty : MonoBehaviour
         float spreadAngleX = Random.Range(-spread, spread);
         float spreadAngleY = Random.Range(-spread, spread);
 
+        // create a random axis of rotation for the spread
+        Vector3 axis = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+
         // apply the spread angles to the projectile's forward direction
-        Vector3 spreadVector = Quaternion.Euler(spreadAngleX, spreadAngleY, 0f) * projectileSpawn.forward;
-    
+        Quaternion spreadRotation = Quaternion.AngleAxis(spreadAngleX, Vector3.right) * Quaternion.AngleAxis(spreadAngleY, Vector3.up) * Quaternion.AngleAxis(spread, axis);
+        Vector3 spreadVector = spreadRotation * projectileSpawn.forward;
+        
         // spawn a new projectile at the shoot point
-        GameObject newProjectile = Instantiate(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation, GameObject.Find("Projectiles").transform);
+        GameObject newProjectile = Instantiate(projectilePrefab, projectileSpawn.position, Quaternion.identity, GameObject.Find("Projectiles").transform);
         // apply a force to the projectile in the shoot point's forward direction with randomized spread
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
         projectileRb.AddForce(spreadVector * shootForce, ForceMode.Impulse);
 
-        // get the Renderer component of the new projectile
-        Renderer projectileRenderer = newProjectile.GetComponent<Renderer>();
-        // choose a random color from the colors array
-        Color randomColor = colors[Random.Range(0, colors.Length)];
-        // set the color of the projectile to the random color
-        projectileRenderer.material.color = randomColor;
-
         // destroy the projectile after the specified lifespan
-        StartCoroutine(Despawn(newProjectile, lifespan));
-    }
-
-    private IEnumerator Despawn(GameObject obj, float timeSeconds)
-    {
-        // this function destroys the gumball after `time` seconds
-        yield return new WaitForSeconds(timeSeconds);
-        Destroy(obj);
+        tool.Despawn(newProjectile, lifespan);
     }
 }

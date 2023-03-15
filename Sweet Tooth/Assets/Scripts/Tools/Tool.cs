@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -127,5 +129,20 @@ public class Tool : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void Despawn(GameObject obj, float timeSeconds)
+    {
+        // this function destroys the object after `time` seconds
+        StartCoroutine(DespawnCoroutine(obj, timeSeconds));
+    }
+
+    private IEnumerator DespawnCoroutine(GameObject obj, float timeSeconds)
+    {
+        // wait for the specified amount of time
+        yield return new WaitForSeconds(timeSeconds);
+
+        // destroy the object
+        Destroy(obj);
     }
 }

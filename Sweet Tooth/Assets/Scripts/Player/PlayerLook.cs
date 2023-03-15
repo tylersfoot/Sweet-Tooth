@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public new Camera camera;
-    private float xRotation = 0f;
+    private float xRotation;
 
-    public float xSensitivity = 80f;
-    public float ySensitivity = 60f;
-    public float screenSizeFactor = 1f;
+    public float xSensitivity;
+    public float ySensitivity;
+    public float screenSizeFactor;
 
     void Start()
     {

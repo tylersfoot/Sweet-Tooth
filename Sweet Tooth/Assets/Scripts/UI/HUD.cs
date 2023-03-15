@@ -6,8 +6,7 @@ using TMPro;
 
 public class HUD : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI promptText;
+    public TextMeshProUGUI promptText;
     public TextMeshProUGUI fpsText;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI ammoText;
@@ -17,9 +16,8 @@ public class HUD : MonoBehaviour
 
     public Tool tool;
     public PlayerAbility playerAbility;
+    public PlayerStats playerStats;
 
-    public float playerMaxHealth; // max health
-    public float playerHealth; // player's health
     public float playerHealthDisplay; // the displayed version, lerped
 
     public bool isDamaged = false; // for stopping pink bar progress
@@ -28,7 +26,7 @@ public class HUD : MonoBehaviour
     public float healSpeed;
     public float pinkLerpSpeed; // the lerp speed of the pink health bar
     public float pinkWaitTime; // time until pink bar starts updating
-    private float pinkCurrentTime; 
+    public float pinkCurrentTime; 
     private float pinkLerpedFillAmount;
     public float redLerpSpeed; 
     // private float redLerpedFillAmount = 0;
@@ -60,12 +58,12 @@ public class HUD : MonoBehaviour
         healCurrentTime += Time.deltaTime;
         if (healCurrentTime >= healWaitTime)
         {
-             HealPlayer(healSpeed * Mathf.Pow(healCurrentTime, 1.5f) * Time.deltaTime, "naturalRegen");
+             playerStats.HealPlayer(healSpeed * Mathf.Pow(healCurrentTime, 1.5f) * Time.deltaTime, "naturalRegen");
         }
 
         // smooth the red bar
-        playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerHealth, Time.deltaTime * redLerpSpeed);
-        redHealthBar.fillAmount = playerHealthDisplay / playerMaxHealth;
+        playerHealthDisplay = Mathf.Lerp(playerHealthDisplay, playerStats.playerHealth, Time.deltaTime * redLerpSpeed);
+        redHealthBar.fillAmount = playerHealthDisplay / playerStats.playerMaxHealth;
         // redLerpedFillAmount = Mathf.Lerp(redHealthBar.fillAmount, playerHealth/playerMaxHealth, Time.deltaTime * redLerpSpeed);
         // redHealthBar.fillAmount = redLerpedFillAmount;
 
@@ -77,48 +75,14 @@ public class HUD : MonoBehaviour
         }
         pinkHealthBar.fillAmount = pinkLerpedFillAmount;
         // update the health text
-        healthText.text = Mathf.RoundToInt(playerHealthDisplay).ToString() + "/" + playerMaxHealth;
+        healthText.text = Mathf.RoundToInt(playerHealthDisplay).ToString() + "/" + playerStats.playerMaxHealth;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         // hides and locks the cursor when the game starts
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        HealPlayer(100f, "startGame");
-    }
-
-    public void DamagePlayer(float amount, string source)
-    {
-        Debug.Log("Damaged player " + amount + " HP");
-        playerHealth -= amount;
-
-        if (playerHealth <= 0)
-        {
-            playerHealth = 0;
-            PlayerDeath(source);
-        }
-
-        pinkCurrentTime = 0f; // reset pink bar timer
-        healCurrentTime = 0f; // reset natural healing
-    }
-
-    public void HealPlayer(float amount, string source)
-    {
-        // Debug.Log("Healed player " + amount + " HP");
-        playerHealth += amount;
-
-        if (playerHealth > playerMaxHealth)
-        {
-            playerHealth = playerMaxHealth;
-        }
-    }
-
-    public void PlayerDeath(string source)
-    {
-        Debug.Log("Player died from " + source);
     }
 
     public void UpdateText(string promptMessage)

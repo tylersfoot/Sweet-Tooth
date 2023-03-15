@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class HealCube : Interactable
 {
-    public HUD HUDScript;
+    public PlayerStats playerStats;
     private int amount = 20;
 
     protected override void Interact()
     {
-        HUDScript.HealPlayer(amount, "healCube");
+        playerStats.HealPlayer(amount, "healCube");
     }
 }

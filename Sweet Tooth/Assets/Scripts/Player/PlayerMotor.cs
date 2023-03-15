@@ -7,31 +7,34 @@ public class PlayerMotor : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     public new Camera camera;
+    public PlayerStats playerStats;
+
     private bool isGrounded;
     public bool lerpCrouch;
     public bool crouching;
     public bool sprinting;
     private bool sprintKeyDown;
-    public float crouchHeight = 1f; // crouch height
-    public float standHeight = 2f; // standing height
-    public float crouchHeightVelocity = 0f;
-    public float crouchHeightSmoothTime = 0.1f;
-    public float speed = 5f; // current speed
-    public float targetSpeed = 5f; // target speed
-    public float walkSpeed = 5f; // walking speed
-    public float crouchSpeedFactor = 0.6f; // crouching speed factor
-    public float sprintSpeedFactor = 1.4f; // sprinting speed factor
-    private float fovVelocity = 0f;
-    public float walkFOV = 60f; // walking FOV
-    public float sprintFOVFactor = 1.33f; // sprinting FOV factor
-    public float fovDampTime = 0.1f; // time to reach target FOV
+
+    public float crouchHeight; // crouch height
+    public float standHeight; // standing height
+    public float crouchHeightVelocity;
+    public float crouchHeightSmoothTime;
+    public float speed; // current speed
+    public float targetSpeed; // target speed
+    public float crouchSpeedFactor; // crouching speed factor
+    public float sprintSpeedFactor; // sprinting speed factor
+    private float fovVelocity;
+    public float walkFOV; // walking FOV
+    public float sprintFOVFactor; // sprinting FOV factor
+    public float fovDampTime; // time to reach target FOV
     private float currentFOV; // current FOV
-    public float gravity = -30f; // gravity acceleration
-    public float jumpHeight = 1.5f; // jump height
-    public float targetJumpHeight = 1.5f;
-    public float walkJumpHeight = 1.5f; // target jump height
-    public float crouchJumpHeightFactor = 0.8f;
-    public float sprintJumpHeightFactor = 1.2f;
+    public float gravity; // gravity acceleration
+    public float jumpHeight; // jump height
+    public float targetJumpHeight;
+    public float walkJumpHeight; // target jump height
+    public float crouchJumpHeightFactor;
+    public float sprintJumpHeightFactor;
+
     private Vector3 targetScale = Vector3.one; // target player scale
 
     // called before the first frame update
@@ -44,16 +47,16 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         // changes speed and jump height based on state
-        targetSpeed = walkSpeed;
+        targetSpeed = playerStats.walkSpeed;
         targetJumpHeight = walkJumpHeight;
         if (crouching)
         {
-            targetSpeed = walkSpeed * crouchSpeedFactor;
+            targetSpeed = playerStats.walkSpeed * crouchSpeedFactor;
             targetJumpHeight = walkJumpHeight * crouchJumpHeightFactor;
         }
         if (sprinting)
         {
-            targetSpeed = walkSpeed * sprintSpeedFactor;
+            targetSpeed = playerStats.walkSpeed * sprintSpeedFactor;
             targetJumpHeight = walkJumpHeight * sprintJumpHeightFactor;
         }
         speed = targetSpeed;
