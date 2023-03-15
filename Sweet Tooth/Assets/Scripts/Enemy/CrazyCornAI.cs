@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,15 +13,23 @@ public class CrazyCornAI : MonoBehaviour
     bool walkPointSet;
     public float walkPointRange;
     public LayerMask Terrain;
+    public float health;
+    public float flashDuration;
+    public Renderer[] renderers;
 
-    void Start() {
+    public PlayerStats playerStats;
+
+    void Start()
+    {
         // target = player
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        renderers = GetComponentsInChildren<Renderer>();
        
     }
 
-    void Update() {
+    void Update()
+    {
         float distance = Vector3.Distance(target.position, transform.position);
         // checks for player in sight range
         if (distance <= sightRange)
@@ -32,25 +42,29 @@ public class CrazyCornAI : MonoBehaviour
         }
         if (distance >= 10f)
         {
-            patrol();
+            // patrol();
         }
+
+        // Debug.Log(health);
     }
 
-    void chasePlayer() {
+    void chasePlayer()
+    {
         // approaches player position
         agent.SetDestination(target.transform.position);
     }
 
-    void attackPlayer() {
+    void attackPlayer()
+    {
         // stops approaching
         agent.SetDestination(transform.position);
-        
 
-        // I need the code for the damage here and animation
+        // I need the code for animation
+        playerStats.DamagePlayer(2, "crazyCorn");
         
     }
-    void patrol() {
-        
+    void patrol()
+    {
         if (!walkPointSet) {
 
             SearchWalkPoint();
@@ -72,7 +86,8 @@ public class CrazyCornAI : MonoBehaviour
 
     }
 
-    void SearchWalkPoint() {
+    void SearchWalkPoint()
+    {
 
         //calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
@@ -85,5 +100,49 @@ public class CrazyCornAI : MonoBehaviour
         }
 
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Death();
+        }
+        // else
+        // {
+        //     StartCoroutine(FlashRed(flashDuration));
+        // }
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
+
+    // IEnumerator FlashRed(float duration)
+    // {
+    //     // change material colors to red
+    //     foreach (Renderer r in renderers)
+    //     {
+    //         Material[] materials = r.materials;
+    //         for (int i = 0; i < materials.Length; i++)
+    //         {
+    //             materials[i].color = Color.red;
+    //         }
+    //     }
+
+    //     // wait for duration
+    //     yield return new WaitForSeconds(duration);
+
+    //     // change material colors back to their original colors
+    //     foreach (Renderer r in renderers)
+    //     {
+    //         Material[] materials = r.materials;
+    //         for (int i = 0; i < materials.Length; i++)
+    //         {
+    //             materials[i].color = Color.white;
+    //         }
+    //     }
+    // }
 }
 

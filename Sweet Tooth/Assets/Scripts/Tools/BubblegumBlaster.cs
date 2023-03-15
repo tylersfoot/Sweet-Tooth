@@ -66,6 +66,8 @@ public class BubblegumBlaster : MonoBehaviour
         // set the color of the projectile to the random color
         projectileRenderer.material.color = randomColor;
 
+        newProjectile.GetComponent<Gumball>().damage = damage; // sets damage of the projectile
+
         // destroy the projectile after the specified lifespan
         tool.Despawn(newProjectile, lifespan);
 

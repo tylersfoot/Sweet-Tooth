@@ -7,6 +7,7 @@ TagManager:
   - ToolsTag
   - PauseMenuTag
   - Projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX
