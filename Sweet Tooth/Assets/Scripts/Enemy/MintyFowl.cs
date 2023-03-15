@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CrazyCornAI : MonoBehaviour
+public class MintyFowlAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;
