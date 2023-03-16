@@ -61,7 +61,7 @@ public class BubblegumBlaster : MonoBehaviour
 
         // get the Renderer component of the new projectile
         Renderer projectileRenderer = newProjectile.GetComponent<Renderer>();
-        // choose a random color from the colors arrayd
+        // choose a random color from the colors array
         Color randomColor = colors[Random.Range(0, colors.Length)];
         // set the color of the projectile to the random color
         projectileRenderer.material.color = randomColor;
