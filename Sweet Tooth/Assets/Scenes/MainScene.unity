@@ -28607,7 +28607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sightRange: 10
-  attackRange: 1
+  attackRange: 5
+  patrolRange: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   Terrain:

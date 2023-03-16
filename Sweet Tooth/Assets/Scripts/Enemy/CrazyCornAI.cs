@@ -9,6 +9,7 @@ public class CrazyCornAI : MonoBehaviour
     Transform target;
     public float sightRange = 10f; // distance the enemy can see the player
     public float attackRange = 5f; // distance the enemy can attack the player
+    public float patrolRange = 10f; // distance the enemy patrols
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
@@ -38,11 +39,11 @@ public class CrazyCornAI : MonoBehaviour
         }
         if (distance <= attackRange) 
         {
-            attackPlayer();
+            Invoke("attackPlayer", 2.0f);
         }
-        if (distance >= 10f)
+        if (distance >= patrolRange)
         {
-            patrol();
+            Invoke("patrol", 5.0f);
         }
 
         // Debug.Log(health);
