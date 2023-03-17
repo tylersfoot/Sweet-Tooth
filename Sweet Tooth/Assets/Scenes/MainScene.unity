@@ -4414,23 +4414,23 @@ MonoBehaviour:
   lerpCrouch: 0
   crouching: 0
   sprinting: 0
-  crouchHeight: 1
-  standHeight: 2
-  crouchHeightVelocity: 0
-  crouchHeightSmoothTime: 0.1
   speed: 5
   targetSpeed: 5
-  crouchSpeedFactor: 0.7
   sprintSpeedFactor: 1.3
-  walkFOV: 60
+  crouchSpeedFactor: 0.7
   sprintFOVFactor: 1.2
+  walkFOV: 60
   fovDampTime: 0.1
-  gravity: -30
+  crouchHeight: 1
+  sprintJumpHeightFactor: 1.2
+  crouchHeightVelocity: 0
+  crouchHeightSmoothTime: 0.1
   jumpHeight: 1.5
   targetJumpHeight: 1.5
   walkJumpHeight: 1.5
   crouchJumpHeightFactor: 0.8
-  sprintJumpHeightFactor: 1.2
+  standHeight: 2
+  gravity: -30
 --- !u!114 &314080665
 MonoBehaviour:
   m_ObjectHideFlags: 0

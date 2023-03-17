@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+    [Header("Scripts")]
     private CharacterController controller;
     private Vector3 playerVelocity;
     public new Camera camera;
     public PlayerStats playerStats;
+
 
     private bool isGrounded;
     public bool lerpCrouch;
@@ -15,26 +17,32 @@ public class PlayerMotor : MonoBehaviour
     public bool sprinting;
     private bool sprintKeyDown;
 
-    public float crouchHeight; // crouch height
-    public float standHeight; // standing height
-    public float crouchHeightVelocity;
-    public float crouchHeightSmoothTime;
+    [Header("Speed")]    
     public float speed; // current speed
     public float targetSpeed; // target speed
-    public float crouchSpeedFactor; // crouching speed factor
     public float sprintSpeedFactor; // sprinting speed factor
+    public float crouchSpeedFactor; // crouching speed factor
+
+    [Header("FOV")]
     private float fovVelocity;
-    public float walkFOV; // walking FOV
     public float sprintFOVFactor; // sprinting FOV factor
-    public float fovDampTime; // time to reach target FOV
     private float currentFOV; // current FOV
-    public float gravity; // gravity acceleration
+    public float walkFOV; // walking FOV
+    public float fovDampTime; // time to reach target FOV
+
+    [Header("Height")]
+    public float crouchHeight; // crouch height
+    public float sprintJumpHeightFactor;
+    public float crouchHeightVelocity;
+    public float crouchHeightSmoothTime;
     public float jumpHeight; // jump height
     public float targetJumpHeight;
     public float walkJumpHeight; // target jump height
     public float crouchJumpHeightFactor;
-    public float sprintJumpHeightFactor;
+    public float standHeight; // standing height
 
+    [Header("Other")]
+    public float gravity; // gravity acceleration
     private Vector3 targetScale = Vector3.one; // target player scale
 
     // called before the first frame update
