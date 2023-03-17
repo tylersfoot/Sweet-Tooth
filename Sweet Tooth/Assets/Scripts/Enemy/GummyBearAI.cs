@@ -31,7 +31,7 @@ public class GummyBearAI : MonoBehaviour
         }
         if (distance >= 10f)
         {
-            patrol();
+            Invoke("patrol", 2f);
         }
     }
 
@@ -48,7 +48,7 @@ public class GummyBearAI : MonoBehaviour
     }
     void patrol() {
         // ! this throws an error every frame so I commented it out lol
-        // agent.transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        //agent.transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomSpot].position, 2.0f);
     }
 }
 

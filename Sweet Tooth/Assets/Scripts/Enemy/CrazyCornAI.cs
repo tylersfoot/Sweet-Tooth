@@ -39,7 +39,7 @@ public class CrazyCornAI : MonoBehaviour
         }
         if (distance <= attackRange) 
         {
-            Invoke("attackPlayer", 2.0f);
+            attackPlayer();
         }
         if (distance >= patrolRange)
         {
@@ -96,7 +96,7 @@ public class CrazyCornAI : MonoBehaviour
 
         walkPoint = new Vector3 (transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if(Physics.Raycast(walkPoint, -transform.up, 2f, Terrain)) {
+        if(Physics.Raycast(walkPoint, -transform.up, 4f, Terrain)) {
         walkPointSet = true;
         }
 
