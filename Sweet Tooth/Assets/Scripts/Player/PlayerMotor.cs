@@ -6,11 +6,13 @@ public class PlayerMotor : MonoBehaviour
 {
     [Header("Scripts")]
     private CharacterController controller;
-    private Vector3 playerVelocity;
-    public new Camera camera;
     public PlayerStats playerStats;
 
+    [Header("Objects")]
+    public new Camera camera;
+    public GameObject tool;
 
+    [Header("Booleans")]
     private bool isGrounded;
     public bool lerpCrouch;
     public bool crouching;
@@ -18,6 +20,7 @@ public class PlayerMotor : MonoBehaviour
     private bool sprintKeyDown;
 
     [Header("Speed")]    
+    private Vector3 playerVelocity;
     public float speed; // current speed
     public float targetSpeed; // target speed
     public float sprintSpeedFactor; // sprinting speed factor
@@ -76,6 +79,8 @@ public class PlayerMotor : MonoBehaviour
             controller.height = Mathf.SmoothDamp(controller.height, targetHeight, ref crouchHeightVelocity, crouchHeightSmoothTime);
             targetScale.y = controller.height / standHeight;
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 10f);
+            Vector3 targetScaleInverse = new Vector3(1.0f / targetScale.x, 1.0f / targetScale.y, 1.0f / targetScale.z);
+            tool.transform.localScale = Vector3.Lerp(tool.transform.localScale, targetScaleInverse, Time.deltaTime * 10f);
             if (Mathf.Abs(controller.height - targetHeight) < 0.01f)
             {
                 lerpCrouch = false;
