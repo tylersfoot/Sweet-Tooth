@@ -18,7 +18,8 @@ public class CrazyCornAI : MonoBehaviour
     public float flashDuration;
     public Renderer[] renderers;
     float timer;
-    public float delay = 1f; // delay for the time between potrols
+    public float delaypatrol = 1f; // delay for the time between potrols
+    public float delayattack = 1f;
 
     public PlayerStats playerStats;
 
@@ -41,11 +42,11 @@ public class CrazyCornAI : MonoBehaviour
         {
             chasePlayer();
         }
-        if (distance <= attackRange) 
+        if (distance <= attackRange ) 
         {
             attackPlayer();
         }
-        if (distance >= patrolRange && timer > delay)
+        if (distance >= patrolRange && timer > delaypatrol)
         {
             patrol();
         }
@@ -61,6 +62,7 @@ public class CrazyCornAI : MonoBehaviour
 
     void attackPlayer()
     {
+        delayattack = Time.deltaTime + 2f;
         // stops approaching
         agent.SetDestination(transform.position);
 
@@ -76,7 +78,7 @@ public class CrazyCornAI : MonoBehaviour
         }
 
         if (walkPointSet) {
-            delay = Time.deltaTime + 5f;
+            delaypatrol = Time.deltaTime + 5f;
         agent.SetDestination(walkPoint);
         }
         
