@@ -7,6 +7,7 @@ using TMPro;
 public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI mainText;
+    public TextMeshProUGUI authorText;
     public GameObject canvas;
 
     void Start()
@@ -15,9 +16,13 @@ public class DialogueBox : MonoBehaviour
         ActivateBox(false);
     }
 
-    public void UpdateText(string promptMessage)
+    public void UpdateText(string text)
     {
-        mainText.text = promptMessage;
+        mainText.text = text;
+    }
+    public void UpdateAuthorText(string text)
+    {
+        authorText.text = text;
     }
 
     public void ActivateBox(bool active)

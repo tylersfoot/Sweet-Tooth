@@ -27,6 +27,7 @@ public class Dialogue : Interactable
     {
         isOpen = true;
         dialogueBox.UpdateText("fuck you");
+        dialogueBox.UpdateAuthorText(author);
         dialogueBox.ActivateBox(true);
         Debug.Log(text.Length);
     }
