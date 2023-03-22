@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Dialogue : Interactable
 {
-    public string[] text;
+    public string[] text; // the different text boxes
+    public int currentParagraph; // which text box are you on, ex: 0 is the first paragraph, 1 is the second
+    public string textDisplay;
+    public string author;
+
     public bool isOpen = false;
     public float distance;
-    private GameObject player;
 
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player");
-    }
+    public DialogueBox dialogueBox;
+    public GameObject player;
 
     void Update()
     {
@@ -25,17 +26,16 @@ public class Dialogue : Interactable
     void StartDialogue()
     {
         isOpen = true;
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = Vector3.zero; // Set position of sphere to the origin
-        sphere.transform.localScale = new Vector3(3, 3, 3); // Set scale of sphere
+        dialogueBox.UpdateText("fuck you");
+        dialogueBox.ActivateBox(true);
+        Debug.Log(text.Length);
     }
 
     void EndDialogue()
     {
         isOpen = false;
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = Vector3.zero; // Set position of sphere to the origin
-        sphere.transform.localScale = new Vector3(10, 10, 10); // Set scale of sphere
+        dialogueBox.UpdateText("ok fine im sorry come back");
+        currentParagraph = 0;
     }
     
     protected override void Interact()
