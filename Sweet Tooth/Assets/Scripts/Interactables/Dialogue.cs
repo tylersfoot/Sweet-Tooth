@@ -14,6 +14,9 @@ public class Dialogue : Interactable
 
     public DialogueBox dialogueBox;
     public GameObject player;
+    private Coroutine dialogueCoroutine;
+    public PlayerInteract playerInteract;
+    public InputManager inputManager;
 
     void Update()
     {
@@ -26,34 +29,44 @@ public class Dialogue : Interactable
     IEnumerator StartDialogue()
     {
         isOpen = true;
-        // dialogueBox.UpdateText("fuck you");
+        playerInteract.allowInteraction = false; // can't interact with anything else while in dialogue
         dialogueBox.UpdateAuthorText("");
         dialogueBox.ActivateBox(true);
         StartCoroutine(dialogueBox.OpenAnimation());
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.19f * dialogueBox.speed);
 
         for (int i = 0; i <= author.Length; i++) // loops and types out the author name
         {
             yield return new WaitForSeconds(dialogueBox.typeSpeed);
             dialogueBox.UpdateAuthorText(author.Substring(0, i));
         }
-        yield return new WaitForSeconds(0.2f);
 
-        for (int x = 0; x < text.Length; x++)
+        yield return new WaitForSeconds(0.025f * dialogueBox.speed);
+
+        for (int x = 0; x < text.Length; x++) // loops through each paragraph
         {
-            for (int i = 0; i <= text[x].Length; i++)
+            for (int i = 0; i <= text[x].Length; i++) // loops and types out the text
             {
+                if (inputManager.interactKeyPressed) // if interact key pressed, skip typing
+                {
+                    i = text[x].Length;
+                    inputManager.interactKeyPressed = false; // prevents double skip
+                }
                 yield return new WaitForSeconds(dialogueBox.typeSpeed);
                 dialogueBox.UpdateText(text[x].Substring(0, i));
             }
-            yield return new WaitForSeconds(2f); // change this to wait for input and delete below section
 
-            for (int i = text[x].Length - 1; i >= 0; i--)
+            // waits before changing paragraphs
+            // yield return new WaitForSeconds(0.25f * dialogueBox.speed);
+            float accumulatedTime = 0;
+            while (!inputManager.interactKeyPressed && accumulatedTime < (0.25f * dialogueBox.speed))
             {
-                yield return new WaitForSeconds(dialogueBox.typeSpeed * 10000 * (i / text[x].Length));
-                dialogueBox.UpdateText(text[x].Substring(0, i));
+                accumulatedTime += Time.deltaTime;
+                yield return null;
             }
-            yield return new WaitForSeconds(0.4f);
+            inputManager.interactKeyPressed = false; // prevents double skip
+
+
         }
         
     }
@@ -61,12 +74,20 @@ public class Dialogue : Interactable
     void EndDialogue()
     {
         isOpen = false;
+        playerInteract.allowInteraction = true;
         dialogueBox.UpdateText("ok fine im sorry come back");
         currentParagraph = 0;
-    }
+
+        // TODO end starting courotine, clear text, reverse animation
+
+        if (dialogueCoroutine != null)
+        {   
+            StopCoroutine(dialogueCoroutine);
+        }
     
+    }
     protected override void Interact()
     {
-        StartCoroutine(StartDialogue());
+        dialogueCoroutine = StartCoroutine(StartDialogue());
     }
 }

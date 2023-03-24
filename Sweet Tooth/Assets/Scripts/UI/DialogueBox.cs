@@ -13,19 +13,19 @@ public class DialogueBox : MonoBehaviour
     public GameObject canvas;
 
     // animation stuff
-    [Header("Target")]
+    [Header("Target")] // the end coordinates
     public Vector2 mainTargetCoordinates;
     public Vector2 authorTargetCoordinates;
     public Vector2 mainTargetSize;
     public Vector2 authorTargetSize;
 
-    [Header("Goto")]
+    [Header("Goto")] // the coordinates that the objects go to (this is changed)
     public Vector2 mainGotoCoordinates;
     public Vector2 authorGotoCoordinates;
     public Vector2 mainGotoSize;
     public Vector2 authorGotoSize;
 
-    [Header("Start")]
+    [Header("Start")] // starting coordinates, offscreen
     public Vector2 mainStartCoordinates;
     public Vector2 authorStartCoordinates;
     public Vector2 mainStartSize;
@@ -36,6 +36,7 @@ public class DialogueBox : MonoBehaviour
     public RectTransform authorBoxRT;
     public float speed;
     public float typeSpeed;
+    public InputManager inputManager;
 
     void Start()
     {
@@ -64,6 +65,8 @@ public class DialogueBox : MonoBehaviour
 
     public IEnumerator OpenAnimation()
     {
+        // TODO disable interact / prompt when open in PlayerInteract.cs
+
         mainGotoCoordinates = mainTargetCoordinates; // move up
         authorGotoCoordinates.y = authorTargetCoordinates.y-50; // move up with an offset so its not visible
         yield return new WaitForSeconds(0.4f);

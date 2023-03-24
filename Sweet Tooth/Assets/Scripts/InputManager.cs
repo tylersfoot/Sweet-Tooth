@@ -13,7 +13,11 @@ public class InputManager : MonoBehaviour
     private PlayerAbility ability;
     public Tool tool;
     public PauseMenu pauseMenu;
-    // Start is called before the first frame update
+    public PlayerInteract playerInteract;
+    public DialogueBox dialogueBox;
+
+    public bool interactKeyPressed;
+
     void Awake()
     {
         playerInput = new PlayerInput();
@@ -51,6 +55,18 @@ public class InputManager : MonoBehaviour
         onFoot.Sprint.canceled += ctx => {
             if (!pauseMenu.isPaused) {
                 motor.Sprint(false);
+            }
+        };
+        
+        onFoot.Interact.started += ctx => {
+            if (!pauseMenu.isPaused) {
+                interactKeyPressed = true;
+            }
+        };
+
+        onFoot.Interact.canceled += ctx => {
+            if (!pauseMenu.isPaused) {
+                interactKeyPressed = false;
             }
         };
 
@@ -113,7 +129,6 @@ public class InputManager : MonoBehaviour
         onFoot.Pause.started += ctx => pauseMenu.Pause();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         // tell the playermotor to move using the value from our movement action
