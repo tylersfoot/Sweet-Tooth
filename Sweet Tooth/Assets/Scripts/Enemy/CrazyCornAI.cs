@@ -18,7 +18,7 @@ public class CrazyCornAI : MonoBehaviour
     public float flashDuration;
     public Renderer[] renderers;
     float timer;
-    public float delaypatrol = 1f; // delay for the time between potrols
+    public float delaypatrol = 5.0f; // delay for the time between potrols
     public float delayattack = 1f;
 
     public PlayerStats playerStats;
