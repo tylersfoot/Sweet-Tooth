@@ -34,8 +34,8 @@ public class DialogueBox : MonoBehaviour
     [Header("Other")]
     public RectTransform mainBoxRT;
     public RectTransform authorBoxRT;
-    public float speed = 1;
-    public bool t1 = false;
+    public float speed;
+    public float typeSpeed;
 
     void Start()
     {
@@ -43,39 +43,36 @@ public class DialogueBox : MonoBehaviour
         // ActivateBox(false);
 
         mainGotoCoordinates = mainStartCoordinates;
-        // authorGotoCoordinates = authorStartCoordinates;
+        authorGotoCoordinates = authorStartCoordinates;
         mainGotoSize = mainStartSize;
-        // authorGotoSize = authorStartSize;
+        authorGotoSize = authorStartSize;
  
         mainBoxRT.localPosition = mainStartCoordinates;
-        // authorBoxRT.position = authorStartCoordinates;
+        authorBoxRT.localPosition = authorStartCoordinates;
         mainBoxRT.sizeDelta = mainGotoSize;
-        // authorBoxRT.sizeDelta = authorGotoSize;
+        authorBoxRT.sizeDelta = authorGotoSize;
     }
 
     void Update()
     {
         mainBoxRT.localPosition = Vector2.Lerp(mainBoxRT.localPosition, mainGotoCoordinates, Time.deltaTime * speed);
         mainBoxRT.sizeDelta = Vector2.Lerp(mainBoxRT.sizeDelta, mainGotoSize, Time.deltaTime * speed);
+        authorBoxRT.localPosition = Vector2.Lerp(authorBoxRT.localPosition, authorGotoCoordinates, Time.deltaTime * speed);
+        authorBoxRT.sizeDelta = Vector2.Lerp(authorBoxRT.sizeDelta, authorGotoSize, Time.deltaTime * speed);
 
     }
 
     public IEnumerator OpenAnimation()
     {
-        // targets
-        // auth x -140 y 137.5 
-        // auth width 200 height 25
-        // main x 0 y 70
-        // main width 550 height 100
-
-        // move up
-        // t1 = true;
-        mainGotoCoordinates = mainTargetCoordinates;
-        // yield return new WaitForSeconds(0.8f);
-        authorGotoCoordinates = authorTargetCoordinates;
-        mainGotoSize = mainTargetSize;
-        authorGotoSize = authorTargetSize;
-
+        mainGotoCoordinates = mainTargetCoordinates; // move up
+        authorGotoCoordinates.y = authorTargetCoordinates.y-50; // move up with an offset so its not visible
+        yield return new WaitForSeconds(0.4f);
+        mainGotoSize.x = mainTargetSize.x; // widen out
+        authorGotoCoordinates.x = authorTargetCoordinates.x; // widen out
+        yield return new WaitForSeconds(0.3f);
+        authorGotoCoordinates.y = authorTargetCoordinates.y; // pop out the top
+        yield return new WaitForSeconds(0.4f);
+        authorGotoSize.x = authorTargetSize.x; // widen out author box
         
     }
 

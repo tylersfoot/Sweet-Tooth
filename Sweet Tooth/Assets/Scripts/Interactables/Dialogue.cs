@@ -23,14 +23,39 @@ public class Dialogue : Interactable
         }
     }
 
-    void StartDialogue()
+    IEnumerator StartDialogue()
     {
         isOpen = true;
-        dialogueBox.UpdateText("fuck you");
-        dialogueBox.UpdateAuthorText(author);
+        // dialogueBox.UpdateText("fuck you");
+        dialogueBox.UpdateAuthorText("");
         dialogueBox.ActivateBox(true);
-        dialogueBox.OpenAnimation();
-        Debug.Log(text.Length);
+        StartCoroutine(dialogueBox.OpenAnimation());
+        yield return new WaitForSeconds(1.5f);
+
+        for (int i = 0; i <= author.Length; i++) // loops and types out the author name
+        {
+            yield return new WaitForSeconds(dialogueBox.typeSpeed);
+            dialogueBox.UpdateAuthorText(author.Substring(0, i));
+        }
+        yield return new WaitForSeconds(0.2f);
+
+        for (int x = 0; x < text.Length; x++)
+        {
+            for (int i = 0; i <= text[x].Length; i++)
+            {
+                yield return new WaitForSeconds(dialogueBox.typeSpeed);
+                dialogueBox.UpdateText(text[x].Substring(0, i));
+            }
+            yield return new WaitForSeconds(2f); // change this to wait for input and delete below section
+
+            for (int i = text[x].Length - 1; i >= 0; i--)
+            {
+                yield return new WaitForSeconds(dialogueBox.typeSpeed * 10000 * (i / text[x].Length));
+                dialogueBox.UpdateText(text[x].Substring(0, i));
+            }
+            yield return new WaitForSeconds(0.4f);
+        }
+        
     }
 
     void EndDialogue()
@@ -42,6 +67,6 @@ public class Dialogue : Interactable
     
     protected override void Interact()
     {
-        StartDialogue();
+        StartCoroutine(StartDialogue());
     }
 }

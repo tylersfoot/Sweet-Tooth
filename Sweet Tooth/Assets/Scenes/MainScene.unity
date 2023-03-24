@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.68748343, g: 0.45604312, b: 0.4548496, a: 1}
+  m_IndirectSpecularColor: {r: 0.68748367, g: 0.45604372, b: 0.45485085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4982,7 +4982,7 @@ MonoBehaviour:
   authorBox: {fileID: 1510876770}
   canvas: {fileID: 364686038}
   mainTargetCoordinates: {x: 0, y: -99}
-  authorTargetCoordinates: {x: -140, y: 137.5}
+  authorTargetCoordinates: {x: -140, y: -31.5}
   mainTargetSize: {x: 550, y: 100}
   authorTargetSize: {x: 200, y: 25}
   mainGotoCoordinates: {x: 0, y: 0}
@@ -4990,13 +4990,13 @@ MonoBehaviour:
   mainGotoSize: {x: 0, y: 0}
   authorGotoSize: {x: 0, y: 0}
   mainStartCoordinates: {x: 0, y: -239}
-  authorStartCoordinates: {x: -140, y: 137.5}
-  mainStartSize: {x: 0, y: 0}
-  authorStartSize: {x: 200, y: 25}
+  authorStartCoordinates: {x: 0, y: -200}
+  mainStartSize: {x: 20, y: 100}
+  authorStartSize: {x: 20, y: 25}
   mainBoxRT: {fileID: 580377362}
   authorBoxRT: {fileID: 1510876771}
-  speed: 4
-  t1: 0
+  speed: 8
+  typeSpeed: 0.05
 --- !u!114 &364686040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,9 +5070,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 580377362}
   - {fileID: 1510876771}
-  - {fileID: 448352733}
+  - {fileID: 580377362}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6292,82 +6291,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000031949952, y: 0.007080621, z: 0.001773579}
     m_Extent: {x: 0.00406206, y: 0.008587147, z: 0.0045214146}
   m_DirtyAABB: 0
---- !u!1 &448352732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 448352733}
-  - component: {fileID: 448352735}
-  - component: {fileID: 448352734}
-  m_Layer: 5
-  m_Name: SeperationLine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &448352733
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448352732}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 364686043}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -100, y: 122.5}
-  m_SizeDelta: {x: 200, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &448352734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448352732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7529412, g: 0, b: 0.4627451, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &448352735
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448352732}
-  m_CullTransparentMesh: 1
 --- !u!1 &451300280
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,6 +6520,42 @@ Transform:
   m_Father: {fileID: 22465505}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &498433066
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 550, g: 100, b: 25, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &504338538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7502,8 +7461,8 @@ GameObject:
   - component: {fileID: 580377362}
   - component: {fileID: 580377364}
   - component: {fileID: 580377363}
-  - component: {fileID: 580377365}
   - component: {fileID: 580377366}
+  - component: {fileID: 580377367}
   m_Layer: 5
   m_Name: MainBox
   m_TagString: Untagged
@@ -7525,7 +7484,7 @@ RectTransform:
   m_Children:
   - {fileID: 1379852735}
   m_Father: {fileID: 364686043}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7544,7 +7503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1019811922}
+  m_Material: {fileID: 498433066}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7570,21 +7529,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580377361}
   m_CullTransparentMesh: 1
---- !u!114 &580377365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580377361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  r: {x: 25, y: 25, z: 25, w: 25}
-  rect2props: {x: 0.000030517578, y: 0, z: 212.13205, w: 212.13205}
-  image: {fileID: 580377363}
 --- !u!114 &580377366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7600,6 +7544,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0.7529412, g: 0, b: 0.4627451, a: 1}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!114 &580377367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580377361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 25
+  image: {fileID: 580377363}
 --- !u!1 &595712223
 GameObject:
   m_ObjectHideFlags: 0
@@ -12670,44 +12628,6 @@ Transform:
   m_Father: {fileID: 1661141049}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1019811922
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _halfSize: {r: 275, g: 50, b: 0, a: 0}
-    - _r: {r: 25, g: 25, b: 25, a: 25}
-    - _rect2props: {r: 0.000030517578, g: 0, b: 212.13205, a: 212.13205}
-  m_BuildTextureStacks: []
 --- !u!1 &1021272183
 GameObject:
   m_ObjectHideFlags: 0
@@ -15772,44 +15692,6 @@ Transform:
   m_Father: {fileID: 1840498374}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1274424768
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
-    - _r: {r: 15, g: 15, b: 0, a: 0}
-    - _rect2props: {r: 0.0000076293945, g: -7.5000076, b: 74.246216, a: 74.246216}
-  m_BuildTextureStacks: []
 --- !u!1 &1278673273
 GameObject:
   m_ObjectHideFlags: 0
@@ -19337,7 +19219,7 @@ RectTransform:
   m_Children:
   - {fileID: 1345664774}
   m_Father: {fileID: 364686043}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19356,8 +19238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 15, y: 15, z: 0, w: 0}
-  rect2props: {x: 0.0000076293945, y: -7.5000076, z: 74.246216, w: 74.246216}
+  r: {x: 12.5, y: 12.5, z: 0, w: 0}
+  rect2props: {x: 0.000015258789, y: -6.2500076, z: 75.130104, w: 75.130104}
   image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
@@ -19371,7 +19253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1274424768}
+  m_Material: {fileID: 2026925843}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -23452,8 +23334,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842105929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.877804, y: 13.053935, z: -4.780347}
-  m_LocalScale: {x: 6.3581, y: 1, z: 6.087245}
+  m_LocalPosition: {x: 8.877804, y: 13.053935, z: -12.31}
+  m_LocalScale: {x: 6.3581, y: 1, z: 19.454226}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 400148250}
@@ -25224,6 +25106,44 @@ Transform:
   m_Father: {fileID: 400148250}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &2026925843
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
+    - _r: {r: 12.5, g: 12.5, b: 0, a: 0}
+    - _rect2props: {r: 0.000015258789, g: -6.2500076, b: 75.130104, a: 75.130104}
+  m_BuildTextureStacks: []
 --- !u!1 &2027713883
 GameObject:
   m_ObjectHideFlags: 0
@@ -26153,14 +26073,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148991854115}
-  m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.06, y: -2.31, z: -25.91}
+  m_LocalRotation: {x: 0.0000000615022, y: 0.65572983, z: 0.000000053415977, w: 0.7549956}
+  m_LocalPosition: {x: -3.9640148, y: 1.07, z: -9.593578}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1739919901}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 81.95, z: 0}
 --- !u!4 &587512372134037366
 Transform:
   m_ObjectHideFlags: 0
@@ -27159,11 +27079,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Press [E] To Read Sign
   text:
-  - kill yourself this is a big paragraph
-  - im sorry i love you i didnt mean that lol
-  - this is a third paragraph i love brodie and tyler they created me please help
-    im in pain
-  - brodie is gay
+  - 'f this is a big paragraph kill yourself '
+  - im sorry i love you i didnt mean that lol im sorry i love you i didnt mean that
+    lol im sorry i love you i didnt mean that lol im sorry i love you i didnt mean
+    that lol
+  - ' this is a third paragraph i love brodie and tyler they created me please help
+    im in painthis is a third paragraph i love brodie and tyler they created me please
+    help im in pain'
+  - 'brodie is gay brodie is gay brodie is gay brodie is gay brodie is gay brodie
+    is gay brodie is gay brodie is gay brodie is gay brodie is gay '
+  - 'i love cheese i love cheese i love cheese i love cheese i love cheese '
   currentParagraph: 0
   textDisplay: 
   author: sign from sm64
