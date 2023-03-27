@@ -7528,8 +7528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
-  image: {fileID: 580377363}
 --- !u!1 &595712223
 GameObject:
   m_ObjectHideFlags: 0
@@ -19938,9 +19936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 12.5, y: 12.5, z: 0, w: 0}
-  rect2props: {x: 0.000015258789, y: -6.2500076, z: 75.130104, w: 75.130104}
-  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27448,7 +27443,7 @@ Transform:
   m_GameObject: {fileID: 4993975481937361186}
   m_LocalRotation: {x: 0.5820423, y: -0.29873326, z: -0.3538348, w: 0.6684207}
   m_LocalPosition: {x: -0.0064961617, y: -0.0017770296, z: 0.005069889}
-  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5947353486129956774}
@@ -28322,9 +28317,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4079875273188989739}
-  m_LocalRotation: {x: 0.57377243, y: -0.49564904, z: 0.4521315, w: -0.46978125}
-  m_LocalPosition: {x: -0.00027017295, y: -0.002486519, z: 0.0010931838}
-  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+  m_LocalRotation: {x: 0.5737724, y: -0.49564904, z: 0.45213157, w: -0.46978116}
+  m_LocalPosition: {x: -0.00027017106, y: -0.0024865307, z: 0.001093198}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4672051309246230044}
@@ -29226,6 +29221,9 @@ GameObject:
   - component: {fileID: 7749127841215327204}
   - component: {fileID: 7749127841215327205}
   - component: {fileID: 7749127841215327203}
+  - component: {fileID: 7749127841215327208}
+  - component: {fileID: 7749127841215327207}
+  - component: {fileID: 7749127841215327206}
   m_Layer: 0
   m_Name: CrazyCorn
   m_TagString: Enemy
@@ -29407,6 +29405,61 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7749127841215327206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749127841215327199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1.14
+  tripodSize: 1
+  boneColor: {r: 0, g: 0.1262517, b: 1, a: 0.5}
+  m_Transforms: []
+--- !u!114 &7749127841215327207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749127841215327199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 0}
+    m_Active: 1
+  m_Effectors: []
+--- !u!95 &7749127841215327208
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749127841215327199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7838344636525815018
 GameObject:
   m_ObjectHideFlags: 0
@@ -29587,7 +29640,7 @@ Transform:
   m_GameObject: {fileID: 7702248757397986370}
   m_LocalRotation: {x: 0.5737723, y: -0.495649, z: 0.45213157, w: -0.46978128}
   m_LocalPosition: {x: -0.014106063, y: -0.0020774885, z: 0.0030300908}
-  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4710214423794729605}
