@@ -8,7 +8,6 @@ public class Gumball : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if (other.CompareTag("Enemy"))
         {
             other.SendMessage("TakeDamage", damage);

@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    // player stat variables
+    [Header("Player Stats")]
     public float playerMaxHealth;
     public float playerHealth;
     public float walkSpeed;
 
-    // other scripts
+    [Header("Inventory")]
+    public Dictionary<string, int> inv = new Dictionary<string, int>();
+
+    [Header("Scripts")]
     public HUD HUD;
 
     void Start()
     {
         HealPlayer(100f, "startGame");
+        inv.Add("candyCornChunk", 0);
+        inv.Add("gummyBearHead", 0);
+        inv.Add("mintyFowlLeg", 0);
+        inv.Add("peanutButterToadLeg", 0);
     }
 
     public void DamagePlayer(float amount, string source)

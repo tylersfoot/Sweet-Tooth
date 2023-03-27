@@ -63,12 +63,13 @@ public class Tool : MonoBehaviour
         // if the number is over or under the index, for use with scroll wheel
         if (num < 1)
         {
-            num = tools.Length;
+            num = 1;
         }
         if (num > tools.Length)
         {
-            num = 1;
+            num = tools.Length;
         }
+        activeToolIndex = num;
 
         // switches the tool
         switch (num)
