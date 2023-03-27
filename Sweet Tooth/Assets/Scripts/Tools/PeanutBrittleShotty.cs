@@ -66,6 +66,8 @@ public class PeanutBrittleShotty : MonoBehaviour
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
         projectileRb.AddForce(spreadVector * shootForce, ForceMode.Impulse);
 
+        newProjectile.GetComponent<PeanutBrittle>().damage = damage; // sets damage of the projectile
+
         // destroy the projectile after the specified lifespan
         tool.Despawn(newProjectile, lifespan);
     }

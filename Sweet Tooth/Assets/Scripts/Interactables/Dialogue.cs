@@ -14,7 +14,8 @@ public class Dialogue : Interactable
 
     public DialogueBox dialogueBox;
     public GameObject player;
-    private Coroutine dialogueCoroutine;
+    private Coroutine startDialogueCoroutine;
+    private Coroutine endDialogueCoroutine;
     public PlayerInteract playerInteract;
     public InputManager inputManager;
 
@@ -22,7 +23,7 @@ public class Dialogue : Interactable
     {
         if (isOpen && Vector3.Distance(transform.position, player.transform.position) > distance)
         {
-            EndDialogue();
+            endDialogueCoroutine = StartCoroutine(EndDialogue());
         }
     }
 
@@ -65,29 +66,28 @@ public class Dialogue : Interactable
                 yield return null;
             }
             inputManager.interactKeyPressed = false; // prevents double skip
-
-
-        }
-        
+        } 
+        endDialogueCoroutine = StartCoroutine(EndDialogue());
     }
 
-    void EndDialogue()
+    IEnumerator EndDialogue()
     {
         isOpen = false;
         playerInteract.allowInteraction = true;
-        dialogueBox.UpdateText("ok fine im sorry come back");
         currentParagraph = 0;
-
-        // TODO end starting courotine, clear text, reverse animation
-
-        if (dialogueCoroutine != null)
+        if (startDialogueCoroutine != null)
         {   
-            StopCoroutine(dialogueCoroutine);
+            StopCoroutine(startDialogueCoroutine);
         }
-    
+        yield return new WaitForSeconds(0.1f);
+        dialogueBox.UpdateText("");
+        dialogueBox.UpdateAuthorText("");
+
+        StartCoroutine(dialogueBox.CloseAnimation());    
     }
+
     protected override void Interact()
     {
-        dialogueCoroutine = StartCoroutine(StartDialogue());
+        startDialogueCoroutine = StartCoroutine(StartDialogue());
     }
 }

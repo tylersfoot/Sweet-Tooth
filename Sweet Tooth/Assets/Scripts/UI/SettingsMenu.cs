@@ -12,6 +12,7 @@ public class SettingsMenu : MonoBehaviour
     public PlayerLook playerLook; // xSensitivity, ySensitivity
     public BGM BGM;
     public SoundManager soundManager;
+    public GameObject globalVolume;
 
     public AudioSource crazyCornAudio;
     
@@ -44,6 +45,18 @@ public class SettingsMenu : MonoBehaviour
     {
         playerLook.xSensitivity = xSens * playerLook.screenSizeFactor;
         xSensitivityDisplay.text = "X Sensitivity: " + (xSens * playerLook.screenSizeFactor).ToString("n2");
+    }
+
+    public void toggleHighQuality(bool highQuality)
+    {
+        if (highQuality)
+        {
+            globalVolume.SetActive(true);
+        }
+        else
+        {
+            globalVolume.SetActive(false);
+        }
     }
 
     public void SetYSensitivity(float ySens)
