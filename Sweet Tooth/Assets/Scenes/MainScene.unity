@@ -29430,7 +29430,15 @@ MonoBehaviour:
   boneSize: 1.14
   tripodSize: 1
   boneColor: {r: 0, g: 0.1262517, b: 1, a: 0.5}
-  m_Transforms: []
+  m_Transforms:
+  - {fileID: 4329394701976470167}
+  - {fileID: 4672051309246230044}
+  - {fileID: 5769260146219466201}
+  - {fileID: 8816993944414167930}
+  - {fileID: 4710214423794729605}
+  - {fileID: 4228585288687977327}
+  - {fileID: 1893699758795557376}
+  - {fileID: 5947353486129956774}
 --- !u!114 &7749127841215327207
 MonoBehaviour:
   m_ObjectHideFlags: 0
