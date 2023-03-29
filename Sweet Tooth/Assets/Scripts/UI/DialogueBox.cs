@@ -37,6 +37,8 @@ public class DialogueBox : MonoBehaviour
     public float speed;
     public float typeSpeed;
     public InputManager inputManager;
+    public GameObject hudCanvas;
+    public bool isOpen;
 
     void Start()
     {
@@ -65,26 +67,28 @@ public class DialogueBox : MonoBehaviour
 
     public IEnumerator OpenAnimation()
     {
+        hudCanvas.SetActive(false);
         mainGotoCoordinates = mainTargetCoordinates; // move up
         authorGotoCoordinates.y = authorTargetCoordinates.y-50; // move up with an offset so its not visible
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         mainGotoSize.x = mainTargetSize.x; // widen out
         authorGotoCoordinates.x = authorTargetCoordinates.x; // move left
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         authorGotoCoordinates.y = authorTargetCoordinates.y; // pop out the top
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         authorGotoSize.x = authorTargetSize.x; // widen out author box
     }
 
     public IEnumerator CloseAnimation()
     {
+        hudCanvas.SetActive(true);
         authorGotoSize.x = authorStartSize.x; // unwiden out author box
-        yield return new WaitForSeconds(0.4f);
-        authorGotoCoordinates.y = authorTargetCoordinates.y-50; // make the top come back in
         yield return new WaitForSeconds(0.3f);
+        authorGotoCoordinates.y = authorTargetCoordinates.y-50; // make the top come back in
+        yield return new WaitForSeconds(0.2f);
         authorGotoCoordinates.x = authorStartCoordinates.x; // move right
         mainGotoSize.x = mainStartSize.x; // unwiden out
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         authorGotoCoordinates.y = authorStartCoordinates.y; // move down
         mainGotoCoordinates = mainStartCoordinates; // move down 
     }

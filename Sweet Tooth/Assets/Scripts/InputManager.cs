@@ -17,6 +17,32 @@ public class InputManager : MonoBehaviour
     public DialogueBox dialogueBox;
 
     public bool interactKeyPressed;
+    public bool stopInput;
+    public bool stopMove;
+    public bool stopLook;
+
+    void Update()
+    {
+        if (pauseMenu.isPaused)
+        // used to have || dialogueBox.isOpen
+        {
+            stopInput = true;
+        }
+        else
+        {
+            stopInput = false;
+        }
+
+        if (dialogueBox.isOpen){
+            stopMove = true;
+            stopLook = true;
+        }
+        else
+        {
+            stopMove = false;
+            stopLook = false;
+        }
+    }
 
     void Awake()
     {
@@ -29,75 +55,75 @@ public class InputManager : MonoBehaviour
     
         // jump
         onFoot.Jump.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 motor.Jump();
             }
         };
 
         // toggle crouching when pressing/releasing key
         onFoot.Crouch.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 motor.Crouch(true);
             }
         };
         onFoot.Crouch.canceled += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 motor.Crouch(false);
             }
         };
         
         // toggle sprint when pressing/releasing key
         onFoot.Sprint.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 motor.Sprint(true);
             }
         };
         onFoot.Sprint.canceled += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 motor.Sprint(false);
             }
         };
         
         onFoot.Interact.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 interactKeyPressed = true;
             }
         };
 
         onFoot.Interact.canceled += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 interactKeyPressed = false;
             }
         };
 
         // activate ability
         onFoot.Ability.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 ability.ActivateAbility("sugarRush");
             }
         };
 
         // use tool
         onFoot.UseToolPrimary.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.Use(true);
             }
         };
         onFoot.UseToolPrimary.canceled += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.Use(false);
             }
         };
 
         onFoot.Reload.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.Reload();
             }
         };
 
         // switch tools using scroll wheel
         onFoot.Scroll.performed += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 float scrollValue = ctx.ReadValue<float>();
                 if (scrollValue > 0) {
                     // scroll up - switch to the next tool in order
@@ -111,17 +137,17 @@ public class InputManager : MonoBehaviour
 
         // switch tools using keyboard
         onFoot.ToolOne.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.SwitchTool(1);
             }
         };
         onFoot.ToolTwo.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.SwitchTool(2);
             }
         };
         onFoot.ToolThree.started += ctx => {
-            if (!pauseMenu.isPaused) {
+            if (!stopInput) {
                 tool.SwitchTool(3);
             }
         };
@@ -132,14 +158,19 @@ public class InputManager : MonoBehaviour
     void FixedUpdate()
     {
         // tell the playermotor to move using the value from our movement action
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-
-        
+        if (!stopMove) // if dialogue box is not open
+        {
+            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        }
     }
+
     void LateUpdate()
     {
         // tell the playermotor to look using the value from our look action
-        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        if (!stopLook) // if dialogue box is not open
+        {
+            look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        }
     }
 
     private void OnEnable()

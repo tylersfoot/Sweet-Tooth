@@ -16,7 +16,6 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         camera = GetComponent<PlayerLook>().camera;
-        
     }
 
     void Update()
@@ -32,11 +31,13 @@ public class PlayerInteract : MonoBehaviour
 
             if(hitInfo.collider.GetComponent<Interactable>() != null)
             {
+                // if ray hits interactable object, grab interactable script
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-                playerHUD.UpdateText(interactable.promptMessage);
+                playerHUD.UpdateText(interactable.promptMessage); // show prompt
 
                 if (inputManager.interactKeyPressed && allowInteraction)
                 {
+                    // call BaseInteract() on the object's script
                     interactable.BaseInteract();
                     inputManager.interactKeyPressed = false;
                 }

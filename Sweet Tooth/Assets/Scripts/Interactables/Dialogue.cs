@@ -9,7 +9,6 @@ public class Dialogue : Interactable
     public string textDisplay;
     public string author;
 
-    public bool isOpen = false;
     public float distance;
 
     public DialogueBox dialogueBox;
@@ -21,7 +20,7 @@ public class Dialogue : Interactable
 
     void Update()
     {
-        if (isOpen && Vector3.Distance(transform.position, player.transform.position) > distance)
+        if (dialogueBox.isOpen && Vector3.Distance(transform.position, player.transform.position) > distance)
         {
             endDialogueCoroutine = StartCoroutine(EndDialogue());
         }
@@ -29,7 +28,7 @@ public class Dialogue : Interactable
 
     IEnumerator StartDialogue()
     {
-        isOpen = true;
+        dialogueBox.isOpen = true;
         playerInteract.allowInteraction = false; // can't interact with anything else while in dialogue
         dialogueBox.UpdateAuthorText("");
         dialogueBox.ActivateBox(true);
@@ -72,7 +71,7 @@ public class Dialogue : Interactable
 
     IEnumerator EndDialogue()
     {
-        isOpen = false;
+        dialogueBox.isOpen = false;
         playerInteract.allowInteraction = true;
         currentParagraph = 0;
         if (startDialogueCoroutine != null)
