@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class GummyBearAI : MonoBehaviour
+public class PeanutButterToadAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;

@@ -450,8 +450,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &22465507
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1814,8 +1824,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &159730975
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2230,8 +2250,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &194015422
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2320,8 +2350,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &195520813
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2644,8 +2684,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &203271387
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3501,8 +3551,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &252024774
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3736,8 +3796,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &278835963
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3960,8 +4030,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &283570666
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5679,8 +5759,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &381576979
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6930,8 +7020,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &504338541
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7665,8 +7765,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &572583406
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7880,8 +7990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
-  image: {fileID: 580377363}
 --- !u!1 &595712223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,8 +8238,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &614784301
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8220,8 +8338,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &619266408
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8989,8 +9117,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &684892560
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9827,8 +9965,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &729228045
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10173,8 +10321,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &746417929
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11580,8 +11738,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &840486843
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11975,8 +12143,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &882492149
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12565,8 +12743,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &914415199
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13222,8 +13410,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &994155817
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13826,8 +14024,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1067428343
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13916,8 +14124,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1068175407
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14068,8 +14286,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1076241580
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14778,8 +15006,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1122795288
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15066,8 +15304,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1145199906
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15398,8 +15646,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1202740482
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15926,8 +16184,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1233958746
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16258,8 +16526,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1250650906
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16348,8 +16626,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1255963027
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16438,8 +16726,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1259307727
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16528,8 +16826,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1262034318
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16955,8 +17263,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1303915659
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17937,8 +18255,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1336598695
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19490,8 +19818,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1418352041
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20291,8 +20629,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1490975421
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20995,9 +21343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 12.5, y: 12.5, z: 0, w: 0}
-  rect2props: {x: 0.000015258789, y: -6.2500076, z: 75.130104, w: 75.130104}
-  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21407,8 +21752,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1530146723
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21497,8 +21852,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1530320695
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -22309,8 +22674,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1604370702
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23007,8 +23382,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1672308824
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24745,8 +25130,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1803296122
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24835,8 +25230,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1818239728
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25169,8 +25574,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1840138087
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -25854,8 +26269,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1903872029
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26073,8 +26498,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1919130822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26424,8 +26859,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1945144690
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26514,8 +26959,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &1951243476
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27545,8 +28000,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &2027713886
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27915,6 +28380,37 @@ Transform:
   m_Father: {fileID: 1903872027}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2074873773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074873774}
+  m_Layer: 0
+  m_Name: Rig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074873774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074873773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6972062723937595749}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084093643
 GameObject:
   m_ObjectHideFlags: 0
@@ -28092,8 +28588,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 1
-  moveSpots: []
-  speed: 0
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 0
+  flashDuration: 0
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 0}
 --- !u!195 &2109990054
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29727,7 +30233,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!195 &4104603286403943372
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29778,6 +30284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sightRange: 10
   attackRange: 5
+  patrolRange: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 0
   Terrain:
@@ -29786,6 +30293,8 @@ MonoBehaviour:
   health: 1000
   flashDuration: 5
   renderers: []
+  delaypatrol: 5
+  delayattack: 1
   playerStats: {fileID: 314080691}
 --- !u!4 &4228585288687977327
 Transform:
@@ -29849,9 +30358,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sightRange: 10
-  attackRange: 1
-  moveSpots: []
-  speed: 0
+  attackRange: 3
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 50
+  flashDuration: 1
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 314080691}
 --- !u!195 &4298291701023034234
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30465,6 +30984,7 @@ Transform:
   m_Children:
   - {fileID: 2049537268496015867}
   - {fileID: 6102404474259106304}
+  - {fileID: 2074873774}
   m_Father: {fileID: 1720903568}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30485,6 +31005,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7707610947520232518}
+  - component: {fileID: 7707610947520232522}
+  - component: {fileID: 7707610947520232521}
+  - component: {fileID: 7707610947520232520}
+  - component: {fileID: 7707610947520232519}
   m_Layer: 0
   m_Name: peanutbuttertoad
   m_TagString: Untagged
@@ -30755,6 +31279,84 @@ Transform:
   m_Father: {fileID: 1720903568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -117.799, z: 0}
+--- !u!114 &7707610947520232519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042855749938751228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e7a867c366f044b918d2ba0fd03d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightRange: 10
+  attackRange: 5
+  patrolRange: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  Terrain:
+    serializedVersion: 2
+    m_Bits: 0
+  health: 500
+  flashDuration: 1
+  renderers: []
+  delaypatrol: 5
+  delayattack: 1
+  playerStats: {fileID: 314080691}
+--- !u!136 &7707610947520232520
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042855749938751228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.5
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: 0, y: 3, z: -1}
+--- !u!54 &7707610947520232521
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042855749938751228}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &7707610947520232522
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042855749938751228}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 10
+  m_Acceleration: 10
+  avoidancePriority: 50
+  m_AngularSpeed: 1e+17
+  m_StoppingDistance: 5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7718016092975257819
 GameObject:
   m_ObjectHideFlags: 0
@@ -30810,7 +31412,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!195 &7749127841215327202
 NavMeshAgent:
   m_ObjectHideFlags: 0

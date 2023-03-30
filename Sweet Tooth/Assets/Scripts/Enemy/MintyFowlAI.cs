@@ -9,6 +9,7 @@ public class MintyFowlAI : MonoBehaviour
     Transform target;
     public float sightRange = 10f; // distance the enemy can see the player
     public float attackRange = 5f; // distance the enemy can attack the player
+    public float patrolRange = 10f; // distance the enemy patrols
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
@@ -16,6 +17,9 @@ public class MintyFowlAI : MonoBehaviour
     public float health;
     public float flashDuration;
     public Renderer[] renderers;
+    float timer;
+    public float delaypatrol = 5.0f; // delay for the time between potrols
+    public float delayattack = 1f;
 
     public PlayerStats playerStats;
 
@@ -32,15 +36,18 @@ public class MintyFowlAI : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
         // checks for player in sight range
+        timer = Time.deltaTime;
+        delayattack = delayattack + Time.deltaTime;
+        //keeps track of the game time
         if (distance <= sightRange)
         {
             chasePlayer();
         }
-        if (distance <= attackRange) 
+        if (distance <= attackRange && delayattack > 2f) 
         {
             attackPlayer();
         }
-        if (distance >= 10f)
+        if (distance >= patrolRange && timer > delaypatrol)
         {
             patrol();
         }
@@ -56,6 +63,7 @@ public class MintyFowlAI : MonoBehaviour
 
     void attackPlayer()
     {
+        delayattack = 0f;
         // stops approaching
         agent.SetDestination(transform.position);
 
@@ -65,16 +73,17 @@ public class MintyFowlAI : MonoBehaviour
     }
     void patrol()
     {
+        //if no walkpoint searches for new one
         if (!walkPointSet) {
 
             SearchWalkPoint();
         }
 
         if (walkPointSet) {
-
+            delaypatrol = Time.deltaTime + 5f;
         agent.SetDestination(walkPoint);
         }
-
+        
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         //Walkpoint arrived
 
@@ -95,7 +104,7 @@ public class MintyFowlAI : MonoBehaviour
 
         walkPoint = new Vector3 (transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if(Physics.Raycast(walkPoint, -transform.up, 2f, Terrain)) {
+        if(Physics.Raycast(walkPoint, -transform.up, 4f, Terrain)) {
         walkPointSet = true;
         }
 

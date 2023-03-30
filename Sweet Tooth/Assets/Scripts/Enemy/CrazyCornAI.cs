@@ -37,12 +37,13 @@ public class CrazyCornAI : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         // checks for player in sight range
         timer = Time.deltaTime;
+        delayattack = delayattack + Time.deltaTime;
         //keeps track of the game time
         if (distance <= sightRange)
         {
             chasePlayer();
         }
-        if (distance <= attackRange ) 
+        if (distance <= attackRange && delayattack > 2f) 
         {
             attackPlayer();
         }
@@ -62,7 +63,7 @@ public class CrazyCornAI : MonoBehaviour
 
     void attackPlayer()
     {
-        delayattack = Time.deltaTime + 2f;
+        delayattack = 0f;
         // stops approaching
         agent.SetDestination(transform.position);
 
@@ -72,6 +73,7 @@ public class CrazyCornAI : MonoBehaviour
     }
     void patrol()
     {
+        //if no walkpoint searches for new one
         if (!walkPointSet) {
 
             SearchWalkPoint();
