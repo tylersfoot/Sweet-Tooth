@@ -17,25 +17,29 @@ public class InputManager : MonoBehaviour
     public DialogueBox dialogueBox;
 
     public bool interactKeyPressed;
-    public bool stopInput;
-    public bool stopMove;
-    public bool stopLook;
+    public bool stopInput; // stop inputs all together
+    public bool stopMove; // stop movement, including sprint/crouch/jump
+    public bool stopLook; // stop looking around
 
     void Update()
     {
-        if (pauseMenu.isPaused)
-        // used to have || dialogueBox.isOpen
+        if (pauseMenu.isPaused || pauseMenu.currentScreen == "gameOverMenu")
         {
             stopInput = true;
+            stopMove = true;
+            stopLook = true;
         }
         else
         {
             stopInput = false;
+            stopMove = false;
+            stopLook = false;
         }
 
-        if (dialogueBox.isOpen){
-            stopMove = true;
-            stopLook = true;
+        if (dialogueBox.isOpen)
+        {
+            // stopMove = true;
+            // stopLook = true;
         }
         else
         {

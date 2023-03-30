@@ -20,6 +20,8 @@ public class SettingsMenu : MonoBehaviour
     public TextMeshProUGUI xSensitivityDisplay;
     public Slider ySensitivitySlider;
     public TextMeshProUGUI ySensitivityDisplay;
+    public Slider mouseSmoothingSlider;
+    public TextMeshProUGUI mouseSmoothingDisplay;
     public Slider BGMSlider;
     public TextMeshProUGUI BGMDisplay;
     public Slider SoundEffectSlider;
@@ -28,23 +30,35 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         canvas.SetActive(false);
-
-        xSensitivityDisplay.text = "X Sensitivity: " + playerLook.xSensitivity.ToString("n2");
-        ySensitivityDisplay.text = "Y Sensitivity: " + playerLook.ySensitivity.ToString("n2");
+        SetXSensitivity(playerLook.xSensitivity);
+        SetYSensitivity(playerLook.ySensitivity);
+        SetMouseSmoothing(50/playerLook.mouseSmoothing);
         BGMDisplay.text = "Music Volume: " + (BGM.volume*100).ToString("n0") + "%";
         SoundEffectDisplay.text = "Effects Volume: " + (soundManager.volume*100).ToString("n0") + "%";
-
-    }
-    void Update()
-    {
-        // debugging
-        // Debug.Log(playerLook.xSensitivity + " ... " + playerLook.screenSizeFactor);
     }
 
     public void SetXSensitivity(float xSens)
     {
-        playerLook.xSensitivity = xSens * playerLook.screenSizeFactor;
-        xSensitivityDisplay.text = "X Sensitivity: " + (xSens * playerLook.screenSizeFactor).ToString("n2");
+        playerLook.changeSensitivity("x", xSens);
+        xSensitivitySlider.value = xSens;
+        xSensitivityDisplay.text = "X Sensitivity: " + (playerLook.xSensitivity).ToString("n0");
+    }
+
+    public void SetYSensitivity(float ySens)
+    {
+        playerLook.changeSensitivity("y", ySens);
+        ySensitivitySlider.value = ySens;
+        ySensitivityDisplay.text = "Y Sensitivity: " + (playerLook.ySensitivity).ToString("n0");
+    }
+
+    public void SetMouseSmoothing(float mouseSmoothing)
+    {
+        // ranges from 0-10 to 10-1
+        mouseSmoothing += 0.01f; // to prevent divide by 0
+        playerLook.mouseSmoothing = (1/mouseSmoothing)*50;
+        mouseSmoothing -= 0.01f;
+        mouseSmoothingSlider.value = (mouseSmoothing);
+        mouseSmoothingDisplay.text = "Mouse Smoothing: " + (mouseSmoothing).ToString("n2");
     }
 
     public void toggleHighQuality(bool highQuality)
@@ -57,12 +71,6 @@ public class SettingsMenu : MonoBehaviour
         {
             globalVolume.SetActive(false);
         }
-    }
-
-    public void SetYSensitivity(float ySens)
-    {
-        playerLook.ySensitivity = ySens * playerLook.screenSizeFactor;
-        ySensitivityDisplay.text = "Y Sensitivity: " + (ySens * playerLook.screenSizeFactor).ToString("n2");
     }
 
     public void SetBGMVolume(float volume)

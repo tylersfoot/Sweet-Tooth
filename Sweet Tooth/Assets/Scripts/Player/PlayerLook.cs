@@ -5,37 +5,53 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public new Camera camera;
-    private float xRotation;
-
+    private float verticalRotationTarget;
+    private float verticalRotation;
+    private float horizontalRotationTarget;
+    private float horizontalRotation;
     public float xSensitivity;
     public float ySensitivity;
-    public float screenSizeFactor;
+    public float mouseSmoothing;
 
     void Start()
     {
-        // get the base screen width and height
-        int baseScreenWidth = 1920;
-        int baseScreenHeight = 1080;
-
-        // calculate the screen size factor
-        screenSizeFactor = (float)Screen.width / baseScreenWidth + (float)Screen.height / baseScreenHeight;
-        screenSizeFactor /= 2f;
-
         // adjust the sensitivity based on the screen size factor
-        xSensitivity *= screenSizeFactor;
-        ySensitivity *= screenSizeFactor;
+        xSensitivity *= Screen.width / 1920;
+        ySensitivity *= Screen.height / 1080;
+    }
+
+    void Update()
+    {
+        // vertical rotation
+        verticalRotation = Mathf.Lerp(verticalRotation, verticalRotationTarget, Time.deltaTime * mouseSmoothing);
+        camera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+
+        // horizontal rotation
+        horizontalRotation = Mathf.Lerp(horizontalRotation, horizontalRotationTarget, Time.deltaTime * mouseSmoothing);
+        Quaternion newRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, horizontalRotation, transform.rotation.eulerAngles.z);
+        transform.rotation = newRotation;
+
+    }
+
+    public void changeSensitivity(string axis, float sensitivity)
+    {
+        if (axis == "x")
+        {
+            xSensitivity = sensitivity;
+            xSensitivity *= Screen.width / 1920;
+        }
+        else if (axis == "y")
+        {
+            ySensitivity = sensitivity;
+            ySensitivity *= Screen.height / 1080;
+        }
     }
 
     public void ProcessLook(Vector2 input)
     {
-        float mouseX = input.x;
-        float mouseY = input.y;
         // calculate camera rotation for looking vertically
-        xRotation -= (mouseY * Time.deltaTime) * ySensitivity;
-        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
-        // apply to the camera transform
-        camera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        // rotate player to look horizontally
-        transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
+        verticalRotationTarget -= (input.y * Time.deltaTime) * ySensitivity;
+        verticalRotationTarget = Mathf.Clamp(verticalRotationTarget, -80f, 80f);
+        horizontalRotationTarget += (input.x * Time.deltaTime) * xSensitivity;
     }
 }

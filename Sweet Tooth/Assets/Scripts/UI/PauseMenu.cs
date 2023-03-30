@@ -25,19 +25,22 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        if (!isPaused)
+        if (currentScreen != "gameOverMenu")
         {
-            // pauses the game
-            Time.timeScale = 0f;
-            canvas.SetActive(true);
-            isPaused = true;
-            currentScreen = "pauseMenu";
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            ResumeButton();
+            if (!isPaused)
+            {
+                // pauses the game
+                Time.timeScale = 0f;
+                canvas.SetActive(true);
+                isPaused = true;
+                currentScreen = "pauseMenu";
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                ResumeButton();
+            }
         }
     }
 

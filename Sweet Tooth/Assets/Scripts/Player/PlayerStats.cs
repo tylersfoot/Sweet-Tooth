@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Scripts")]
     public HUD HUD;
+    public GameOverMenu gameOverMenu;
 
     void Start()
     {
@@ -50,6 +51,6 @@ public class PlayerStats : MonoBehaviour
 
     public void PlayerDeath(string source)
     {
-        Debug.Log("Player died from " + source);
+        gameOverMenu.Death(source);
     }
 }
