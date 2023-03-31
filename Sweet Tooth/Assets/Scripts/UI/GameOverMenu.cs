@@ -45,7 +45,17 @@ public class GameOverMenu : MonoBehaviour
         case "peanutButterToad":
             deathDisplay = "The peanut butter toad's tongue was too sticky, and you couldn't get away.";
             break;
+        case "mrKahooBadoo":
+            deathDisplay = "Mr. Kahoo Badoo's dance moves were too much for you to handle.";
+            break;
+        case "tylersfoot":
+            deathDisplay = "You were smited by tyler's foot. You should have known better.";
+            break;
+        case "Dr. Bixler":
+            deathDisplay = "Dr. Bixler's experiments caused atoms in your brain to split, creating a nuclear explosion and killing millions around you.";
+            break;
         default:
+            // when there was no death reason
             deathDisplay = "You died from... something? We're... not really sure.";
             break;
         }

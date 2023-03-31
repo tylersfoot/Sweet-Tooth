@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -69,10 +70,10 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void QuitButton()
+    public void MainMenuButton()
     {
-        // closes the game without hesitation
-        Application.Quit();
+        // load main menu
+        SceneManager.LoadScene("MainMenu"); 
     }
 }
 

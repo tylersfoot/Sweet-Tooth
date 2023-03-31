@@ -54,7 +54,12 @@ public class BubblegumBlaster : MonoBehaviour
         Vector3 spreadVector = Quaternion.Euler(spreadAngleX, spreadAngleY, 0f) * projectileSpawn.forward;
     
         // spawn a new projectile at the shoot point
-        GameObject newProjectile = Instantiate(projectilePrefab, projectileSpawn.position, projectileSpawn.rotation, GameObject.Find("Projectiles").transform);
+        GameObject newProjectile = Instantiate(
+            projectilePrefab,
+            projectileSpawn.position,
+            projectileSpawn.rotation,
+            GameObject.Find("Projectiles").transform
+        );
         // apply a force to the projectile in the shoot point's forward direction with randomized spread
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
         projectileRb.AddForce(spreadVector * shootForce, ForceMode.Impulse);

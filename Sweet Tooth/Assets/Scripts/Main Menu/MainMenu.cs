@@ -29,6 +29,11 @@ public class MainMenu : MonoBehaviour
     public float quitFillTarget;
     public float quitFill;
 
+    void Start()
+    {
+        Time.timeScale = 1f; // when coming back from pause menu
+    }
+
     void Update()
     {
         // lerps the bar when you hover over an option

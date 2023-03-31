@@ -55,7 +55,6 @@ public class Tool : MonoBehaviour
             maxAmmoDisplay = "";
             break;
         }
-        
     }
 
     public void SwitchTool(int num)
@@ -97,7 +96,6 @@ public class Tool : MonoBehaviour
         }
     }
 
-    // method to use the tool
     public void Use(bool key)
     {
         switch (activeTool)
