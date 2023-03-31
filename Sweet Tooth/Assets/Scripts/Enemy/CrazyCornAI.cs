@@ -15,6 +15,7 @@ public class CrazyCornAI : MonoBehaviour
     public float walkPointRange;
     public LayerMask Terrain;
     public float health;
+    public float damage;
     public float flashDuration;
     public Renderer[] renderers;
     float timer;
@@ -68,7 +69,7 @@ public class CrazyCornAI : MonoBehaviour
         agent.SetDestination(transform.position);
 
         // I need the code for animation
-        playerStats.DamagePlayer(2, "crazyCorn");
+        playerStats.DamagePlayer(damage, "crazyCorn");
         
     }
     void patrol()

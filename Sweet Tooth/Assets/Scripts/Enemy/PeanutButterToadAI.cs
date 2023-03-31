@@ -11,13 +11,14 @@ public class PeanutButterToadAI : MonoBehaviour
     public float attackRange = 5f; // distance the enemy can attack the player
     public float patrolRange = 10f; // distance the enemy patrols
     public Vector3 walkPoint;
-    bool walkPointSet;
+    private bool walkPointSet;
     public float walkPointRange;
     public LayerMask Terrain;
     public float health;
+    public float damage;
     public float flashDuration;
     public Renderer[] renderers;
-    float timer;
+    private float timer;
     public float delaypatrol = 5.0f; // delay for the time between potrols
     public float delayattack = 1f;
 
@@ -68,7 +69,7 @@ public class PeanutButterToadAI : MonoBehaviour
         agent.SetDestination(transform.position);
 
         // I need the code for animation
-        playerStats.DamagePlayer(2, "crazyCorn");
+        playerStats.DamagePlayer(damage, "peanutButterToad");
         
     }
     void patrol()

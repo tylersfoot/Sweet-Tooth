@@ -34,7 +34,7 @@ public class GameOverMenu : MonoBehaviour
             deathDisplay = "You pressed the cube too many times, huh? Curiosity killed the cat... and you.";
             break;
         case "crazyCorn":
-            deathDisplay = "Well butter my corn and call me creamed, the crazy corn got you good.";
+            deathDisplay = "The crazy corn ate you. Good job.";
             break;
         case "gummyBear":
             deathDisplay = "The gummy bear hugged you to death!";
@@ -56,12 +56,13 @@ public class GameOverMenu : MonoBehaviour
     public void RespawnButton()
     {
         // restart scene for now
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game");
     }
 
     public void MainMenuButton()
     {
-        // load main menu (in future)
+        // load main menu
+        SceneManager.LoadScene("MainMenu");
     }
 }
 

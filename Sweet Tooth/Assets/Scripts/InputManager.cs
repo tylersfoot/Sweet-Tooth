@@ -29,20 +29,15 @@ public class InputManager : MonoBehaviour
             stopMove = true;
             stopLook = true;
         }
+        else if (dialogueBox.isOpen)
+        {
+            // stopInput = false;
+            // stopMove = false;
+            // stopLook = false;
+        }
         else
         {
             stopInput = false;
-            stopMove = false;
-            stopLook = false;
-        }
-
-        if (dialogueBox.isOpen)
-        {
-            // stopMove = true;
-            // stopLook = true;
-        }
-        else
-        {
             stopMove = false;
             stopLook = false;
         }
@@ -162,7 +157,7 @@ public class InputManager : MonoBehaviour
     void FixedUpdate()
     {
         // tell the playermotor to move using the value from our movement action
-        if (!stopMove) // if dialogue box is not open
+        if (!stopMove)
         {
             motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
         }
@@ -171,7 +166,7 @@ public class InputManager : MonoBehaviour
     void LateUpdate()
     {
         // tell the playermotor to look using the value from our look action
-        if (!stopLook) // if dialogue box is not open
+        if (!stopLook)
         {
             look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
         }
