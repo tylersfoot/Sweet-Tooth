@@ -47,6 +47,7 @@ public class PlayerMotor : MonoBehaviour
     [Header("Other")]
     public float gravity; // gravity acceleration
     private Vector3 targetScale = Vector3.one; // target player scale
+    public float acceleration; // acceleration towards target speed, for smoothing/lerping
 
     // called before the first frame update
     void Start()
@@ -71,6 +72,7 @@ public class PlayerMotor : MonoBehaviour
             targetJumpHeight = walkJumpHeight * sprintJumpHeightFactor;
         }
         speed = targetSpeed;
+        // speed = Mathf.Lerp(speed, targetSpeed, acceleration * Time.deltaTime);
         jumpHeight = targetJumpHeight;
         isGrounded = controller.isGrounded;
         if (lerpCrouch)

@@ -33,7 +33,7 @@ public class Dialogue : Interactable
         dialogueBox.UpdateAuthorText("");
         dialogueBox.ActivateBox(true);
         StartCoroutine(dialogueBox.OpenAnimation());
-        yield return new WaitForSeconds(0.19f * dialogueBox.speed);
+        yield return new WaitForSeconds(0.10f * dialogueBox.speed);
 
         for (int i = 0; i <= author.Length; i++) // loops and types out the author name
         {
