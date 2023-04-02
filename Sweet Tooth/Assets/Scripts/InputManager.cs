@@ -41,6 +41,21 @@ public class InputManager : MonoBehaviour
             stopMove = false;
             stopLook = false;
         }
+
+        // tell the playermotor to move using the value from our movement action
+        if (!stopMove)
+        {
+            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        }
+    }
+
+    void LateUpdate()
+    {
+        // tell the playermotor to look using the value from our look action
+        if (!stopLook)
+        {
+            look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        }
     }
 
     void Awake()
@@ -152,24 +167,6 @@ public class InputManager : MonoBehaviour
         };
         // pause game
         onFoot.Pause.started += ctx => pauseMenu.Pause();
-    }
-
-    void FixedUpdate()
-    {
-        // tell the playermotor to move using the value from our movement action
-        if (!stopMove)
-        {
-            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-        }
-    }
-
-    void LateUpdate()
-    {
-        // tell the playermotor to look using the value from our look action
-        if (!stopLook)
-        {
-            look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
-        }
     }
 
     private void OnEnable()

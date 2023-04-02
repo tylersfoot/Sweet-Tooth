@@ -52,9 +52,9 @@ public class PlayerAbility : MonoBehaviour
         float walkSpeedBefore = playerStats.walkSpeed;
         float walkFOVBefore = playerMotor.walkFOV;
         float walkJumpHeightBefore = playerMotor.walkJumpHeight;
-        playerStats.walkSpeed = 10;
+        playerStats.walkSpeed *= 2f;
         playerMotor.walkFOV = 90;
-        playerMotor.walkJumpHeight = 2f;
+        playerMotor.walkJumpHeight *= 1.5f;
             
         yield return new WaitForSeconds(abilityDuration);
         // perform some action when ability ends

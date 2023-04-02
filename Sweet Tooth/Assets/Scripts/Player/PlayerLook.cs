@@ -16,8 +16,8 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         // adjust the sensitivity based on the screen size factor
-        xSensitivity *= Screen.width / 1920;
-        ySensitivity *= Screen.height / 1080;
+        xSensitivity *= (float)Screen.width / 1920f;
+        ySensitivity *= (float)Screen.height / 1080f;
     }
 
     void Update()
@@ -25,6 +25,7 @@ public class PlayerLook : MonoBehaviour
         // vertical rotation
         verticalRotation = Mathf.Lerp(verticalRotation, verticalRotationTarget, Time.deltaTime * mouseSmoothing);
         camera.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+
 
         // horizontal rotation
         horizontalRotation = Mathf.Lerp(horizontalRotation, horizontalRotationTarget, Time.deltaTime * mouseSmoothing);
@@ -38,20 +39,22 @@ public class PlayerLook : MonoBehaviour
         if (axis == "x")
         {
             xSensitivity = sensitivity;
-            xSensitivity *= Screen.width / 1920;
+            xSensitivity *= (float)Screen.width / 1920f;
         }
         else if (axis == "y")
         {
             ySensitivity = sensitivity;
-            ySensitivity *= Screen.height / 1080;
+            ySensitivity *= (float)Screen.height / 1080f;
         }
     }
 
     public void ProcessLook(Vector2 input)
     {
         // calculate camera rotation for looking vertically
+        Debug.LogError(Screen.height);
         verticalRotationTarget -= (input.y * Time.deltaTime) * ySensitivity;
         verticalRotationTarget = Mathf.Clamp(verticalRotationTarget, -80f, 80f);
         horizontalRotationTarget += (input.x * Time.deltaTime) * xSensitivity;
+
     }
 }

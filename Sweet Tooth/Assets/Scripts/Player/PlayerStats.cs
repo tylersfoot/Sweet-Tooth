@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Player Stats")]
-    public float playerMaxHealth;
-    public float playerHealth;
-    public float walkSpeed;
+    public float playerMaxHealth; // max player health
+    public float playerHealth; // current player health
+    public float walkSpeed; // max walking speed, base factor
 
     [Header("Inventory")]
     public Dictionary<string, int> inv = new Dictionary<string, int>();
