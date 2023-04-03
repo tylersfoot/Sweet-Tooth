@@ -39,7 +39,6 @@ public class CrazyCornAI : MonoBehaviour
         // checks for player in sight range
         timer = Time.deltaTime;
         delayattack = delayattack + Time.deltaTime;
-        delaypatrol = delaypatrol + Time.deltaTime;
         //keeps track of the game time
         if (distance <= sightRange)
         {
@@ -49,7 +48,7 @@ public class CrazyCornAI : MonoBehaviour
         {
             attackPlayer();
         }
-        if (distance >= patrolRange && delaypatrol > 2f)
+        if (distance >= patrolRange && timer > delaypatrol)
         {
             patrol();
         }
@@ -75,7 +74,6 @@ public class CrazyCornAI : MonoBehaviour
     }
     void patrol()
     {
-        delaypatrol = 0f;
         //if no walkpoint searches for new one
         if (!walkPointSet) {
 
