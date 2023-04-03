@@ -13,7 +13,6 @@ public class HUD : MonoBehaviour
     public Image redHealthBar; // instantly changes to health
     public Image pinkHealthBar; // lerps to change with playerHealthDisplay
     public Image sugarRushBar; // changes over time
-    public Image crosshair;
 
     public Tool tool;
     public PlayerAbility playerAbility;

@@ -10,7 +10,6 @@ public class SettingsMenu : MonoBehaviour
     public GameObject canvas;
     public PauseMenu pauseMenu; // currentScreen
     public PlayerLook playerLook; // xSensitivity, ySensitivity
-    public SillyMode sillyMode; // sillyMode
     public BGM BGM;
     public SoundManager soundManager;
     public GameObject globalVolume;
@@ -72,11 +71,6 @@ public class SettingsMenu : MonoBehaviour
         {
             globalVolume.SetActive(false);
         }
-    }
-
-    public void toggleSillyMode(bool isSilly)
-    {
-        sillyMode.makeSilly(isSilly);
     }
 
     public void SetBGMVolume(float volume)

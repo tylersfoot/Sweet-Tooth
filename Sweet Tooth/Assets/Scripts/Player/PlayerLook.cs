@@ -51,6 +51,7 @@ public class PlayerLook : MonoBehaviour
     public void ProcessLook(Vector2 input)
     {
         // calculate camera rotation for looking vertically
+        Debug.LogError(Screen.height);
         verticalRotationTarget -= (input.y * Time.deltaTime) * ySensitivity;
         verticalRotationTarget = Mathf.Clamp(verticalRotationTarget, -80f, 80f);
         horizontalRotationTarget += (input.x * Time.deltaTime) * xSensitivity;
