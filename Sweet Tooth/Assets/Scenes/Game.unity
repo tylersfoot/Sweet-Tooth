@@ -4456,9 +4456,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   radius: 25
   image: {fileID: 580377363}
 --- !u!1 &591618209
+=======
+--- !u!1 &595712223
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11024,9 +11028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 12.5, y: 12.5, z: 0, w: 0}
-  rect2props: {x: 0.000015258789, y: -6.2500076, z: 75.130104, w: 75.130104}
-  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15426,7 +15427,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!195 &4104603286403943372
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15538,7 +15539,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4298291701023034233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16449,7 +16450,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!195 &7707610947520232522
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16527,7 +16528,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!195 &7749127841215327202
 NavMeshAgent:
   m_ObjectHideFlags: 0
