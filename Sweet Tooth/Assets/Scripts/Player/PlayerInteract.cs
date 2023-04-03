@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
     private new Camera camera;
-    [SerializeField]
-    private float distance = 3f;
-    [SerializeField]
-    private LayerMask mask;
+    public float interactDistance = 3f;
+    public float crosshairDistance = 5f;
+    public LayerMask interactMask;
+    public LayerMask enemiesMask;
     public HUD playerHUD;
     public InputManager inputManager;
     public bool allowInteraction;
@@ -23,12 +23,14 @@ public class PlayerInteract : MonoBehaviour
         playerHUD.UpdateText(string.Empty);
         // create a ray at center of camera shooting outwards
         Ray ray = new Ray(camera.transform.position, camera.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * distance);   
+        Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.blue);
+        Debug.DrawRay(ray.origin, ray.direction * crosshairDistance, Color.red);
+
         RaycastHit hitInfo; // variable to store collision information
 
-        if(Physics.Raycast(ray, out hitInfo, distance, mask))
+        // interacion raycast
+        if(Physics.Raycast(ray, out hitInfo, interactDistance, interactMask))
         {
-
             if(hitInfo.collider.GetComponent<Interactable>() != null)
             {
                 // if ray hits interactable object, grab interactable script
@@ -41,9 +43,20 @@ public class PlayerInteract : MonoBehaviour
                     interactable.BaseInteract();
                     inputManager.interactKeyPressed = false;
                 }
-
             }
-
+        }
+        // crosshair raycast
+        if(Physics.Raycast(ray, out hitInfo, crosshairDistance, enemiesMask))
+        {
+            if (hitInfo.collider.CompareTag("Enemy"))
+            {
+                // if ray hits enemy, change the crosshair to red
+                playerHUD.crosshair.color = Color.red;
+            }
+        }
+        else
+        {
+            playerHUD.crosshair.color = Color.white;
         }
     
     }
