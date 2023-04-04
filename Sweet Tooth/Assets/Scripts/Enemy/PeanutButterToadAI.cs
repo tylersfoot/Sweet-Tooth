@@ -9,11 +9,9 @@ public class PeanutButterToadAI : MonoBehaviour
     Transform target;
     public float sightRange = 10f; // distance the enemy can see the player
     public float attackRange = 5f; // distance the enemy can attack the player
-    public float patrolRange = 10f; // distance the enemy patrols
     public Vector3 walkPoint;
     private bool walkPointSet;
     public float walkPointRange;
-    public LayerMask Terrain;
     public float health;
     public float damage;
     public float flashDuration;
@@ -21,6 +19,9 @@ public class PeanutButterToadAI : MonoBehaviour
     private float timer;
     public float delaypatrol = 5.0f; // delay for the time between potrols
     public float delayattack = 1f;
+    
+    private float randomZ;
+    private float randomX;
 
     public PlayerStats playerStats;
 
@@ -37,78 +38,88 @@ public class PeanutButterToadAI : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
         // checks for player in sight range
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
         delayattack = delayattack + Time.deltaTime;
         //keeps track of the game time
-        if (distance <= sightRange)
-        {
-            chasePlayer();
+
+        Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        // walkpoint arrived
+        if (distanceToWalkPoint.magnitude < 3f) {
+            walkPointSet = false;
         }
+
         if (distance <= attackRange && delayattack > 2f) 
         {
-            attackPlayer();
+            AttackPlayer();
         }
-        if (distance >= patrolRange && timer > delaypatrol)
+        else if (distance <= sightRange)
         {
-            patrol();
+            ChasePlayer();
         }
-
-        // Debug.Log(health);
+        else if (timer > delaypatrol)
+        {
+            Patrol();
+        }
+        else
+        {
+            // do nothing
+        }
     }
 
-    void chasePlayer()
+    void ChasePlayer()
     {
         // approaches player position
         agent.SetDestination(target.transform.position);
     }
 
-    void attackPlayer()
+    void AttackPlayer()
     {
-        delayattack = 0f;
-        // stops approaching
+        delayattack = 0f; // reset timer
+        // stops approaching, sets target position to itself
         agent.SetDestination(transform.position);
 
-        // I need the code for animation
+        // attack player
         playerStats.DamagePlayer(damage, "peanutButterToad");
-        
+        // TODO: add attack animation
     }
-    void patrol()
-    {
-        //if no walkpoint searches for new one
-        if (!walkPointSet) {
 
+    void Patrol()
+    {
+        // if no walkpoint, searches for new one
+        if (!walkPointSet) {
             SearchWalkPoint();
         }
 
         if (walkPointSet) {
-            delaypatrol = Time.deltaTime + 5f;
-        agent.SetDestination(walkPoint);
+            timer = 0;
+            agent.SetDestination(walkPoint);
         }
-        
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-        //Walkpoint arrived
-
-        if (distanceToWalkPoint.magnitude < 1f) {
-
-            walkPointSet = false;
-
-        }
-
     }
 
     void SearchWalkPoint()
     {
+        // Debug.Log("Searching for walk point!");
+        
+        // generate random point within patrol range
+        Vector3 randomDirection = Random.insideUnitSphere * walkPointRange;
+        randomDirection += transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, walkPointRange, NavMesh.AllAreas);
 
-        //calculate random point in range
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
+        // set walkPoint if found
+        if (NavMesh.SamplePosition(randomDirection, out hit, walkPointRange, NavMesh.AllAreas))
+        {
+            walkPoint = hit.position;
+            walkPointSet = true;
+            // Debug.Log("Found walk point: " + walkPoint);
 
-        walkPoint = new Vector3 (transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-        if(Physics.Raycast(walkPoint, -transform.up, 4f, Terrain)) {
-        walkPointSet = true;
+            // draw a red line in the editor from the walk point to the ground
+            Debug.DrawRay(walkPoint, transform.up * 100f, Color.red, 10f);
         }
-
+        else
+        {
+            // Debug.Log("Walk point not found!");
+        }
     }
 
     public void TakeDamage(int damage)

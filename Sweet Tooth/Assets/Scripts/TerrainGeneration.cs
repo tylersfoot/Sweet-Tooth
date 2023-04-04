@@ -29,7 +29,7 @@ public class TerrainGeneration : MonoBehaviour
         gridSize = terrainData.heightmapResolution - 1;
 
         // set the seed for the perlin noise
-        Random.InitState(seed);
+        // Random.InitState(seed);
 
         float[,] heights = new float[terrainData.heightmapResolution, terrainData.heightmapResolution];
         // loops through all vertices
