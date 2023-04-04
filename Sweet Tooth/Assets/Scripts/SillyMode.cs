@@ -23,6 +23,7 @@ public class SillyMode : MonoBehaviour
         {
             // set material's rendering mode to both faces (hamper mode)
             material.SetInt("_Cull", (int)UnityEngine.Rendering.CullMode.Back);
+            // I don't know why "Back" sets it to Front but whatever
         }
         // assign modified material to player
         playerRenderer.material = material;

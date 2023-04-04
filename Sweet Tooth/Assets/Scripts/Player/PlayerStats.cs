@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public float playerMaxHealth; // max player health
     public float playerHealth; // current player health
     public float walkSpeed; // max walking speed, base factor
+    public bool isDead; // is the player dead?
 
     [Header("Inventory")]
     public Dictionary<string, int> inv = new Dictionary<string, int>();
@@ -32,7 +33,10 @@ public class PlayerStats : MonoBehaviour
         if (playerHealth <= 0)
         {
             playerHealth = 0;
-            PlayerDeath(source);
+            if (!isDead)
+            {
+                PlayerDeath(source);
+            }
         }
 
         HUD.pinkCurrentTime = 0f; // reset pink bar timer
@@ -41,7 +45,10 @@ public class PlayerStats : MonoBehaviour
 
     public void HealPlayer(float amount, string source)
     {
-        playerHealth += amount;
+        if (!isDead)
+        {
+            playerHealth += amount;
+        }
 
         if (playerHealth > playerMaxHealth)
         {
@@ -51,6 +58,7 @@ public class PlayerStats : MonoBehaviour
 
     public void PlayerDeath(string source)
     {
+        isDead = true;
         gameOverMenu.Death(source);
     }
 }
