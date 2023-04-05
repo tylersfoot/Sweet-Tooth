@@ -48,11 +48,20 @@ public class PlayerMotor : MonoBehaviour
     public float gravity; // gravity acceleration
     private Vector3 targetScale = Vector3.one; // target player scale
     public float acceleration; // acceleration towards target speed, for smoothing/lerping
+    public Transform[] children;
 
     // called before the first frame update
     void Start()
-    {
+    { 
+        // get controller component
         controller = GetComponent<CharacterController>();
+
+        children = new Transform[transform.childCount];
+        int i = 0;  
+        foreach (Transform T in transform)
+        {
+            children[i++] = T;
+        }
     }
 
     // called once per frame
@@ -77,12 +86,16 @@ public class PlayerMotor : MonoBehaviour
         isGrounded = controller.isGrounded;
         if (lerpCrouch)
         {
+            // adjust camera height based on crouch state
+            float targetCameraHeight = crouching ? crouchHeight : standHeight;
+            Vector3 cameraPosition = camera.transform.localPosition;
+            cameraPosition.y = Mathf.Lerp(cameraPosition.y, targetCameraHeight, Time.deltaTime * 10f);
+            camera.transform.localPosition = cameraPosition;
+
+            isGrounded = controller.isGrounded;
+
             float targetHeight = crouching ? crouchHeight : standHeight; // sets the target height
             controller.height = Mathf.SmoothDamp(controller.height, targetHeight, ref crouchHeightVelocity, crouchHeightSmoothTime);
-            targetScale.y = controller.height / standHeight;
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 10f);
-            Vector3 targetScaleInverse = new Vector3(1.0f / targetScale.x, 1.0f / targetScale.y, 1.0f / targetScale.z);
-            tool.transform.localScale = Vector3.Lerp(tool.transform.localScale, targetScaleInverse, Time.deltaTime * 10f);
             if (Mathf.Abs(controller.height - targetHeight) < 0.01f)
             {
                 lerpCrouch = false;
