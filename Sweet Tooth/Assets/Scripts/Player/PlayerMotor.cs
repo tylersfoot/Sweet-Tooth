@@ -34,15 +34,18 @@ public class PlayerMotor : MonoBehaviour
     public float fovDampTime; // time to reach target FOV
 
     [Header("Height")]
+    public float standHeight; // standing height
     public float crouchHeight; // crouch height
-    public float sprintJumpHeightFactor;
-    public float crouchHeightVelocity;
-    public float crouchHeightSmoothTime;
-    public float jumpHeight; // jump height
-    public float targetJumpHeight;
     public float walkJumpHeight; // target jump height
     public float crouchJumpHeightFactor;
-    public float standHeight; // standing height
+    public float jumpHeight; // jump height
+    public float targetJumpHeight;
+    public float sprintJumpHeightFactor;
+    public float crouchHeightSmoothTime;
+
+
+    
+
 
     [Header("Other")]
     public float gravity; // gravity acceleration
@@ -87,17 +90,21 @@ public class PlayerMotor : MonoBehaviour
         if (lerpCrouch)
         {
             // adjust camera height based on crouch state
-            float targetCameraHeight = crouching ? crouchHeight : standHeight;
+            float targetHeight = crouching ? 0f : 0.6f; // sets the target height
+            
+            // lerps camera height
             Vector3 cameraPosition = camera.transform.localPosition;
-            cameraPosition.y = Mathf.Lerp(cameraPosition.y, targetCameraHeight, Time.deltaTime * 10f);
+            cameraPosition.y = Mathf.Lerp(cameraPosition.y, targetHeight, Time.deltaTime * crouchHeightSmoothTime);
             camera.transform.localPosition = cameraPosition;
 
-            isGrounded = controller.isGrounded;
+            // sets target height and lerps controller height and center
+            targetHeight = crouching ? crouchHeight : standHeight;
+            controller.height = Mathf.Lerp(controller.height, targetHeight, Time.deltaTime * crouchHeightSmoothTime);
+            controller.center = Vector3.down * (standHeight - controller.height) / 2.0f;
 
-            float targetHeight = crouching ? crouchHeight : standHeight; // sets the target height
-            controller.height = Mathf.SmoothDamp(controller.height, targetHeight, ref crouchHeightVelocity, crouchHeightSmoothTime);
-            if (Mathf.Abs(controller.height - targetHeight) < 0.01f)
+            if (Mathf.Abs(controller.height - targetHeight) < 0.001f)
             {
+                controller.height = targetHeight;
                 lerpCrouch = false;
             }
         }
@@ -132,17 +139,13 @@ public class PlayerMotor : MonoBehaviour
             sprintKeyDown = true;
         }
         crouching = !crouching;
-        if (crouching)
+        if(!crouching)
         {
-            targetScale.y = crouchHeight / standHeight;
-        }
-        else
-        {
+
             if (sprintKeyDown)
             {
                 Sprint(true);
             }
-            targetScale.y = 1f;
         }
         lerpCrouch = true;
     }
