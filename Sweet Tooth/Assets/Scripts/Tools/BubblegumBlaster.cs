@@ -51,8 +51,8 @@ public class BubblegumBlaster : MonoBehaviour
         float spreadAngleY = Random.Range(-spread, spread);
 
         // apply the spread angles to the projectile's forward direction
-        Vector3 spreadVector = Quaternion.Euler(spreadAngleX, spreadAngleY, 0f) * projectileSpawn.forward;
-    
+        Vector3 spreadVector = Quaternion.Euler(spreadAngleX, spreadAngleY, 0f) * Vector3.forward;
+
         // spawn a new projectile at the shoot point
         GameObject newProjectile = Instantiate(
             projectilePrefab,
@@ -62,7 +62,7 @@ public class BubblegumBlaster : MonoBehaviour
         );
         // apply a force to the projectile in the shoot point's forward direction with randomized spread
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
-        projectileRb.AddForce(spreadVector * shootForce, ForceMode.Impulse);
+        projectileRb.AddRelativeForce(spreadVector * shootForce, ForceMode.Impulse);
 
         // get the Renderer component of the new projectile
         Renderer projectileRenderer = newProjectile.GetComponent<Renderer>();
@@ -78,4 +78,5 @@ public class BubblegumBlaster : MonoBehaviour
 
         soundManager.PlaySound(shootSound);
     }
+
 }

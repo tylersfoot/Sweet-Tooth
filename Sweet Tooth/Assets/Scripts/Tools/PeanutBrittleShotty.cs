@@ -53,22 +53,25 @@ public class PeanutBrittleShotty : MonoBehaviour
         float spreadAngleX = Random.Range(-spread, spread);
         float spreadAngleY = Random.Range(-spread, spread);
 
-        // create a random axis of rotation for the spread
-        Vector3 axis = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-
         // apply the spread angles to the projectile's forward direction
-        Quaternion spreadRotation = Quaternion.AngleAxis(spreadAngleX, Vector3.right) * Quaternion.AngleAxis(spreadAngleY, Vector3.up) * Quaternion.AngleAxis(spread, axis);
-        Vector3 spreadVector = spreadRotation * projectileSpawn.forward;
-        
+        Vector3 spreadVector = Quaternion.Euler(spreadAngleX, spreadAngleY, 0f) * Vector3.forward;
+
         // spawn a new projectile at the shoot point
-        GameObject newProjectile = Instantiate(projectilePrefab, projectileSpawn.position, Quaternion.identity, GameObject.Find("Projectiles").transform);
+        GameObject newProjectile = Instantiate(
+            projectilePrefab,
+            projectileSpawn.position,
+            projectileSpawn.rotation,
+            GameObject.Find("Projectiles").transform
+        );
         // apply a force to the projectile in the shoot point's forward direction with randomized spread
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
-        projectileRb.AddForce(spreadVector * shootForce, ForceMode.Impulse);
+        projectileRb.AddRelativeForce(spreadVector * shootForce, ForceMode.Impulse);
 
         newProjectile.GetComponent<PeanutBrittle>().damage = damage; // sets damage of the projectile
 
         // destroy the projectile after the specified lifespan
         tool.Despawn(newProjectile, lifespan);
+
+        soundManager.PlaySound(shootSound);
     }
 }
