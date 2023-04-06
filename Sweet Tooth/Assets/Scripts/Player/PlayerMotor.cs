@@ -42,6 +42,7 @@ public class PlayerMotor : MonoBehaviour
     public float targetJumpHeight;
     public float sprintJumpHeightFactor;
     public float crouchHeightSmoothTime;
+    public Vector3 controllerTop;
 
 
     
@@ -90,7 +91,7 @@ public class PlayerMotor : MonoBehaviour
         if (lerpCrouch)
         {
             // adjust camera height based on crouch state
-            float targetHeight = crouching ? 0f : 0.6f; // sets the target height
+            float targetHeight = crouching ? crouchHeight-1.4f : standHeight-1.4f; // sets the target height
             
             // lerps camera height
             Vector3 cameraPosition = camera.transform.localPosition;
@@ -110,14 +111,42 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    void OnDrawGizmos()
+    {
+        if (controller != null)
+        {
+            // Draw a red wire sphere at the top of the character controller
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(controller.transform.position + controllerTop, controller.radius * 0.9f);
+        }
+    }
+
     // recieve inputs from InputManager.cs and apply them to character controller
     public void ProcessMove(Vector2 input)
     {
+        // move in the direction specified by wasd
         Vector3 moveDirection = new Vector3(input.x, 0, input.y);
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
+
+        // check for objects above player and zero out vertical velocity if necessary
+        controllerTop = new Vector3(0, controller.height - 1.3f, 0); // offset so the sphere doesn't stick out much
+        Collider[] colliders = Physics.OverlapSphere(controller.transform.position + controllerTop, controller.radius * 0.9f);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.gameObject != gameObject)
+            {
+                playerVelocity.y = Mathf.Min(0, playerVelocity.y);
+                Debug.Log("Hitting object above player! velocity: " + playerVelocity.y);
+                break; // exit the loop if collision is detected
+            }
+        }
+
+        // apply gravity to the player
         playerVelocity.y += gravity * Time.deltaTime;
         if(isGrounded && playerVelocity.y < 0)
-            playerVelocity.y = -2f;
+        {
+            playerVelocity.y = -0.5f; // slight gravity when on ground to stick to ground
+        }
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
