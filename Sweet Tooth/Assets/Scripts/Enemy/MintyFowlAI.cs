@@ -98,8 +98,6 @@ public class MintyFowlAI : MonoBehaviour
 
     void SearchWalkPoint()
     {
-        // Debug.Log("Searching for walk point!");
-        
         // generate random point within patrol range
         Vector3 randomDirection = Random.insideUnitSphere * walkPointRange;
         randomDirection += transform.position;
@@ -111,14 +109,6 @@ public class MintyFowlAI : MonoBehaviour
         {
             walkPoint = hit.position;
             walkPointSet = true;
-            // Debug.Log("Found walk point: " + walkPoint);
-
-            // draw a red line in the editor from the walk point to the ground
-            Debug.DrawRay(walkPoint, transform.up * 100f, Color.red, 10f);
-        }
-        else
-        {
-            // Debug.Log("Walk point not found!");
         }
     }
 
