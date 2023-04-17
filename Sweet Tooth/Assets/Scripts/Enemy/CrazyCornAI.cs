@@ -23,14 +23,17 @@ public class CrazyCornAI : MonoBehaviour
     private float randomZ;
     private float randomX;
 
+    public MobSpawner mobSpawner; // reference to the spawner script
+
     public PlayerStats playerStats;
 
     void Start()
     {
-        // target = player
+        // called when enemy is spawned
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         renderers = GetComponentsInChildren<Renderer>();
+        mobSpawner = GetComponentInParent<MobSpawner>();
        
     }
 
@@ -101,6 +104,14 @@ public class CrazyCornAI : MonoBehaviour
         // generate random point within patrol range
         Vector3 randomDirection = Random.insideUnitSphere * walkPointRange;
         randomDirection += transform.position;
+        
+        // check that the randomly generated point is within patrolRadius distance from the MobSpawner object
+        float distanceToSpawner = Vector3.Distance(randomDirection, mobSpawner.transform.position);
+        if (distanceToSpawner > mobSpawner.patrolRadius)
+        {
+            randomDirection = (randomDirection - mobSpawner.transform.position).normalized * mobSpawner.patrolRadius + mobSpawner.transform.position;
+        }
+
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, walkPointRange, NavMesh.AllAreas);
 
