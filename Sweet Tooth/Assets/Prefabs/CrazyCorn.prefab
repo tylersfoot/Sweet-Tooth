@@ -381,6 +381,9 @@ MonoBehaviour:
   - {fileID: 5221600937917654648}
   - {fileID: 7539004251983163159}
   - {fileID: 2328668827449565873}
+  - {fileID: 5765597595639618786}
+  - {fileID: 4843009624644108119}
+  - {fileID: 9180296478759971814}
 --- !u!114 &1824599133930360564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +406,7 @@ MonoBehaviour:
   renderers: []
   delaypatrol: 2
   delayattack: 1
+  mobSpawner: {fileID: 0}
   playerStats: {fileID: 0}
 --- !u!1 &1856555308371213772
 GameObject:
