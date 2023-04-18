@@ -1,45 +1,34 @@
-// using System.IO;
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class GameDataManager : MonoBehaviour
-// {
-//     string saveFile; // save file path
-//     public static GameData gameData = new GameData(); // static gamedata class reference
+public static class GameDataManager : MonoBehaviour
+{
+    // private static readonly string SAVE_FILE_PATH = Application.persistentDataPath + "/gamedata.json";
+    // only for testing purposes, change later to above code; 
+    // above goes in AppData, below in the game directory
+    private static readonly string SAVE_FILE_PATH = Path.Combine(Application.dataPath, "gamedata.json");
 
-//     void Awake()
-//     {
-//         // update the path once the persistent path exists
-//         saveFile = Application.persistentDataPath + "/gamedata.json";
+    public static GameData Data { get; private set; }
 
-//         if (!File.Exists(saveFile))
-//         {
-//             // create the save file if it doesn't exist
-//             File.Create(saveFile).Dispose();
-//         }
+    public static void LoadData()
+    {
+        if (File.Exists(SAVE_FILE_PATH))
+        {
+            string json = File.ReadAllText(SAVE_FILE_PATH);
+            Data = JsonUtility.FromJson<GameData>(json);
+        }
+        else
+        {
+            Data = new GameData();
+            SaveData();
+        }
+    }
 
-//         WriteFile();
-//     }
-
-//     public void ReadFile()
-//     {
-//         if (File.Exists(saveFile))
-//         {
-//             // read the entire file and save its contents
-//             string fileContents = File.ReadAllText(saveFile);
-            
-//             // deserialize the JSON data into a pattern matching the GameData class
-//             gameData = JsonUtility.FromJson<GameData>(fileContents);
-//         }
-//     }
-
-//     public void WriteFile()
-//     {
-//         // serialize the object into JSON and save string
-//         string jsonString = JsonUtility.ToJson(gameData);
-
-//         // write JSON to file
-//         File.WriteAllText(saveFile, jsonString);
-//     }
-// }
+    public static void SaveData()
+    {
+        string json = JsonUtility.ToJson(Data);
+        File.WriteAllText(SAVE_FILE_PATH, json);
+    }
+}
