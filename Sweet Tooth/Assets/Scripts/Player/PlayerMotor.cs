@@ -109,6 +109,8 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
             }
         }
+
+        GameData.playerLocation = transform.position; // saves player location to GameData
     }
 
     void OnDrawGizmos()
@@ -136,7 +138,6 @@ public class PlayerMotor : MonoBehaviour
             if (collider.gameObject != gameObject)
             {
                 playerVelocity.y = Mathf.Min(0, playerVelocity.y);
-                Debug.Log("Hitting object above player! velocity: " + playerVelocity.y);
                 break; // exit the loop if collision is detected
             }
         }

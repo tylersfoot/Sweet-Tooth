@@ -34,13 +34,14 @@ public class PauseMenu : MonoBehaviour
                 ResumeButton();
             }
         }
+
+        // GameObject.FindGameObjectWithTag("GameDataManager").GetComponent<GameDataManager>().WriteFile();
     }
 
     public void ResumeButton()
     {
         if (isPaused)
         {
-           
             settingsMenu.Back(); // closes settings screen if open
             Time.timeScale = 1f; // resumes time
             canvas.SetActive(false); // disables pause menu canvas

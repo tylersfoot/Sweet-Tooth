@@ -8,6 +8,7 @@ TagManager:
   - PauseMenuTag
   - Projectile
   - Enemy
+  - GameDataManager
   layers:
   - Default
   - TransparentFX
