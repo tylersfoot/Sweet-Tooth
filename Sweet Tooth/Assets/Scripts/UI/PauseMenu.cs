@@ -15,15 +15,6 @@ public class PauseMenu : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    void Update()
-    {
-        // backspace pressed, close game
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            Application.Quit();
-        }
-    }
-
     public void Pause()
     {
         if (currentScreen != "gameOverMenu")
