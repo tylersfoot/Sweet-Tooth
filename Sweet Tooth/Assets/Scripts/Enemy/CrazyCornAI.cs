@@ -23,15 +23,17 @@ public class CrazyCornAI : MonoBehaviour
     private float randomZ;
     private float randomX;
 
-    public MobSpawner mobSpawner; // reference to the spawner script
-
-    public PlayerStats playerStats;
+    private MobSpawner mobSpawner; // reference to the spawner script
+    private PlayerStats playerStats;
+    private GameObject player; // reference to player
 
     void Start()
     {
         // called when enemy is spawned
+        player = GameObject.FindWithTag("Player");
+        playerStats = player.GetComponent<PlayerStats>();
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = player.transform;
         renderers = GetComponentsInChildren<Renderer>();
         mobSpawner = GetComponentInParent<MobSpawner>();
        
@@ -138,6 +140,7 @@ public class CrazyCornAI : MonoBehaviour
 
     public void Death()
     {
+        mobSpawner.currentAmount -= 1;
         Destroy(gameObject);
     }
 
