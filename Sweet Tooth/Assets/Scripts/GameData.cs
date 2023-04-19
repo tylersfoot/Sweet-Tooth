@@ -7,4 +7,7 @@ public class GameData
 {
     public float exampleVariable;
     public Vector3 playerLocation;
+
+    // inventory
+    public Dictionary<string, float> inv = new Dictionary<string, float>();
 }

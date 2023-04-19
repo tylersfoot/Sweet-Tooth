@@ -11,7 +11,7 @@ public static class GameDataManager
     // above goes in AppData, below in the game directory
     private static readonly string SAVE_FILE_PATH = Path.Combine(Application.dataPath, "gamedata.json");
 
-     public static GameData Data { get; private set; } = new GameData();
+    public static GameData Data { get; private set; } = new GameData();
 
     public static void LoadData()
     {

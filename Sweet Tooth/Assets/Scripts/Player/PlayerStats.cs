@@ -10,20 +10,17 @@ public class PlayerStats : MonoBehaviour
     public float walkSpeed; // max walking speed, base factor
     public bool isDead; // is the player dead?
 
-    [Header("Inventory")]
-    public Dictionary<string, int> inv = new Dictionary<string, int>();
-
     [Header("Scripts")]
     public HUD HUD;
     public GameOverMenu gameOverMenu;
 
     void Start()
     {
-        HealPlayer(100f, "startGame");
-        inv.Add("candyCornChunk", 0);
-        inv.Add("gummyBearHead", 0);
-        inv.Add("mintyFowlLeg", 0);
-        inv.Add("peanutButterToadLeg", 0);
+        HealPlayer(10000f, "startGame");
+        GameDataManager.Data.inv.Add("crazyCornChunk", 0);
+        GameDataManager.Data.inv.Add("gummyBearHead", 0);
+        GameDataManager.Data.inv.Add("mintyFowlLeg", 0);
+        GameDataManager.Data.inv.Add("peanutButterToadLeg", 0);
     }
 
     void Update()
