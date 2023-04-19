@@ -161,6 +161,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Test"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fd620b7-1bbf-4f2b-9e0a-3bd2b1b56ef0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -535,6 +544,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""489e6758-82f2-4474-b304-06b531a21605"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Test"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1076,6 +1096,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_ToolThree = m_OnFoot.FindAction("ToolThree", throwIfNotFound: true);
         m_OnFoot_Scroll = m_OnFoot.FindAction("Scroll", throwIfNotFound: true);
         m_OnFoot_Reload = m_OnFoot.FindAction("Reload", throwIfNotFound: true);
+        m_OnFoot_Test = m_OnFoot.FindAction("Test", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1164,6 +1185,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_ToolThree;
     private readonly InputAction m_OnFoot_Scroll;
     private readonly InputAction m_OnFoot_Reload;
+    private readonly InputAction m_OnFoot_Test;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -1183,6 +1205,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ToolThree => m_Wrapper.m_OnFoot_ToolThree;
         public InputAction @Scroll => m_Wrapper.m_OnFoot_Scroll;
         public InputAction @Reload => m_Wrapper.m_OnFoot_Reload;
+        public InputAction @Test => m_Wrapper.m_OnFoot_Test;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1237,6 +1260,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
+            @Test.started += instance.OnTest;
+            @Test.performed += instance.OnTest;
+            @Test.canceled += instance.OnTest;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -1286,6 +1312,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
+            @Test.started -= instance.OnTest;
+            @Test.performed -= instance.OnTest;
+            @Test.canceled -= instance.OnTest;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1438,6 +1467,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnToolThree(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
+        void OnTest(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

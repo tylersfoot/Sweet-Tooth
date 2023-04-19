@@ -34,8 +34,6 @@ public class PauseMenu : MonoBehaviour
                 ResumeButton();
             }
         }
-
-        // GameObject.FindGameObjectWithTag("GameDataManager").GetComponent<GameDataManager>().WriteFile();
     }
 
     public void ResumeButton()
@@ -66,6 +64,18 @@ public class PauseMenu : MonoBehaviour
     {
         // load main menu
         SceneManager.LoadScene("MainMenu"); 
+    }
+
+    public void SaveButton()
+    {
+        GameDataManager.SaveData();
+        Debug.Log("Saved Data!");
+    }
+
+    public void LoadButton()
+    {
+        GameDataManager.LoadData();
+        Debug.Log("Loaded Data!");
     }
 }
 

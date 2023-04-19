@@ -109,8 +109,6 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
             }
         }
-
-        GameData.playerLocation = transform.position; // saves player location to GameData
     }
 
     void OnDrawGizmos()

@@ -49,7 +49,9 @@ public class MobSpawner : MonoBehaviour
         spawnPoint.y = Terrain.activeTerrain.SampleHeight(spawnPoint);
 
         // spawn the enemy prefab at the spawn point
-        Instantiate(enemyPrefab, spawnPoint, Quaternion.identity, transform);
+        GameObject enemyObject = Instantiate(enemyPrefab, spawnPoint, Quaternion.identity, transform);
+        enemyObject.SetActive(true);
+
     }
 
     void Update()

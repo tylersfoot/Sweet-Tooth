@@ -26,6 +26,21 @@ public class PlayerStats : MonoBehaviour
         inv.Add("peanutButterToadLeg", 0);
     }
 
+    void Update()
+    {
+        SaveDataVariables();
+    }
+
+    public void SaveDataVariables()
+    {
+        GameDataManager.Data.playerLocation = transform.position; // saves player location
+    }
+
+    public void LoadDataVariables()
+    {
+        transform.position = GameDataManager.Data.playerLocation;
+    }
+
     public void DamagePlayer(float amount, string source)
     {
         playerHealth -= amount;

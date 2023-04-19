@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class CrazyCornAI : MonoBehaviour
 {
@@ -36,7 +37,6 @@ public class CrazyCornAI : MonoBehaviour
         target = player.transform;
         renderers = GetComponentsInChildren<Renderer>();
         mobSpawner = GetComponentInParent<MobSpawner>();
-       
     }
 
     void Update()
