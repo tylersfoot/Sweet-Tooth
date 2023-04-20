@@ -17,10 +17,10 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         HealPlayer(10000f, "startGame");
-        GameDataManager.Data.inv.Add("crazyCornChunk", 0);
-        GameDataManager.Data.inv.Add("gummyBearHead", 0);
-        GameDataManager.Data.inv.Add("mintyFowlLeg", 0);
-        GameDataManager.Data.inv.Add("peanutButterToadLeg", 0);
+        // GameDataManager.Data.inv.Add("crazyCornChunk", 0);
+        // GameDataManager.Data.inv.Add("gummyBearHead", 0);
+        // GameDataManager.Data.inv.Add("mintyFowlLeg", 0);
+        // GameDataManager.Data.inv.Add("peanutButterToadLeg", 0);
     }
 
     void Update()

@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject canvas;
     public SettingsMenu settingsMenu; // for changing screens
+    public InventoryMenu inventoryMenu;
     public bool isPaused = false;
     public string currentScreen = "none"; // which screen is the player seeing
 
@@ -41,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         if (isPaused)
         {
             settingsMenu.Back(); // closes settings screen if open
+            inventoryMenu.Back(); // closes inventory if open
             Time.timeScale = 1f; // resumes time
             canvas.SetActive(false); // disables pause menu canvas
             isPaused = false;

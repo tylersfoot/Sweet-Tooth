@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     private PlayerAbility ability;
     public Tool tool;
     public PauseMenu pauseMenu;
+    public InventoryMenu inventoryMenu;
     public PlayerInteract playerInteract;
     public DialogueBox dialogueBox;
 
@@ -169,8 +170,12 @@ public class InputManager : MonoBehaviour
                 tool.SwitchTool(3);
             }
         };
+
         // pause game
         onFoot.Pause.started += ctx => pauseMenu.Pause();
+
+        // open inventory
+        onFoot.Inventory.started += ctx => inventoryMenu.OpenInventory();
     }
 
     private void OnEnable()
