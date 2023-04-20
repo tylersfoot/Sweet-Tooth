@@ -9,5 +9,11 @@ public class GameData
     public Vector3 playerLocation;
 
     // inventory
-    public Dictionary<string, float> inv = new Dictionary<string, float>();
+    public Dictionary<string, float> inv = new Dictionary<string, float>
+    {
+        { "crazyCornChunk", 0 },
+        { "gummyBearHead", 0 },
+        { "mintyFowlLeg", 0 },
+        { "peanutButterToadLeg", 0 }
+    };
 }
