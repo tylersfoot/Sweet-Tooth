@@ -11,24 +11,7 @@ public class ItemDrop : MonoBehaviour
         // check if the player touches the object
         if (other.CompareTag("Player"))
         {
-            // add to inventory
-            // switch (item)
-            // {
-            // case "crazyCornChunk":
-            //     GameDataManager.Data.inv["crazyCornChunk"] += 1;
-            //     break;
-            // case "gummyBearHead":
-            //     GameDataManager.Data.inv["gummyBearHead"] += 1;
-            //     break;
-            // case "mintyFowlLeg":
-            //     GameDataManager.Data.inv["mintyFowlLeg"] += 1;
-            //     break;
-            // case "peanutButterToadLeg":
-            //     GameDataManager.Data.inv["peanutButterToadLeg"] += 1;
-            //     break;
-            // default:
-            //     break;
-            // }
+
             Dictionary<string, string> itemKeys = new Dictionary<string, string>() {
                 { "crazyCornChunk", "crazyCornChunk" },
                 { "gummyBearHead", "gummyBearHead" },

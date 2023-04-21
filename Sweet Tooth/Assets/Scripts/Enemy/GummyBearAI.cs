@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class GummyBearAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;
-    public float sightRange = 10f; // distance the enemy can see the player
-    public float attackRange = 5f; // distance the enemy can attack the player
+    public float sightRange; // distance the enemy can see the player
+    public float attackRange; // distance the enemy can attack the player
     public Vector3 walkPoint;
     private bool walkPointSet;
     public float walkPointRange;
@@ -17,21 +18,27 @@ public class GummyBearAI : MonoBehaviour
     public float flashDuration;
     public Renderer[] renderers;
     private float timer;
-    public float delaypatrol = 5.0f; // delay for the time between potrols
-    public float delayattack = 1f;
+    public float delaypatrol; // delay for the time between potrols
+    public float delayattack;
+    public GameObject itemPrefab;
+    private bool isDead;
     
     private float randomZ;
     private float randomX;
 
-    public PlayerStats playerStats;
+    private MobSpawner mobSpawner; // reference to the spawner script
+    private PlayerStats playerStats;
+    private GameObject player; // reference to player
 
     void Start()
     {
-        // target = player
+        // called when enemy is spawned
+        player = GameObject.FindWithTag("Player");
+        playerStats = player.GetComponent<PlayerStats>();
         agent = GetComponent<NavMeshAgent>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = player.transform;
         renderers = GetComponentsInChildren<Renderer>();
-       
+        mobSpawner = GetComponentInParent<MobSpawner>();
     }
 
     void Update()
@@ -101,6 +108,14 @@ public class GummyBearAI : MonoBehaviour
         // generate random point within patrol range
         Vector3 randomDirection = Random.insideUnitSphere * walkPointRange;
         randomDirection += transform.position;
+        
+        // check that the randomly generated point is within patrolRadius distance from the MobSpawner object
+        float distanceToSpawner = Vector3.Distance(randomDirection, mobSpawner.transform.position);
+        if (distanceToSpawner > mobSpawner.patrolRadius)
+        {
+            randomDirection = (randomDirection - mobSpawner.transform.position).normalized * mobSpawner.patrolRadius + mobSpawner.transform.position;
+        }
+
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, walkPointRange, NavMesh.AllAreas);
 
@@ -127,7 +142,17 @@ public class GummyBearAI : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject);
+        if (!isDead) {
+            isDead = true;
+            GameObject itemDrop = Instantiate(
+                itemPrefab,
+                transform.position,
+                transform.rotation
+            );
+            itemDrop.SetActive(true);
+            mobSpawner.currentAmount -= 1;
+            Destroy(gameObject);
+        }
     }
 
     // IEnumerator FlashRed(float duration)

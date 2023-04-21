@@ -8,8 +8,8 @@ public class CrazyCornAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;
-    public float sightRange = 10f; // distance the enemy can see the player
-    public float attackRange = 5f; // distance the enemy can attack the player
+    public float sightRange; // distance the enemy can see the player
+    public float attackRange; // distance the enemy can attack the player
     public Vector3 walkPoint;
     private bool walkPointSet;
     public float walkPointRange;
@@ -18,8 +18,10 @@ public class CrazyCornAI : MonoBehaviour
     public float flashDuration;
     public Renderer[] renderers;
     private float timer;
-    public float delaypatrol = 5.0f; // delay for the time between potrols
-    public float delayattack = 1f;
+    public float delaypatrol; // delay for the time between potrols
+    public float delayattack;
+    public GameObject itemPrefab;
+    private bool isDead;
     
     private float randomZ;
     private float randomX;
@@ -140,8 +142,17 @@ public class CrazyCornAI : MonoBehaviour
 
     public void Death()
     {
-        mobSpawner.currentAmount -= 1;
-        Destroy(gameObject);
+        if (!isDead) {
+            isDead = true;
+            GameObject itemDrop = Instantiate(
+                itemPrefab,
+                transform.position,
+                transform.rotation
+            );
+            itemDrop.SetActive(true);
+            mobSpawner.currentAmount -= 1;
+            Destroy(gameObject);
+        }
     }
 
     // IEnumerator FlashRed(float duration)
