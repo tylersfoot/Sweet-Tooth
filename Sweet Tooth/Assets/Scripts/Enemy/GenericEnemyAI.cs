@@ -4,24 +4,25 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
 
-public class CrazyCornAI : MonoBehaviour
+public class GenericEnemyAI : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform target;
     public float sightRange; // distance the enemy can see the player
     public float attackRange; // distance the enemy can attack the player
-    public Vector3 walkPoint;
+    private Vector3 walkPoint;
     private bool walkPointSet;
     public float walkPointRange;
     public float health;
     public float damage;
     public float flashDuration;
-    public Renderer[] renderers;
+    private Renderer[] renderers;
     private float timer;
-    public float delaypatrol; // delay for the time between potrols
-    public float delayattack;
-    public GameObject itemPrefab;
+    public float delaypatrol; // time between patrols
+    public float delayattack; // time between attacks
+    public GameObject itemPrefab; // item that will drop
     private bool isDead;
+    public string enemyName; // name of the enemy, ex: "crazyCorn"
     
     private float randomZ;
     private float randomX;
@@ -86,7 +87,7 @@ public class CrazyCornAI : MonoBehaviour
         agent.SetDestination(transform.position);
 
         // attack player
-        playerStats.DamagePlayer(damage, "crazyCorn");
+        playerStats.DamagePlayer(damage, enemyName);
         // TODO: add attack animation
     }
 
