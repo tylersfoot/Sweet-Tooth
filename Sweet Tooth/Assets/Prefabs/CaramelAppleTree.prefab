@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3917451952225053368}
   - component: {fileID: 985499051851684364}
   - component: {fileID: 8517846999477452855}
+  - component: {fileID: -8970675880234230139}
   m_Layer: 0
   m_Name: CaramelAppleTree
   m_TagString: Untagged
@@ -115,12 +116,26 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: 0, y: 0.13720205, z: 0.017363593}
   m_Size: 0.27272558
-  m_FadeMode: 0
+  m_FadeMode: 1
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0
+  - screenRelativeHeight: 0.03981218
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3917451952225053368}
   m_Enabled: 1
+--- !u!136 &-8970675880234230139
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268885159434734445}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.02
+  m_Height: 0.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.1, z: 0.005}
