@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/tylersfoot/Sweet-Tooth">
-    <img src="assets/image.png" alt="Logo" width="80" height="80">
+    <img src="assets/derek.png" alt="Logo" width="280" height="160">
   </a>
 
   <h1 align="center">Sweet Tooth</h3>
@@ -28,7 +28,7 @@
     <a href="https://github.com/tylersfoot/Sweet-Tooth/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://tylersfoot.live/Sweet-Tooth/Builds/2023.3.9.1/WebGL">View Demo [v2023.3.9.1]</a>
+    <a href="https://github.com/tylersfoot/Sweet-Tooth/releases/tag/2023.5.4.1">Download Lastest Version</a>
     ·
     <a href="https://github.com/tylersfoot/Sweet-Tooth/issues">Report Bug/Request Feature</a>
   </p>
@@ -55,10 +55,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<div align="center">
+  <a href="https://github.com/tylersfoot/Sweet-Tooth">
+    <img src="assets/livereaction.png" alt="Logo" width="500" height="200">
+  </a>
+</div>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-**Sweet Tooth** is an action horror game set in Candyland. The game features precedurally generated environments which are edible (destructible) as well as enemy types that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different environments to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
+**Sweet Tooth** is an action game set in a Candyland based world. The game features multiple biomes as well as delicious enemies that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different biomes to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -71,7 +74,7 @@
 * [![Git][Git.com]][Git-url]
 * [![Audacity][Audacity.com]][Audacity-url]
 
-**Unity 2021.3.18f1 `LTS` + WebGL Support**
+**Unity 2021.3.19f1 `LTS` + WebGL Support**
 
 **Visual Studio Code**
 
@@ -97,9 +100,9 @@
 
 **Audacity 3.2.4**
 
-**FL Studio 20.8.4**
+~~**FL Studio 20.8.4**~~
 
-**Aseprite 1.2.40**
+~~**Aseprite 1.2.40**~~
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -108,7 +111,7 @@
 
 ### Prerequisites
 
-This game has only been tested on Windows so far. The game supports both keyboard+mouse and controller (controller not tested lol)
+This game has only been tested on Windows so far. The game (will) support both keyboard and controller, but it is heavily recommended to use keyboard and mouse. The game is not optimized, so it might run slow on laptops or older computers.
 
 ### Installation
 
@@ -159,6 +162,7 @@ Project Link: [https://github.com/tylersfoot/Sweet-Tooth](https://github.com/tyl
 * Dr. Bixler for supporting us through this project
 * [Awesome badges](https://dev.to/envoy_/150-badges-for-github-pnk#ide) for the different site badges
 * [Poly Pizza](https://poly.pizza) for free low-poly models and inspiration
+* You for checking this game out! Thanks!
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

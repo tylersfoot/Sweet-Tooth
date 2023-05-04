@@ -12,7 +12,9 @@ public class MobSpawner : MonoBehaviour
     public float currentAmount; // how many enemies are out right now
     public float spawnDelay; // time between attempting to spawn another enemy
     public float spawnDelayRange; // random range to add to spawn delay
+    public float spawnDistanceCutoff; // distance the player has to be for enemy to spawn
     public GameObject enemyPrefab; // enemy prefab to spawn
+    private GameObject player; // reference to player
 
     void Start()
     {
@@ -23,6 +25,14 @@ public class MobSpawner : MonoBehaviour
 
         // start the spawn coroutine
         StartCoroutine(SpawnEnemiesCoroutine());
+        player = GameObject.FindWithTag("Player");
+    }
+
+    void Update()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+        Debug.DrawRay(transform.position, direction.normalized * spawnDistanceCutoff, Color.red);
+                // delay = spawnDelay + Random.Range(0, spawnDelayRange);
     }
 
     IEnumerator SpawnEnemiesCoroutine()
@@ -42,7 +52,9 @@ public class MobSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        currentAmount += 1;
+        if (Vector3.Distance(player.transform.position, transform.position) >= spawnDistanceCutoff)
+        {
+            currentAmount += 1;
         // get a random point in the spawn radius
         Vector3 spawnPoint = Random.insideUnitSphere * spawnRadius + transform.position;
         // set the spawn point to the height of the terrain
@@ -51,12 +63,7 @@ public class MobSpawner : MonoBehaviour
         // spawn the enemy prefab at the spawn point
         GameObject enemyObject = Instantiate(enemyPrefab, spawnPoint, Quaternion.identity, transform);
         enemyObject.SetActive(true);
-
-    }
-
-    void Update()
-    {
-        // delay = spawnDelay + Random.Range(0, spawnDelayRange);
+        }
     }
 
     void OnDrawGizmos()
