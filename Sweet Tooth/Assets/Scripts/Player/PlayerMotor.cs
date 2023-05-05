@@ -44,9 +44,15 @@ public class PlayerMotor : MonoBehaviour
     public float crouchHeightSmoothTime;
     public Vector3 controllerTop;
 
-
-    
-
+    [Header("Biomes")]
+    public TerrainTextureDetector terrainTextureDetector;
+    public string currentBiome;
+    public Color startFogColor;
+    public Color endFogColor;
+    public Color startSkyColor;
+    public Color endSkyColor;
+    public float biomeBlendTime;
+    private float biomeBlendTimer;
 
     [Header("Other")]
     public float gravity; // gravity acceleration
@@ -56,7 +62,7 @@ public class PlayerMotor : MonoBehaviour
 
     // called before the first frame update
     void Start()
-    { 
+    {
         // get controller component
         controller = GetComponent<CharacterController>();
 
@@ -109,6 +115,64 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
             }
         }
+
+        // get the current biome and change the fog and sky color if it has changed
+        string newBiome = terrainTextureDetector.GetBiomeAt(transform.position);
+        if (newBiome != currentBiome)
+        {
+            currentBiome = newBiome;
+            switch (currentBiome)
+            {
+                case "candyCornFields":
+                    endFogColor = Color.green;
+                    endSkyColor = new Color(92, 205, 255);
+                    break;
+                case "mountains":
+                    endFogColor = Color.black;
+                    endSkyColor = Color.black;
+                    break;
+                case "mapleForest":
+                    endFogColor = Color.yellow;
+                    endSkyColor = Color.yellow;
+                    break;
+                case "gumdropValley":
+                    endFogColor = Color.magenta;
+                    endSkyColor = Color.magenta;
+                    break;
+                case "peanutButterSwamp":
+                    endFogColor = Color.red;
+                    endSkyColor = Color.red;
+                    break;
+                case "peppermintForest":
+                    endFogColor = Color.white;
+                    endSkyColor = Color.white;
+                    break;
+                default:
+                    endFogColor = Color.gray;
+                    endSkyColor = Color.gray;
+                    break;
+            }
+
+            // set startFogColor and startSkyColor to the current fog and sky colors
+            startFogColor = RenderSettings.fogColor;
+            startSkyColor = RenderSettings.skybox.GetColor("_SkyTint");
+            biomeBlendTimer = 0f;
+        }
+
+
+        if (biomeBlendTimer < biomeBlendTime)
+        {
+            // Lerp between startColor and endColor based on biomeBlendTimer
+            float t = biomeBlendTimer / biomeBlendTime;
+            Color currentFogColor = Color.Lerp(startFogColor, endFogColor, t);
+            Color currentSkyColor = Color.Lerp(startSkyColor, startFogColor, t);
+            RenderSettings.fogColor = currentFogColor;
+            RenderSettings.skybox.SetColor("_SkyTint", currentSkyColor);
+
+            // Increment biomeBlendTimer
+            biomeBlendTimer += Time.deltaTime;
+        }
+
     }
 
     void OnDrawGizmos()
