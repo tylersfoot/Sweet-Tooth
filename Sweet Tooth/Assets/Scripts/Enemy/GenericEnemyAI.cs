@@ -6,6 +6,7 @@ using UnityEngine.Animations;
 
 public class GenericEnemyAI : MonoBehaviour
 {
+    
     NavMeshAgent agent;
     Transform target;
     public float sightRange; // distance the enemy can see the player
@@ -24,12 +25,15 @@ public class GenericEnemyAI : MonoBehaviour
     private bool isDead;
     public string enemyName; // name of the enemy, ex: "crazyCorn"
     
+    
     private float randomZ;
     private float randomX;
 
     private MobSpawner mobSpawner; // reference to the spawner script
     private PlayerStats playerStats;
-    private GameObject player; // reference to player
+    private GameObject player; // reference to 
+    
+    private Animation anim;
 
     void Start()
     {
@@ -49,6 +53,13 @@ public class GenericEnemyAI : MonoBehaviour
         timer += Time.deltaTime;
         delayattack = delayattack + Time.deltaTime;
         //keeps track of the game time
+
+        if (agent.speed < 20.0f) {
+            anim.Play("T-pose");
+        } 
+        else {
+
+        }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         // walkpoint arrived
