@@ -110,7 +110,7 @@ the most typical depiction of candyland full of sweets, treats, and all manner o
 
 ### Summary
 
-Plum is a ravenous girl, her appetite knows no bounds, especially for candy. This has carried on into the dreamlike candyland through the ability to eat literary anything and gain the powers of that object, enemy, or person.
+Plum is a ravenous girl, her appetite knows no bounds, especially for candy. This has carried on into the dreamlike candyland through the ability to eat literally anything and gain the powers of that object, enemy, or person.
 
 ### Power
 
@@ -126,17 +126,23 @@ With this being added in every time Plum transforms we can change her sprite to 
 
 Plum needs to battle a lot on her journey so weapons are a must. While Plum does have the consumption ability this should not do enough damage in the beginning to allow her to one-shot eat anything. On her journeys I think Plum should either be able to obtain weapons through completing quests or have the option to build her own weapons. If we have it so she builds her own weapons we will have to add in a  whole crafting system, with resource gathering and the like, however it would go along with our whole livable environment feel. If we go with the quest based weapon obtaining it will be easier but we have to find another way for Plum to get more ammo for any non-melee weapons, example like she has to kill a certain enemy type or maybe she sells the enemy parts and then buys more ammo.
 
-### Bubble-Gum Blaster
+### Bubblegum Blaster
 
-This does no damage, it only allows for the slowing down of enemies through the use of bubble gum balls that will spread across the ground and slow anything that walks into them.
+Does minimal damage; dispenses colorful gumballs to help defend against enemies.
+
+- Obtained at the start of the game
 
 ### Candy Cane Stake Launcher
 
-Fires sharpened candy canes that pierce through enemies and can hit those behind them. This deals a lot of damage however it doesn't hold a lot of ammo.
+Fires sharpened candy canes that pierce through enemies and can hit those behind them. This deals a lot of damage, but doesn't hold a lot of ammo.
 
-### Peanut Brittle Shard Shooter
+- Crafted using `15 chicken parts` + `3 camel parts`
 
-This weapon will fire peanut butter shards which are poisonous to most candy enemies found throughout Candyland save for those residents of the Peanut Butter Swamp. Not only does this poison enemies it also allows for them to form giant bulbous protrusions that maybe we can make have more damage dealt to them.
+### Peanut Brittle Blaster
+
+Fires peanut butter shards in bursts that poison enemies.
+
+- Crafted with `20 mosquito parts` + `5 frog parts`
 
 ## Sugar Rush
 
