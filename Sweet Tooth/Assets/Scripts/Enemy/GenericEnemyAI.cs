@@ -54,12 +54,12 @@ public class GenericEnemyAI : MonoBehaviour
         delayattack = delayattack + Time.deltaTime;
         //keeps track of the game time
 
-        if (agent.speed < 20.0f) {
-            anim.Play("T-pose");
-        } 
-        else {
+        // if (agent.speed < 20.0f) {
+        //     anim.Play("T-pose");
+        // } 
+        // else {
 
-        }
+        // }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         // walkpoint arrived

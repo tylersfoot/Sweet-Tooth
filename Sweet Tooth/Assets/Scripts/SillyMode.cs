@@ -6,14 +6,26 @@ public class SillyMode : MonoBehaviour
 {
     public Renderer playerRenderer;
     public Material material;
+    public bool sillyMode;
 
     void Start()
     {
         makeSilly(false);
     }
 
+    void Update()
+    {
+        if (sillyMode)
+        {
+            // flash random colors for the sky and fog
+            RenderSettings.skybox.SetColor("_SkyTint", new Color(Random.value*2f, Random.value*2f, Random.value*2f));
+            RenderSettings.fogColor = new Color(Random.value*2f, Random.value*2f, Random.value*2f);
+        }
+    }
+
     public void makeSilly(bool isSilly)
     {
+        sillyMode = isSilly;
         if (isSilly)
         {
             // set material's rendering mode to both faces (hamper mode)

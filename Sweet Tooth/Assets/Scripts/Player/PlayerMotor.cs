@@ -72,6 +72,7 @@ public class PlayerMotor : MonoBehaviour
         {
             children[i++] = T;
         }
+        RenderSettings.skybox.SetColor("_SkyTint", new Color(92/255f, 205/255f, 255/255f));
     }
 
     // called once per frame
@@ -115,7 +116,7 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
             }
         }
-
+        Debug.Log(RenderSettings.skybox.GetColor("_SkyTint"));
         // get the current biome and change the fog and sky color if it has changed
         string newBiome = terrainTextureDetector.GetBiomeAt(transform.position);
         if (newBiome != currentBiome)
@@ -124,8 +125,9 @@ public class PlayerMotor : MonoBehaviour
             switch (currentBiome)
             {
                 case "candyCornFields":
-                    endFogColor = Color.green;
-                    endSkyColor = new Color(92, 205, 255);
+                    endFogColor = new Color(92/255f, 205/255f, 255/255f);
+                    endSkyColor = new Color(92/255f, 205/255f, 255/255f);
+                    // endSkyColor = Color.stanley swteemerreen;
                     break;
                 case "mountains":
                     endFogColor = Color.black;
@@ -165,14 +167,14 @@ public class PlayerMotor : MonoBehaviour
             // Lerp between startColor and endColor based on biomeBlendTimer
             float t = biomeBlendTimer / biomeBlendTime;
             Color currentFogColor = Color.Lerp(startFogColor, endFogColor, t);
-            Color currentSkyColor = Color.Lerp(startSkyColor, startFogColor, t);
+            Color currentSkyColor = Color.Lerp(startSkyColor, endSkyColor, t);
             RenderSettings.fogColor = currentFogColor;
             RenderSettings.skybox.SetColor("_SkyTint", currentSkyColor);
+            RenderSettings.skybox.SetColor("_Tint", currentSkyColor);
 
             // Increment biomeBlendTimer
             biomeBlendTimer += Time.deltaTime;
         }
-
     }
 
     void OnDrawGizmos()
