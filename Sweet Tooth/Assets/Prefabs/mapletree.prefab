@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6809552510479208213}
   - component: {fileID: 7579479537456808112}
   - component: {fileID: 5677718834323420282}
+  - component: {fileID: 7685343657607349826}
   m_Layer: 0
   m_Name: mapletree
   m_TagString: Untagged
@@ -85,3 +86,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &7685343657607349826
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182232012108846511}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.24802971, y: 12.559352, z: -0.5971174}
+  m_Size: 25.02057
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.044785798
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5677718834323420282}
+  m_Enabled: 1

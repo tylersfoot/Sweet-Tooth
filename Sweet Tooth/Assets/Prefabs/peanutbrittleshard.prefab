@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9108754810465455483}
   - component: {fileID: 5316243896024662750}
   - component: {fileID: 7936434228750939668}
+  - component: {fileID: -4884749895127244405}
   m_Layer: 0
   m_Name: peanutbrittleshard
   m_TagString: Untagged
@@ -84,3 +85,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &-4884749895127244405
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440621539968997313}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 3.2251265, z: 0.1746211}
+  m_Size: 6.491977
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.037031338
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7936434228750939668}
+  m_Enabled: 1

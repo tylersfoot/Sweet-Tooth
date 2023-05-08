@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5037402247468699765}
   - component: {fileID: 8234736479527460816}
   - component: {fileID: 6170879797661510426}
+  - component: {fileID: 5147790752008082767}
   m_Layer: 0
   m_Name: gumdrop
   m_TagString: Untagged
@@ -84,3 +85,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &5147790752008082767
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666550924383881935}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 2.6503367, z: -0.06457281}
+  m_Size: 6.729382
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.039173532
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6170879797661510426}
+  m_Enabled: 1

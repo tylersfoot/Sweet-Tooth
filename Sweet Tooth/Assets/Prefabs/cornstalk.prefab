@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3834988210004822035}
   - component: {fileID: 186695837733685174}
   - component: {fileID: 2698695945347527548}
+  - component: {fileID: 2557611621277730500}
   m_Layer: 0
   m_Name: cornstalk
   m_TagString: Untagged
@@ -86,3 +87,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &2557611621277730500
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500026050525680297}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.04743743, y: 8.13834, z: 0.41780472}
+  m_Size: 15.123463
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.043634
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2698695945347527548}
+  m_Enabled: 1
