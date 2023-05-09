@@ -39,6 +39,7 @@ public class DialogueBox : MonoBehaviour
     public InputManager inputManager;
     public GameObject hudCanvas;
     public bool isOpen;
+    public bool chickenMcFlicken;
 
     void Start()
     {
