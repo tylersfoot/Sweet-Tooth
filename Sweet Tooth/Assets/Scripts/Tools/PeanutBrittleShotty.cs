@@ -9,18 +9,17 @@ public class PeanutBrittleShotty : MonoBehaviour
     public PauseMenu pauseMenu; // for checking if game is paused
     public Tool tool; // for despawning projectiles
     public SoundManager soundManager; // for playing sound
-
+    
     public float shootForce; // initial speed of projectile
     public float damage; // damage of projectile
     public float fireRate; // fire rate of projectile
-    public float range; // how far the projectile travels
     public float lifespan; // how long until the projectile despawns
     public float spread; // max spread angle deviation in degrees
     public float shotAmount; // amount of shots to be fired
     public float currentAmmo; // how much ammo the player has
     public float maxAmmo; // max ammo
-    private float fireCooldown = 0f; // time until next shot
-    public bool isKeyDown = false;
+    private float fireCooldown; // time until next shot
+    public bool isKeyDown; // is the shoot key being held down
 
     public AudioClip shootSound;
 

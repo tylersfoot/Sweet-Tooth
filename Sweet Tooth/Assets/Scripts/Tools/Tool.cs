@@ -9,6 +9,7 @@ public class Tool : MonoBehaviour
     // tool scripts
     public BubblegumBlaster bubblegumBlaster;
     public PeanutBrittleShotty peanutBrittleShotty;
+    public CaneStriker caneStriker;
 
     public GameObject player;
     public Vector3 positionOffset;
@@ -50,6 +51,10 @@ public class Tool : MonoBehaviour
             currentAmmoDisplay = peanutBrittleShotty.currentAmmo.ToString();
             maxAmmoDisplay = peanutBrittleShotty.maxAmmo.ToString();
             break;
+        case "CaneStriker":
+            currentAmmoDisplay = caneStriker.currentAmmo.ToString();
+            maxAmmoDisplay = caneStriker.maxAmmo.ToString();
+            break;
         default:
             currentAmmoDisplay = "";
             maxAmmoDisplay = "";
@@ -59,6 +64,7 @@ public class Tool : MonoBehaviour
 
     public void SwitchTool(int num)
     {
+        Vector3 offset = Vector3.zero;;
         // if the number is over or under the index, for use with scroll wheel
         if (num < 1)
         {
@@ -78,9 +84,15 @@ public class Tool : MonoBehaviour
             break;
         case 2:
             targetTool = "BubblegumBlaster";
+            offset = new Vector3(0, 0, 0);
             break;
         case 3:
             targetTool = "PeanutBrittleShotty";
+            offset = new Vector3(0, 0.1f, 0);
+            break;
+        case 4:
+            targetTool = "CaneStriker";
+            offset = new Vector3(0, 0.5f, 0);
             break;
         default:
             // do nothing
@@ -90,8 +102,11 @@ public class Tool : MonoBehaviour
         GameObject targetToolObject = transform.Find(targetTool).gameObject;
         if (currentToolObject?.name != targetToolObject?.name)
         {
+
+            // apply the position offset when switching tools
             currentToolObject.SetActive(false);
             targetToolObject.SetActive(true);
+            targetToolObject.transform.localPosition = offset; // apply the position offset
             activeTool = targetTool;
         }
     }
@@ -105,6 +120,9 @@ public class Tool : MonoBehaviour
             break;
         case "PeanutBrittleShotty":
             peanutBrittleShotty.isKeyDown = key;
+            break;
+        case "CaneStriker":
+            caneStriker.isKeyDown = key;
             break;
         default:
             // do nothing, maybe hands in the future?
@@ -123,6 +141,9 @@ public class Tool : MonoBehaviour
                 break;
             case "PeanutBrittleShotty":
                 peanutBrittleShotty.currentAmmo = peanutBrittleShotty.maxAmmo;
+                break;
+            case "CaneStriker":
+                caneStriker.currentAmmo = caneStriker.maxAmmo;
                 break;
             default:
                 break;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BubblegumBlaster : MonoBehaviour
+public class CaneStriker : MonoBehaviour
 {
     public GameObject projectilePrefab; // loads in projectile prefab
     public Transform projectileSpawn; // loads in the projectile spawn GameObject
@@ -21,9 +21,6 @@ public class BubblegumBlaster : MonoBehaviour
     public bool isKeyDown; // is the shoot key being held down
 
     public AudioClip shootSound;
-
-    // array of colors for the gumball
-    public Color[] colors = new Color[] {Color.red, Color.green, Color.blue, Color.yellow};
 
     void Start()
     {
@@ -63,14 +60,7 @@ public class BubblegumBlaster : MonoBehaviour
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
         projectileRb.AddRelativeForce(spreadVector * shootForce, ForceMode.Impulse);
 
-        // get the Renderer component of the new projectile
-        Renderer projectileRenderer = newProjectile.GetComponent<Renderer>();
-        // choose a random color from the colors array
-        Color randomColor = colors[Random.Range(0, colors.Length)];
-        // set the color of the projectile to the random color
-        projectileRenderer.material.color = randomColor;
-
-        newProjectile.GetComponent<Gumball>().damage = damage; // sets damage of the projectile
+        newProjectile.GetComponent<CaneShard>().damage = damage; // sets damage of the projectile
 
         // destroy the projectile after the specified lifespan
         tool.Despawn(newProjectile, lifespan);

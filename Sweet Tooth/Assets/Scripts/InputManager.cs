@@ -170,6 +170,11 @@ public class InputManager : MonoBehaviour
                 tool.SwitchTool(3);
             }
         };
+        onFoot.ToolFour.started += ctx => {
+            if (!stopInput) {
+                tool.SwitchTool(4);
+            }
+        };
 
         // pause game
         onFoot.Pause.started += ctx => pauseMenu.Pause();

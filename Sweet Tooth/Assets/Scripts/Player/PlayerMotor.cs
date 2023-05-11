@@ -116,7 +116,7 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
             }
         }
-        Debug.Log(RenderSettings.skybox.GetColor("_SkyTint"));
+        // Debug.Log(RenderSettings.skybox.GetColor("_SkyTint"));
         // get the current biome and change the fog and sky color if it has changed
         string newBiome = terrainTextureDetector.GetBiomeAt(transform.position);
         if (newBiome != currentBiome)

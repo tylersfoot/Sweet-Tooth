@@ -145,6 +145,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Tool Four"",
+                    ""type"": ""Button"",
+                    ""id"": ""30dda072-0e3e-4055-9718-eb2e17f32c53"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Scroll"",
                     ""type"": ""Value"",
                     ""id"": ""947a2594-6d26-48e7-a5a3-8b1f37627f80"",
@@ -575,6 +584,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5202fb34-61be-41ad-96da-0df5e44fc75a"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Tool Four"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1114,6 +1134,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_ToolOne = m_OnFoot.FindAction("ToolOne", throwIfNotFound: true);
         m_OnFoot_ToolTwo = m_OnFoot.FindAction("ToolTwo", throwIfNotFound: true);
         m_OnFoot_ToolThree = m_OnFoot.FindAction("ToolThree", throwIfNotFound: true);
+        m_OnFoot_ToolFour = m_OnFoot.FindAction("Tool Four", throwIfNotFound: true);
         m_OnFoot_Scroll = m_OnFoot.FindAction("Scroll", throwIfNotFound: true);
         m_OnFoot_Reload = m_OnFoot.FindAction("Reload", throwIfNotFound: true);
         m_OnFoot_Test = m_OnFoot.FindAction("Test", throwIfNotFound: true);
@@ -1204,6 +1225,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_ToolOne;
     private readonly InputAction m_OnFoot_ToolTwo;
     private readonly InputAction m_OnFoot_ToolThree;
+    private readonly InputAction m_OnFoot_ToolFour;
     private readonly InputAction m_OnFoot_Scroll;
     private readonly InputAction m_OnFoot_Reload;
     private readonly InputAction m_OnFoot_Test;
@@ -1225,6 +1247,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ToolOne => m_Wrapper.m_OnFoot_ToolOne;
         public InputAction @ToolTwo => m_Wrapper.m_OnFoot_ToolTwo;
         public InputAction @ToolThree => m_Wrapper.m_OnFoot_ToolThree;
+        public InputAction @ToolFour => m_Wrapper.m_OnFoot_ToolFour;
         public InputAction @Scroll => m_Wrapper.m_OnFoot_Scroll;
         public InputAction @Reload => m_Wrapper.m_OnFoot_Reload;
         public InputAction @Test => m_Wrapper.m_OnFoot_Test;
@@ -1277,6 +1300,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ToolThree.started += instance.OnToolThree;
             @ToolThree.performed += instance.OnToolThree;
             @ToolThree.canceled += instance.OnToolThree;
+            @ToolFour.started += instance.OnToolFour;
+            @ToolFour.performed += instance.OnToolFour;
+            @ToolFour.canceled += instance.OnToolFour;
             @Scroll.started += instance.OnScroll;
             @Scroll.performed += instance.OnScroll;
             @Scroll.canceled += instance.OnScroll;
@@ -1332,6 +1358,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ToolThree.started -= instance.OnToolThree;
             @ToolThree.performed -= instance.OnToolThree;
             @ToolThree.canceled -= instance.OnToolThree;
+            @ToolFour.started -= instance.OnToolFour;
+            @ToolFour.performed -= instance.OnToolFour;
+            @ToolFour.canceled -= instance.OnToolFour;
             @Scroll.started -= instance.OnScroll;
             @Scroll.performed -= instance.OnScroll;
             @Scroll.canceled -= instance.OnScroll;
@@ -1494,6 +1523,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnToolOne(InputAction.CallbackContext context);
         void OnToolTwo(InputAction.CallbackContext context);
         void OnToolThree(InputAction.CallbackContext context);
+        void OnToolFour(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);

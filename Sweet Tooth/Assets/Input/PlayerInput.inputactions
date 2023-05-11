@@ -123,6 +123,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Tool Four",
+                    "type": "Button",
+                    "id": "30dda072-0e3e-4055-9718-eb2e17f32c53",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Scroll",
                     "type": "Value",
                     "id": "947a2594-6d26-48e7-a5a3-8b1f37627f80",
@@ -553,6 +562,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5202fb34-61be-41ad-96da-0df5e44fc75a",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tool Four",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
