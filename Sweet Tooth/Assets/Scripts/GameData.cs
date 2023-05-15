@@ -14,6 +14,7 @@ public class GameData
         { "crazyCornChunk", 0 },
         { "gummyBearHead", 0 },
         { "mintyFowlLeg", 0 },
-        { "peanutButterToadLeg", 0 }
+        { "peanutButterToadLeg", 0 },
+        { "snowCamelPart", 0 }
     };
 }
