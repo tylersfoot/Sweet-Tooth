@@ -50,11 +50,14 @@ public class InventoryMenu : MonoBehaviour
 
     void UpdateInventoryText()
     {
-        string text = $@"Crazy Corn Chunks: {GameDataManager.Data.inv["crazyCornChunk"]}
+        string text = $@"
+        Crazy Corn Chunks: {GameDataManager.Data.inv["crazyCornChunk"]}
         Gummy Bear Heads: {GameDataManager.Data.inv["gummyBearHead"]}
         Minty Fowl Legs: {GameDataManager.Data.inv["mintyFowlLeg"]}
         Peanut Butter Toad Legs: {GameDataManager.Data.inv["peanutButterToadLeg"]}
-        Apples: 38.727";
+        Snow Camel Parts: {GameDataManager.Data.inv["snowCamelPart"]}
+        Mosquito Parts: {GameDataManager.Data.inv["mosquitoPart"]}
+        ";
 
         inventoryDisplay.text = text;
     }

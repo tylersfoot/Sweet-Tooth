@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour
     [Header("Scripts")]
     public HUD HUD;
     public GameOverMenu gameOverMenu;
+    public PeanutBrittleShotty peanutBrittleShotty;
+    public CaneStriker caneStriker;
 
     void Start()
     {
@@ -27,11 +29,15 @@ public class PlayerStats : MonoBehaviour
     public void SaveDataVariables()
     {
         GameDataManager.Data.playerLocation = transform.position; // saves player location
+        GameDataManager.Data.isPeanutButterShottyUnlocked = peanutBrittleShotty.isUnlocked;
+        GameDataManager.Data.isCaneStrikerUnlocked = caneStriker.isUnlocked;
     }
 
     public void LoadDataVariables()
     {
         transform.position = GameDataManager.Data.playerLocation;
+        peanutBrittleShotty.isUnlocked = GameDataManager.Data.isPeanutButterShottyUnlocked;
+        caneStriker.isUnlocked = GameDataManager.Data.isCaneStrikerUnlocked;
     }
 
     public void DamagePlayer(float amount, string source)

@@ -5,8 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public float exampleVariable;
     public Vector3 playerLocation;
+    public bool isPeanutButterShottyUnlocked;
+    public bool isCaneStrikerUnlocked;
 
     // inventory
     public Dictionary<string, float> inv = new Dictionary<string, float>
@@ -15,6 +16,7 @@ public class GameData
         { "gummyBearHead", 0 },
         { "mintyFowlLeg", 0 },
         { "peanutButterToadLeg", 0 },
-        { "snowCamelPart", 0 }
+        { "snowCamelPart", 0 },
+        { "mosquitoPart", 0 }
     };
 }

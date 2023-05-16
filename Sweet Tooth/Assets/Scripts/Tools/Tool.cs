@@ -64,7 +64,8 @@ public class Tool : MonoBehaviour
 
     public void SwitchTool(int num)
     {
-        Vector3 offset = Vector3.zero;;
+        bool isUnlocked = false;
+        Vector3 offset = Vector3.zero;
         // if the number is over or under the index, for use with scroll wheel
         if (num < 1)
         {
@@ -74,40 +75,47 @@ public class Tool : MonoBehaviour
         {
             num = 1;
         }
-        activeToolIndex = num;
 
         // switches the tool
         switch (num)
         {
         case 1:
             targetTool = "Hands";
+            isUnlocked = true;
             break;
         case 2:
             targetTool = "BubblegumBlaster";
             offset = new Vector3(0, 0, 0);
+            isUnlocked = true;
             break;
         case 3:
             targetTool = "PeanutBrittleShotty";
             offset = new Vector3(0, 0.1f, 0);
+            isUnlocked = peanutBrittleShotty.isUnlocked;
             break;
         case 4:
             targetTool = "CaneStriker";
             offset = new Vector3(0, 0.5f, 0);
+            isUnlocked = caneStriker.isUnlocked;
             break;
         default:
             // do nothing
             break;
         }
-        GameObject currentToolObject = transform.Find(activeTool).gameObject;
-        GameObject targetToolObject = transform.Find(targetTool).gameObject;
-        if (currentToolObject?.name != targetToolObject?.name)
+        if (isUnlocked)
         {
+            activeToolIndex = num;
+            GameObject currentToolObject = transform.Find(activeTool).gameObject;
+            GameObject targetToolObject = transform.Find(targetTool).gameObject;
+            if (currentToolObject?.name != targetToolObject?.name)
+            {
 
-            // apply the position offset when switching tools
-            currentToolObject.SetActive(false);
-            targetToolObject.SetActive(true);
-            targetToolObject.transform.localPosition = offset; // apply the position offset
-            activeTool = targetTool;
+                // apply the position offset when switching tools
+                currentToolObject.SetActive(false);
+                targetToolObject.SetActive(true);
+                targetToolObject.transform.localPosition = offset; // apply the position offset
+                activeTool = targetTool;
+            }
         }
     }
 
