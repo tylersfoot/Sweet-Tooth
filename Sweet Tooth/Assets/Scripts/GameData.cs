@@ -8,6 +8,7 @@ public class GameData
     public Vector3 playerLocation;
     public bool isPeanutButterShottyUnlocked;
     public bool isCaneStrikerUnlocked;
+    public bool comingFromSave; // did the player click new game or load save
 
     // inventory
     public Dictionary<string, float> inv = new Dictionary<string, float>

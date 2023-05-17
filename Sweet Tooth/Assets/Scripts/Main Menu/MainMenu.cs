@@ -55,11 +55,13 @@ public class MainMenu : MonoBehaviour
  
     public void LoadSaveButton()
     {
-
+        GameDataManager.Data.comingFromSave = true;
+        SceneManager.LoadScene("Game");
     }
 
     public void NewGameButton()
     {
+        GameDataManager.Data.comingFromSave = false;
         SceneManager.LoadScene("Game");
     }
 

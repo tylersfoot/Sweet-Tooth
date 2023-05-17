@@ -19,6 +19,16 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         HealPlayer(10000f, "startGame");
+        // if player loads scene by clicking Load Game, load their save in on first frame
+        if (GameDataManager.Data.comingFromSave == true)
+        {
+            GameDataManager.LoadData();
+            LoadDataVariables();
+        }
+        else
+        {
+            GameDataManager.SaveData();
+        }
     }
 
     void Update()
@@ -29,6 +39,7 @@ public class PlayerStats : MonoBehaviour
     public void SaveDataVariables()
     {
         GameDataManager.Data.playerLocation = transform.position; // saves player location
+        // tool unlocks
         GameDataManager.Data.isPeanutButterShottyUnlocked = peanutBrittleShotty.isUnlocked;
         GameDataManager.Data.isCaneStrikerUnlocked = caneStriker.isUnlocked;
     }

@@ -127,27 +127,26 @@ public class PlayerMotor : MonoBehaviour
                 case "candyCornFields":
                     endFogColor = new Color(92/255f, 205/255f, 255/255f);
                     endSkyColor = new Color(92/255f, 205/255f, 255/255f);
-                    // endSkyColor = Color.stanley swteemerreen;
                     break;
                 case "mountains":
                     endFogColor = Color.black;
                     endSkyColor = Color.black;
                     break;
                 case "mapleForest":
-                    endFogColor = Color.yellow;
-                    endSkyColor = Color.yellow;
+                    endFogColor = new Color(250/255f, 143/255f, 65/255f);
+                    endSkyColor = new Color(250/255f, 143/255f, 65/255f);
                     break;
                 case "gumdropValley":
-                    endFogColor = Color.magenta;
-                    endSkyColor = Color.magenta;
+                    endFogColor = new Color(252/255f, 75/255f, 156/255f);
+                    endSkyColor = new Color(252/255f, 75/255f, 156/255f);
                     break;
                 case "peanutButterSwamp":
-                    endFogColor = Color.red;
-                    endSkyColor = Color.red;
+                    endFogColor = new Color(132/255f, 70/255f, 43/255f);
+                    endSkyColor = new Color(132/255f, 70/255f, 43/255f);
                     break;
                 case "peppermintForest":
-                    endFogColor = Color.white;
-                    endSkyColor = Color.white;
+                    endFogColor = new Color(251/255f, 164/255f, 124/255f);
+                    endSkyColor = new Color(251/255f, 164/255f, 124/255f);
                     break;
                 default:
                     endFogColor = Color.gray;
