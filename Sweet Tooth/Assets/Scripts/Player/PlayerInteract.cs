@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
     public HUD playerHUD;
     public InputManager inputManager;
     public bool allowInteraction;
+    public bool doEatAttack;
+    public float eatAttackDamage;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class PlayerInteract : MonoBehaviour
 
         RaycastHit hitInfo; // variable to store collision information
 
-        // interacion raycast
+        // interaction raycast
         if(Physics.Raycast(ray, out hitInfo, interactDistance, interactMask))
         {
             if(hitInfo.collider.GetComponent<Interactable>() != null)
@@ -45,6 +47,7 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
         }
+
         // crosshair raycast
         if(Physics.Raycast(ray, out hitInfo, crosshairDistance, enemiesMask))
         {
@@ -57,6 +60,20 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             playerHUD.crosshair.color = Color.white;
+        }
+
+        // eat attack raycast
+        if(Physics.Raycast(ray, out hitInfo, crosshairDistance, enemiesMask))
+        {
+            if (hitInfo.collider.CompareTag("Enemy"))
+            {
+                // if ray hits enemy, and doEatAttack is true, eat the enemy
+                if (doEatAttack)
+                {
+                    hitInfo.collider.SendMessage("Eaten", eatAttackDamage);
+                    doEatAttack = false;
+                }
+            }
         }
     
     }

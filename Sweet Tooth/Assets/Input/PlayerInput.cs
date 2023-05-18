@@ -188,6 +188,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EatAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""a639b734-5977-4856-979a-6c43ca56d11a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -595,6 +604,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Tool Four"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2271a1fe-26a8-40c8-8b3a-24f8a1b00b8a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EatAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1139,6 +1159,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_Reload = m_OnFoot.FindAction("Reload", throwIfNotFound: true);
         m_OnFoot_Test = m_OnFoot.FindAction("Test", throwIfNotFound: true);
         m_OnFoot_Inventory = m_OnFoot.FindAction("Inventory", throwIfNotFound: true);
+        m_OnFoot_EatAttack = m_OnFoot.FindAction("EatAttack", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1230,6 +1251,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Reload;
     private readonly InputAction m_OnFoot_Test;
     private readonly InputAction m_OnFoot_Inventory;
+    private readonly InputAction m_OnFoot_EatAttack;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -1252,6 +1274,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Reload => m_Wrapper.m_OnFoot_Reload;
         public InputAction @Test => m_Wrapper.m_OnFoot_Test;
         public InputAction @Inventory => m_Wrapper.m_OnFoot_Inventory;
+        public InputAction @EatAttack => m_Wrapper.m_OnFoot_EatAttack;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1315,6 +1338,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Inventory.started += instance.OnInventory;
             @Inventory.performed += instance.OnInventory;
             @Inventory.canceled += instance.OnInventory;
+            @EatAttack.started += instance.OnEatAttack;
+            @EatAttack.performed += instance.OnEatAttack;
+            @EatAttack.canceled += instance.OnEatAttack;
         }
 
         private void UnregisterCallbacks(IOnFootActions instance)
@@ -1373,6 +1399,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Inventory.started -= instance.OnInventory;
             @Inventory.performed -= instance.OnInventory;
             @Inventory.canceled -= instance.OnInventory;
+            @EatAttack.started -= instance.OnEatAttack;
+            @EatAttack.performed -= instance.OnEatAttack;
+            @EatAttack.canceled -= instance.OnEatAttack;
         }
 
         public void RemoveCallbacks(IOnFootActions instance)
@@ -1528,6 +1557,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnReload(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+        void OnEatAttack(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

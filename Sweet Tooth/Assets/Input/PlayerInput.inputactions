@@ -166,6 +166,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "EatAttack",
+                    "type": "Button",
+                    "id": "a639b734-5977-4856-979a-6c43ca56d11a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -573,6 +582,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Tool Four",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2271a1fe-26a8-40c8-8b3a-24f8a1b00b8a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EatAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

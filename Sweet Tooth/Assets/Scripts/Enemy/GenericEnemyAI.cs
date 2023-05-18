@@ -24,6 +24,7 @@ public class GenericEnemyAI : MonoBehaviour
     public GameObject itemPrefab; // item that will drop
     private bool isDead;
     public string enemyName; // name of the enemy, ex: "crazyCorn"
+    public bool canBeEaten; // after health is 0, eat enemy
     
     
     private float randomZ;
@@ -139,17 +140,29 @@ public class GenericEnemyAI : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            Death();
+            canBeEaten = true;
         }
         // else
         // {
         //     StartCoroutine(FlashRed(flashDuration));
         // }
+    }
+
+    public void Eaten(float damage)
+    {
+        if (canBeEaten)
+        {
+            Death();
+        }
+        else
+        {
+            TakeDamage(damage);
+        }
     }
 
     public void Death()

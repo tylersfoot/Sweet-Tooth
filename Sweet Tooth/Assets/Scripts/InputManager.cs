@@ -176,6 +176,12 @@ public class InputManager : MonoBehaviour
             }
         };
 
+        onFoot.EatAttack.started += ctx => {
+            if (!stopInput) {
+                playerInteract.doEatAttack = true;
+            }
+        };
+
         // pause game
         onFoot.Pause.started += ctx => pauseMenu.Pause();
 
