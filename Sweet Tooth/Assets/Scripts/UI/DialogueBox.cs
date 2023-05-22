@@ -39,12 +39,11 @@ public class DialogueBox : MonoBehaviour
     public InputManager inputManager;
     public GameObject hudCanvas;
     public bool isOpen;
-    public bool chickenMcFlicken;
+    public string status; // what is it doing? opening? reading out text? closing?
 
     void Start()
     {
         UpdateText("");
-        // ActivateBox(false);
 
         mainGotoCoordinates = mainStartCoordinates;
         authorGotoCoordinates = authorStartCoordinates;
@@ -55,6 +54,8 @@ public class DialogueBox : MonoBehaviour
         authorBoxRT.localPosition = authorStartCoordinates;
         mainBoxRT.sizeDelta = mainGotoSize;
         authorBoxRT.sizeDelta = authorGotoSize;
+
+        status = "closed";
     }
 
     void Update()
@@ -63,11 +64,13 @@ public class DialogueBox : MonoBehaviour
         mainBoxRT.sizeDelta = Vector2.Lerp(mainBoxRT.sizeDelta, mainGotoSize, Time.deltaTime * speed);
         authorBoxRT.localPosition = Vector2.Lerp(authorBoxRT.localPosition, authorGotoCoordinates, Time.deltaTime * speed);
         authorBoxRT.sizeDelta = Vector2.Lerp(authorBoxRT.sizeDelta, authorGotoSize, Time.deltaTime * speed);
-
+        // canvas.SetActive(isOpen);
+        // Debug.Log(status);
     }
 
     public IEnumerator OpenAnimation()
     {
+        status = "opening";
         hudCanvas.SetActive(false);
         mainGotoCoordinates = mainTargetCoordinates; // move up
         authorGotoCoordinates.y = authorTargetCoordinates.y-50; // move up with an offset so its not visible
@@ -78,10 +81,12 @@ public class DialogueBox : MonoBehaviour
         authorGotoCoordinates.y = authorTargetCoordinates.y; // pop out the top
         yield return new WaitForSeconds(0.3f);
         authorGotoSize.x = authorTargetSize.x; // widen out author box
+        status = "open";
     }
 
     public IEnumerator CloseAnimation()
     {
+        status = "closing";
         hudCanvas.SetActive(true);
         authorGotoSize.x = authorStartSize.x; // unwiden out author box
         yield return new WaitForSeconds(0.3f);
@@ -92,6 +97,7 @@ public class DialogueBox : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         authorGotoCoordinates.y = authorStartCoordinates.y; // move down
         mainGotoCoordinates = mainStartCoordinates; // move down 
+        status = "closed";
     }
 
     public void UpdateText(string text)

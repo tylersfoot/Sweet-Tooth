@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour
             stopMove = true;
             stopLook = true;
         }
-        else if (dialogueBox.isOpen)
+        else if (dialogueBox.status != "closed")
         {
             // stopInput = false;
             // stopMove = false;

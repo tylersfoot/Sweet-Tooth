@@ -11,6 +11,7 @@ public class Dialogue : Interactable
 
     public float distance;
 
+    private bool isThisDialogueOpen;
     public DialogueBox dialogueBox;
     public GameObject player;
     private Coroutine startDialogueCoroutine;
@@ -20,7 +21,7 @@ public class Dialogue : Interactable
 
     void Update()
     {
-        if (dialogueBox.isOpen && Vector3.Distance(transform.position, player.transform.position) > distance)
+        if (dialogueBox.status != "closed" && Vector3.Distance(transform.position, player.transform.position) > distance && isThisDialogueOpen)
         {
             endDialogueCoroutine = StartCoroutine(EndDialogue());
         }
@@ -28,10 +29,10 @@ public class Dialogue : Interactable
 
     IEnumerator StartDialogue()
     {
-        dialogueBox.isOpen = true;
         playerInteract.allowInteraction = false; // can't interact with anything else while in dialogue
         dialogueBox.UpdateAuthorText("");
         dialogueBox.ActivateBox(true);
+        isThisDialogueOpen = true;
         StartCoroutine(dialogueBox.OpenAnimation());
         yield return new WaitForSeconds(0.10f * dialogueBox.speed);
 
@@ -72,6 +73,7 @@ public class Dialogue : Interactable
     IEnumerator EndDialogue()
     {
         dialogueBox.isOpen = false;
+        isThisDialogueOpen = false;
         playerInteract.allowInteraction = true;
         currentParagraph = 0;
         if (startDialogueCoroutine != null)
@@ -81,12 +83,16 @@ public class Dialogue : Interactable
         yield return new WaitForSeconds(0.1f);
         dialogueBox.UpdateText("");
         dialogueBox.UpdateAuthorText("");
+        Debug.LogWarning("NOOO WHAT THE FUCK DID YOU DO");
 
         StartCoroutine(dialogueBox.CloseAnimation());    
     }
 
     protected override void Interact()
     {
-        startDialogueCoroutine = StartCoroutine(StartDialogue());
+        if (dialogueBox.status == "closed")
+        {
+            startDialogueCoroutine = StartCoroutine(StartDialogue());
+        }
     }
 }

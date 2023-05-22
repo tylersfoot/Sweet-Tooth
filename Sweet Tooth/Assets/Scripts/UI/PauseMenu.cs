@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused = false;
     public string currentScreen = "none"; // which screen is the player seeing
 
+    
+
     void Start()
     {
         canvas.SetActive(false);
