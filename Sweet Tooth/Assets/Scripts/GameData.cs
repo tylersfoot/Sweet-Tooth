@@ -20,4 +20,6 @@ public class GameData
         { "snowCamelPart", 0 },
         { "mosquitoPart", 0 }
     };
+
+    public List<InventoryItem> inventory = new List<InventoryItem>();
 }

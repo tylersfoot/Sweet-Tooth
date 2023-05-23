@@ -16,9 +16,16 @@ public static class GameDataManager
     public static void LoadData()
     {
         if (File.Exists(SAVE_FILE_PATH))
-        {
+        {        
             string json = File.ReadAllText(SAVE_FILE_PATH);
             Data = JsonUtility.FromJson<GameData>(json);
+
+            // Convert inventory list to dictionary
+            Data.inv = new Dictionary<string, float>();
+            foreach (var item in Data.inventory)
+            {
+                Data.inv[item.itemName] = item.itemAmount;
+            }
         }
         else
         {
@@ -41,6 +48,19 @@ public static class GameDataManager
 
     public static void SaveData()
     {
+        // Convert inventory dictionary to list
+        Data.inventory = new List<InventoryItem>();
+        foreach (var kvp in Data.inv)
+        {
+            InventoryItem item = new InventoryItem
+            {
+                itemName = kvp.Key,
+                itemAmount = kvp.Value
+            };
+            Data.inventory.Add(item);
+        }
+
+        // Serialize and save the data
         string json = JsonUtility.ToJson(Data);
         File.WriteAllText(SAVE_FILE_PATH, json);
     }
