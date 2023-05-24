@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public Vector3 playerLocation;
+    // public Vector3 playerLocation;
+    public string gameVersion;
     public bool isPeanutButterShottyUnlocked;
     public bool isCaneStrikerUnlocked;
     public bool comingFromSave; // did the player click new game or load save

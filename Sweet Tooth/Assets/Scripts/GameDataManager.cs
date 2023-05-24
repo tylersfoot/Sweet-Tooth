@@ -2,6 +2,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [UnityEngine.Scripting.Preserve]
 public static class GameDataManager
@@ -61,7 +62,21 @@ public static class GameDataManager
         }
 
         // Serialize and save the data
-        string json = JsonUtility.ToJson(Data);
+        string json = JsonUtility.ToJson(Data, true);
         File.WriteAllText(SAVE_FILE_PATH, json);
+    }
+
+    public static void ClearSave()
+    {
+        // Data.playerLocation = new Vector3(0, 2, -70);
+        Data.gameVersion = "Unknown";
+        Data.isPeanutButterShottyUnlocked = false;
+        Data.isCaneStrikerUnlocked = false;
+        foreach (var key in Data.inv.Keys.ToList())
+        {
+            Data.inv[key] = 0;
+        }
+        
+        SaveData();
     }
 }

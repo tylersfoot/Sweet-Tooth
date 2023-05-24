@@ -1,1 +1,32 @@
-{"playerLocation":{"x":0.0,"y":0.0,"z":0.0},"isPeanutButterShottyUnlocked":false,"isCaneStrikerUnlocked":false,"comingFromSave":false,"inventory":[{"itemName":"crazyCornChunk","itemAmount":0.0},{"itemName":"gummyBearHead","itemAmount":0.0},{"itemName":"mintyFowlLeg","itemAmount":0.0},{"itemName":"peanutButterToadLeg","itemAmount":0.0},{"itemName":"snowCamelPart","itemAmount":0.0},{"itemName":"mosquitoPart","itemAmount":0.0}]}
+{
+    "gameVersion": "Unknown",
+    "isPeanutButterShottyUnlocked": false,
+    "isCaneStrikerUnlocked": false,
+    "comingFromSave": false,
+    "inventory": [
+        {
+            "itemName": "crazyCornChunk",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "gummyBearHead",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "mintyFowlLeg",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "peanutButterToadLeg",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "snowCamelPart",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "mosquitoPart",
+            "itemAmount": 0.0
+        }
+    ]
+}

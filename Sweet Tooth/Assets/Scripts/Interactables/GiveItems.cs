@@ -10,7 +10,7 @@ public class GiveItems : Interactable
         foreach (var itemKey in GameDataManager.Data.inv.Keys.ToList())
         {
             GameDataManager.Data.inv[itemKey] += 1f;
-            GameDataManager.Data.inv[itemKey] *= 1.5f;
+            GameDataManager.Data.inv[itemKey] *= 10;
         }
     }
 }
