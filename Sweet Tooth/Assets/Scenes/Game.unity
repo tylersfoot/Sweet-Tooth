@@ -13187,6 +13187,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5369467225192397843}
+  - {fileID: 2282946526697727552}
+  - {fileID: 7444669710849590800}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19384,118 +19386,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418516625}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
---- !u!1 &419581746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 419581747}
-  - component: {fileID: 419581751}
-  - component: {fileID: 419581750}
-  - component: {fileID: 419581749}
-  - component: {fileID: 419581752}
-  m_Layer: 6
-  m_Name: CraftShotty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &419581747
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419581746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.557, y: 1.6, z: -84.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1739919901}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &419581749
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419581746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &419581750
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419581746}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &419581751
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419581746}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &419581752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419581746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc64c7b2788798a449d2e29c1287ecfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: craft me that shawty
-  peanutBrittleShotty: {fileID: 1313666404}
 --- !u!1 &421452513
 GameObject:
   m_ObjectHideFlags: 0
@@ -19829,42 +19719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428712597}
   m_CullTransparentMesh: 1
---- !u!21 &430760607
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &434229294
 GameObject:
   m_ObjectHideFlags: 0
@@ -23082,7 +22936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 430760607}
+  m_Material: {fileID: 1266028030}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -23135,6 +22989,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 0
+  image: {fileID: 580377363}
 --- !u!1 &582253155
 GameObject:
   m_ObjectHideFlags: 0
@@ -31316,7 +31172,6 @@ MonoBehaviour:
   currentAmmo: 0
   maxAmmo: 10
   isKeyDown: 0
-  isUnlocked: 0
   shootSound: {fileID: 8300000, guid: 7feead31139484949b7fc1dfe4bcbe53, type: 3}
 --- !u!1 &717115548
 GameObject:
@@ -32914,44 +32769,6 @@ Transform:
   m_Father: {fileID: 1964694954}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -285.044, z: 0}
---- !u!21 &778028895
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
-    - _r: {r: 0, g: 0, b: 0, a: 0}
-    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
-  m_BuildTextureStacks: []
 --- !u!1 &781750125
 GameObject:
   m_ObjectHideFlags: 0
@@ -46395,118 +46212,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230244239}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
---- !u!1 &1230441616
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1230441617}
-  - component: {fileID: 1230441621}
-  - component: {fileID: 1230441620}
-  - component: {fileID: 1230441619}
-  - component: {fileID: 1230441618}
-  m_Layer: 6
-  m_Name: CraftStriker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1230441617
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230441616}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.84, y: 1.6, z: -84.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1739919901}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1230441618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230441616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adfa1fd52e4378a408da1fe710afc113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptMessage: craft that striker!
-  caneStriker: {fileID: 715293852}
---- !u!65 &1230441619
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230441616}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1230441620
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230441616}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1230441621
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230441616}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1233955818
 GameObject:
   m_ObjectHideFlags: 0
@@ -46747,6 +46452,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260837285}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1266028030
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!4 &1266960796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2036794930328267906, guid: 56ae4e8ca78041c4ea5bd70e3ffde257, type: 3}
@@ -47717,20 +47458,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Press [E] To Read Sign
-  text:
-  - Hitting the number keys on the top of your keyboard, or using the scroll wheel,
-    will allow you to switch weapons (if they are unlocked).
-  - Hitting [2] will bring up the Bubblegum Blaster. This is a simple tool; it dispenses
-    gumballs at your enemies.
-  - When you run out of ammo, you can hit [R] to reload.
-  currentParagraph: 0
-  textDisplay: 
+  text1: []
+  text2: []
+  text3: []
   author: Sign from SM64
-  distance: 15
+  distance: 10
   dialogueBox: {fileID: 364686039}
   player: {fileID: 314080663}
-  playerInteract: {fileID: 314080675}
-  inputManager: {fileID: 314080665}
 --- !u!23 &1314781549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49890,7 +49624,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421231700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.4, y: 0, z: -159.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -49901,7 +49635,7 @@ Transform:
   - {fileID: 1314781546}
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1438143148
 GameObject:
   m_ObjectHideFlags: 0
@@ -55380,8 +55114,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485656033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: -50}
-  m_LocalScale: {x: 10, y: 10, z: 50}
+  m_LocalPosition: {x: 0, y: -4, z: -62.57}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1421231701}
@@ -55847,6 +55581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  r: {x: 0, y: 0, z: 0, w: 0}
+  rect2props: {x: 0.000015258789, y: 0.0000076293945, z: 79.549515, w: 79.549515}
+  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55859,7 +55596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 778028895}
+  m_Material: {fileID: 1663639374}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -56419,21 +56156,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Press [E] To Read Sign
-  text:
-  - On your screen you will see multiple elements. In the bottom left is your health
-    bar. In the top left corner sits an FPS counter and the current game version.
-    While holding a weapon, your ammo will be displayed on the bottom right.
-  - On the right side is your Sugar Rush meter. This will slowly fill up over time.
-    When it's full, hit [T] on your keyboard to activate Sugar Rush for a short duration.
-    Doing so will give you a speed, jump height, and damage boost.
-  currentParagraph: 0
-  textDisplay: 
+  text1: []
+  text2: []
+  text3: []
   author: Sign from SM64
-  distance: 15
+  distance: 10
   dialogueBox: {fileID: 364686039}
   player: {fileID: 314080663}
-  playerInteract: {fileID: 314080675}
-  inputManager: {fileID: 314080665}
 --- !u!23 &1535840537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68091,6 +67820,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661349452}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
+--- !u!21 &1663639374
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
+    - _r: {r: 0, g: 0, b: 0, a: 0}
+    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
+  m_BuildTextureStacks: []
 --- !u!1 &1674243727
 GameObject:
   m_ObjectHideFlags: 0
@@ -69289,8 +69056,6 @@ Transform:
   - {fileID: 725495624}
   - {fileID: 401316922}
   - {fileID: 1983133719}
-  - {fileID: 1230441617}
-  - {fileID: 419581747}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86564,6 +86329,52 @@ Transform:
   m_Father: {fileID: 8704523055475329744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1145474622160395567
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505740946094423290}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+  - {fileID: -3846018093981099296, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+  - {fileID: 4874126678125670354, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+  - {fileID: -6922793697723135513, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+  - {fileID: -6478536213147159724, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &1147147188143161601
 Transform:
   m_ObjectHideFlags: 0
@@ -86854,6 +86665,26 @@ Transform:
   m_Father: {fileID: 2437347947669392175}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505740946094423290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2282946526697727552}
+  - component: {fileID: 2882721921597221349}
+  - component: {fileID: 1145474622160395567}
+  - component: {fileID: 2882721921597221351}
+  - component: {fileID: 2882721921597221350}
+  m_Layer: 6
+  m_Name: Dereck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1509459994119008196
 GameObject:
   m_ObjectHideFlags: 0
@@ -87994,6 +87825,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &2282946526697727552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505740946094423290}
+  m_LocalRotation: {x: -0, y: -0.9327014, z: -0, w: -0.36064965}
+  m_LocalPosition: {x: 8.98, y: 0, z: -87.54}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 161519820}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -222.28, z: 0}
 --- !u!1 &2305955579064478764
 GameObject:
   m_ObjectHideFlags: 0
@@ -88496,6 +88342,58 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!33 &2882721921597221349
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505740946094423290}
+  m_Mesh: {fileID: -5495902117074765545, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
+--- !u!114 &2882721921597221350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505740946094423290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b93a205d186b314a9c59b689fa6fa07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Chat with Dereck
+  text1:
+  - "Hi, I\u2019m Dereck! I'm a local blacksmith in this village."
+  - I can construct the Peanut Butter Shotty for you! Just get me the materials.
+  - I will need [materials]
+  - Come back when you have everything!
+  text2:
+  - Looks like you've gathered all of the materials. Let me get to work.
+  - '*crafting noises*'
+  - Here you go! The Peanut Butter Shotty! This baby shoots a bunch of peanut brittle
+    at your enemies! Now go have fun!
+  text3:
+  - Welcome back! I don't really have anything else to say...
+  - Go have fun with your Peanut Butter Shotty!
+  author: Dereck
+  distance: 20
+  dialogueBox: {fileID: 364686039}
+  player: {fileID: 314080663}
+--- !u!64 &2882721921597221351
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505740946094423290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 02d6719ca01360b4faa535644b8b305e, type: 3}
 --- !u!4 &2883543329675937997
 Transform:
   m_ObjectHideFlags: 0
@@ -89399,18 +89297,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Press [E] To Read Sign
-  text:
-  - Hello! Thank you for playing Tyler and Brodie's first game, Sweet Tooth! This
-    game was made for our 2023 Senior Capstone in 18 weeks.
-  - The signs down the path will teach you the basics and controls. Now go have fun!
-  currentParagraph: 0
-  textDisplay: 
+  text1: []
+  text2: []
+  text3: []
   author: Sign from SM64
-  distance: 15
+  distance: 10
   dialogueBox: {fileID: 364686039}
   player: {fileID: 314080663}
-  playerInteract: {fileID: 314080675}
-  inputManager: {fileID: 314080665}
 --- !u!64 &3469287836647314238
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -91520,9 +91413,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4742287463488267945}
   m_LocalRotation: {x: 0, y: -0.9671791, z: 0, w: 0.25409567}
-  m_LocalPosition: {x: -14.67, y: 0, z: -86.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -15, y: 0, z: -85}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3906020198349155469}
   - {fileID: 9148371514336012150}
@@ -91542,27 +91435,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Talk to the Chocolate Bunnyteer
-  text:
-  - "Why howdy there! \u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200BI\u2019m
-    Bunny! \u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200BDo you need
-    help stranger? \u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200BLet
-    me give you some useful tips!"
-  - "To Jump, \u200B\u200B\u200B\u200B\u200Bpress Jump!"
-  - "If you press forward, \u200B\u200B\u200B\u200B\u200Byou move forward!"
-  - Enemies will hit you.
-  - "Watch out for Dereck\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B."
-  - "And have a good day! \u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200BJ\u200B\u200Bu\u200B\u200Bs\u200B\u200Bt
-    \u200B\u200Bd\u200B\u200Bo\u200B\u200Bn\u200B\u200B\u2019t \u200B\u200Bl\u200B\u200Be\u200B\u200Bt
-    \u200B\u200Bt\u200B\u200Bh\u200B\u200Be \u200B\u200Bs\u200B\u200Bn\u200B\u200Bo\u200B\u200Bw\u200B\u200B
-    c\u200B\u200Ba\u200B\u200Bm\u200B\u200Be\u200B\u200Bl\u200B\u200Bs \u200B\u200Bb\u200B\u200Bi\u200B\u200Bt\u200B\u200Be\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B."
-  currentParagraph: 0
-  textDisplay: 
+  text1: []
+  text2: []
+  text3: []
   author: Chocolate Bunnyteer
   distance: 20
   dialogueBox: {fileID: 364686039}
   player: {fileID: 314080663}
-  playerInteract: {fileID: 314080675}
-  inputManager: {fileID: 314080665}
 --- !u!136 &5369467225192397845
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -92327,6 +92206,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!33 &5836414694025578933
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789845286615817386}
+  m_Mesh: {fileID: -5495902117074765545, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
 --- !u!1 &5852988901486774345
 GameObject:
   m_ObjectHideFlags: 0
@@ -93654,6 +93541,21 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.002663713, y: 0.03544139, z: -0.00009828061}
     m_Extent: {x: 0.043539174, y: 0.07732325, z: 0.04429914}
   m_DirtyAABB: 0
+--- !u!4 &7444669710849590800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789845286615817386}
+  m_LocalRotation: {x: -0, y: 0.8080681, z: -0, w: 0.5890891}
+  m_LocalPosition: {x: 19.07, y: 0, z: -76.13}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 161519820}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 107.815, z: 0}
 --- !u!1 &7461325896985969032
 GameObject:
   m_ObjectHideFlags: 0
@@ -93948,6 +93850,26 @@ Transform:
   m_Father: {fileID: 837694214557012085}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7789845286615817386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7444669710849590800}
+  - component: {fileID: 5836414694025578933}
+  - component: {fileID: 8582712399362211199}
+  - component: {fileID: 8582712399362211201}
+  - component: {fileID: 8582712399362211200}
+  m_Layer: 6
+  m_Name: TheDuck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &7817189553840722270
 Transform:
   m_ObjectHideFlags: 0
@@ -94927,6 +94849,86 @@ Transform:
   m_Father: {fileID: 837694214557012085}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &8582712399362211199
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789845286615817386}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
+  - {fileID: -6922793697723135513, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
+  - {fileID: -6478536213147159724, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
+  - {fileID: 4874126678125670354, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
+  - {fileID: -3846018093981099296, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8582712399362211200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789845286615817386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b93a205d186b314a9c59b689fa6fa07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: Bother The Duck
+  text1: []
+  text2: []
+  text3: []
+  author: The Duck
+  distance: 20
+  dialogueBox: {fileID: 364686039}
+  player: {fileID: 314080663}
+--- !u!64 &8582712399362211201
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7789845286615817386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 46b979674b8c4dc40b9b1e7faa287c0e, type: 3}
 --- !u!4 &8598437392664542852
 Transform:
   m_ObjectHideFlags: 0

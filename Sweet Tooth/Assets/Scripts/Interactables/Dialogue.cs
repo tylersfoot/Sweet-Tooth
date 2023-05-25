@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class Dialogue : Interactable
 {
-    public string[] text; // the different text boxes
-    public int currentParagraph; // which text box are you on, ex: 0 is the first paragraph, 1 is the second
-    public string textDisplay;
+    private string[] text; // the text that will be read
+    public string[] text1; // the different text boxes
+    public string[] text2; // alt texts if needed
+    public string[] text3;
+    // public float currentStage; // which stage is the NPC at? for handling multiple texts
     public string author;
 
-    public float distance;
+    public float distance; // distance from player until dialogue stops
 
     private bool isThisDialogueOpen;
     public DialogueBox dialogueBox;
     public GameObject player;
     private Coroutine startDialogueCoroutine;
     private Coroutine endDialogueCoroutine;
-    public PlayerInteract playerInteract;
-    public InputManager inputManager;
+    private PlayerInteract playerInteract;
+    private InputManager inputManager;
+
+    void Start()
+    {
+        playerInteract = player.GetComponent<PlayerInteract>();
+        inputManager = player.GetComponent<InputManager>();
+    }
 
     void Update()
     {
@@ -75,7 +83,6 @@ public class Dialogue : Interactable
         dialogueBox.isOpen = false;
         isThisDialogueOpen = false;
         playerInteract.allowInteraction = true;
-        currentParagraph = 0;
         if (startDialogueCoroutine != null)
         {   
             StopCoroutine(startDialogueCoroutine);
@@ -83,13 +90,62 @@ public class Dialogue : Interactable
         yield return new WaitForSeconds(0.1f);
         dialogueBox.UpdateText("");
         dialogueBox.UpdateAuthorText("");
-        Debug.LogWarning("NOOO WHAT THE FUCK DID YOU DO");
 
         StartCoroutine(dialogueBox.CloseAnimation());    
     }
 
     protected override void Interact()
     {
+        // checks which NPC it is and does certain things
+        switch (author)
+        {
+        case "Dereck":
+            if (GameDataManager.Data.isPeanutButterShottyUnlocked)
+            {
+                // if gun is unlocked, skip to last dialogue
+                text = text3;
+            }
+            else
+            {
+                // if you have materials, read crafting script
+                if (GameDataManager.Data.inv["mosquitoPart"] >= 20 && GameDataManager.Data.inv["peanutButterToadLeg"] >= 5)
+                {
+                    GameDataManager.Data.inv["mosquitoPart"] -= 20;
+                    GameDataManager.Data.inv["peanutButterToadLeg"] -= 5;
+                    GameDataManager.Data.isPeanutButterShottyUnlocked = true;
+                    text = text2;
+                }
+                else // if you don't, read initial script again
+                {
+                    text = text1;
+                }
+            }
+            break;
+        case "The Duck":
+            if (GameDataManager.Data.isPeanutButterShottyUnlocked)
+            {
+                // if gun is unlocked, skip to last dialogue
+                text = text3;
+            }
+            else
+            {
+                // if you have materials, read crafting script
+                if (GameDataManager.Data.inv["mosquitoPart"] >= 20 && GameDataManager.Data.inv["peanutButterToadLeg"] >= 5)
+                {
+                    GameDataManager.Data.inv["mosquitoPart"] -= 20;
+                    GameDataManager.Data.inv["peanutButterToadLeg"] -= 5;
+                    GameDataManager.Data.isPeanutButterShottyUnlocked = true;
+                    text = text2;
+                }
+                else // if you don't, read initial script again
+                {
+                    text = text1;
+                }
+            }
+            break;
+        default:
+            break;
+        }
         if (dialogueBox.status == "closed")
         {
             startDialogueCoroutine = StartCoroutine(StartDialogue());

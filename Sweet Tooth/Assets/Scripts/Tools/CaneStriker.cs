@@ -19,7 +19,6 @@ public class CaneStriker : MonoBehaviour
     public float maxAmmo; // max ammo
     private float fireCooldown; // time until next shot
     public bool isKeyDown; // is the shoot key being held down
-    public bool isUnlocked; // is the weapon unlocked
 
     public AudioClip shootSound;
 

@@ -91,12 +91,12 @@ public class Tool : MonoBehaviour
         case 3:
             targetTool = "PeanutBrittleShotty";
             offset = new Vector3(0, 0.1f, 0);
-            isUnlocked = peanutBrittleShotty.isUnlocked;
+            isUnlocked = GameDataManager.Data.isPeanutButterShottyUnlocked;
             break;
         case 4:
             targetTool = "CaneStriker";
             offset = new Vector3(0, 0.5f, 0);
-            isUnlocked = caneStriker.isUnlocked;
+            isUnlocked = GameDataManager.Data.isCaneStrikerUnlocked;
             break;
         default:
             // do nothing
