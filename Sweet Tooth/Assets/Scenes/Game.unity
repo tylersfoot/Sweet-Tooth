@@ -16687,7 +16687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHealth: 100
   playerHealth: 100
-  walkSpeed: 15
+  walkSpeed: 50
   isDead: 0
   HUD: {fileID: 636790449}
   gameOverMenu: {fileID: 1951758269}
@@ -22937,7 +22937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1266028030}
+  m_Material: {fileID: 2109088125}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -22990,6 +22990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 0
+  image: {fileID: 580377363}
 --- !u!1 &582253155
 GameObject:
   m_ObjectHideFlags: 0
@@ -46451,42 +46453,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260837285}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1266028030
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!4 &1266960796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2036794930328267906, guid: 56ae4e8ca78041c4ea5bd70e3ffde257, type: 3}
@@ -55580,6 +55546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  r: {x: 0, y: 0, z: 0, w: 0}
+  rect2props: {x: 0.000015258789, y: 0.0000076293945, z: 79.549515, w: 79.549515}
+  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55592,7 +55561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 1663639374}
+  m_Material: {fileID: 1552175213}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -56504,6 +56473,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547956955}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
+--- !u!21 &1552175213
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
+    - _r: {r: 0, g: 0, b: 0, a: 0}
+    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
+  m_BuildTextureStacks: []
 --- !u!1 &1558624897
 GameObject:
   m_ObjectHideFlags: 0
@@ -67816,44 +67823,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661349452}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
---- !u!21 &1663639374
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
-    - _r: {r: 0, g: 0, b: 0, a: 0}
-    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
-  m_BuildTextureStacks: []
 --- !u!1 &1674243727
 GameObject:
   m_ObjectHideFlags: 0
@@ -84885,6 +84854,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107549436}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
+--- !u!21 &2109088125
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &2110008007
 GameObject:
   m_ObjectHideFlags: 0
@@ -86005,6 +86010,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 1610311143209129779}
   enemyName: crazyCorn
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!1 &896934194889002107
 GameObject:
   m_ObjectHideFlags: 0
@@ -86192,6 +86198,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: 59ae5951ed62f1a4896f89c0fff5dcea, type: 3}
   enemyName: GummyBear
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!114 &919132148493738741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87928,6 +87935,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: 80233b4af9244554387815838efdf37f, type: 3}
   enemyName: CaramelClops
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!114 &2247050294684743232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88648,17 +88656,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptMessage: Chat with Dereck
   text1:
-  - "Hi, I\u2019m Dereck! I'm a local blacksmith in this village."
-  - I can construct the Peanut Butter Shotty for you! Just get me the materials.
-  - I will need [materials]
+  - "Hi,\u200B\u200B\u200B\u200B\u200B I\u2019m Dereck!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    I'm a local blacksmith in this village."
+  - "I can construct the Peanut Butter Shotty for you!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    Just get me the materials."
+  - I will need 20 Mosquilate Sacs and 5 Peanut Butter Toad Legs.
   - Come back when you have everything!
   text2:
-  - Looks like you've gathered all of the materials. Let me get to work.
-  - '*crafting noises*'
-  - Here you go! The Peanut Butter Shotty! This baby shoots a bunch of peanut brittle
-    at your enemies! Now go have fun!
+  - "Looks like you've gathered all of the materials.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    Let me get to work."
+  - "*\u200B\u200B\u200B\u200Bc\u200B\u200B\u200B\u200Br\u200B\u200B\u200B\u200Ba\u200B\u200B\u200B\u200Bf\u200B\u200B\u200B\u200Bt\u200B\u200B\u200B\u200Bi\u200B\u200B\u200B\u200Bn\u200B\u200B\u200B\u200Bg\u200B\u200B\u200B\u200B
+    n\u200B\u200B\u200B\u200Bo\u200B\u200B\u200B\u200Bi\u200B\u200B\u200B\u200Bs\u200B\u200B\u200B\u200Be\u200B\u200B\u200B\u200Bs\u200B\u200B\u200B\u200B*"
+  - "Here you go!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B The
+    Peanut Butter Shotty!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    This baby shoots a bunch of peanut brittle at your enemies!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    Now go have fun!"
   text3:
-  - Welcome back! I don't really have anything else to say...
+  - "Welcome back!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B I
+    don't really have anything else to say\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B."
   - Go have fun with your Peanut Butter Shotty!
   author: Dereck
   distance: 20
@@ -88889,6 +88904,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: 3bb33cae176bf664c9cd6173f0fe0d41, type: 3}
   enemyName: SnowCamel
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!1 &3041128008822373115
 GameObject:
   m_ObjectHideFlags: 0
@@ -89336,6 +89352,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: 5e7e2a9a0ac26204d8ceba458a212878, type: 3}
   enemyName: SuckerPunch
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!33 &3216943505155565218
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90963,6 +90980,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
   enemyName: PeanutButterToad
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!4 &4501525515148676741
 Transform:
   m_ObjectHideFlags: 0
@@ -92062,7 +92080,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Talk to the Chocolate Bunnyteer
-  text1: []
+  text1:
+  - "Why howdy there!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    I\u2019m Bunny!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B Do
+    you need help stranger?\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    Let me give you some useful tips!"
+  - "To Jump,\u200B\u200B\u200B\u200B\u200B press Jump!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B"
+  - "If you press forward,\u200B\u200B\u200B\u200B\u200B you move forward!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B"
+  - Enemies will hit you.
+  - "Watch out for Dereck\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B."
+  - "And have a good day!\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    J\u200B\u200Bu\u200B\u200Bs\u200B\u200Bt\u200B\u200B d\u200B\u200Bo\u200B\u200Bn\u200B\u200B\u2019t\u200B\u200B
+    l\u200B\u200Be\u200B\u200Bt\u200B\u200B t\u200B\u200Bh\u200B\u200Be\u200B\u200B
+    s\u200B\u200Bn\u200B\u200Bo\u200B\u200Bw\u200B\u200B c\u200B\u200Ba\u200B\u200Bm\u200B\u200Be\u200B\u200Bl\u200B\u200Bs\u200B\u200B
+    b\u200B\u200Bi\u200B\u200Bt\u200B\u200Be\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B."
   text2: []
   text3: []
   author: Chocolate Bunnyteer
@@ -92284,6 +92315,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: 4f6e89736603f1d4094ae239bafdf644, type: 3}
   enemyName: MintyFowl
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!1 &5425928440953394473
 GameObject:
   m_ObjectHideFlags: 0
@@ -95232,6 +95264,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 919132149155446097, guid: dea840b0bcf751b4aa9fa2753412364a, type: 3}
   enemyName: Mosquilate
   canBeEaten: 0
+  shouldBeEaten: 0
 --- !u!4 &8047998116316227070
 Transform:
   m_ObjectHideFlags: 0
@@ -95891,9 +95924,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Bother The Duck
-  text1: []
-  text2: []
-  text3: []
+  text1:
+  - "yo\u200B\u200B yo\u200B\u200B yo\u200B\u200B wazzup im the duck\u200B\u200B\u200B\u200B\u200B
+    B\u200B\u200B\u200B\u200B\u200B)"
+  - "if u get me the goods,\u200B\u200B\u200B\u200B\u200B ill hand over my Cane Striker!"
+  - "what are the goods?\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    well I need 15 Minty Fowl Legs and 3 Snow Camel Glands for a secret project. "
+  - "d\u200B\u200Bo\u200B\u200Bn\u200B\u200Bt\u200B\u200B ask questions.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    just get me what i need.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    see ya."
+  text2:
+  - "oh,\u200B\u200B\u200B\u200B\u200B you actually got the goods?\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    lol"
+  - "fine,\u200B\u200B\u200B\u200B\u200B heres my striker.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    it can pierce through enemies.\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B\u200B
+    good luck in ur journeys"
+  text3:
+  - "stop bothering me,\u200B\u200B\u200B\u200B\u200B im trying to kill der-\u200B\u200B\u200B\u200B\u200B
+    uh\u200B\u200B\u200B\u200B\u200B i mean\u200B\u200B\u200B\u200B\u200B give dereck
+    a special gift"
   author: The Duck
   distance: 20
   dialogueBox: {fileID: 364686039}

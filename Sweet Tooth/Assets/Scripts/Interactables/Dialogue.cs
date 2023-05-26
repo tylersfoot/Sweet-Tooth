@@ -108,9 +108,9 @@ public class Dialogue : Interactable
             else
             {
                 // if you have materials, read crafting script
-                if (GameDataManager.Data.inv["mosquitoPart"] >= 20 && GameDataManager.Data.inv["peanutButterToadLeg"] >= 5)
+                if (GameDataManager.Data.inv["mosquilateSac"] >= 20 && GameDataManager.Data.inv["peanutButterToadLeg"] >= 5)
                 {
-                    GameDataManager.Data.inv["mosquitoPart"] -= 20;
+                    GameDataManager.Data.inv["mosquilateSac"] -= 20;
                     GameDataManager.Data.inv["peanutButterToadLeg"] -= 5;
                     GameDataManager.Data.isPeanutButterShottyUnlocked = true;
                     text = text2;
@@ -122,7 +122,7 @@ public class Dialogue : Interactable
             }
             break;
         case "The Duck":
-            if (GameDataManager.Data.isPeanutButterShottyUnlocked)
+            if (GameDataManager.Data.isCaneStrikerUnlocked)
             {
                 // if gun is unlocked, skip to last dialogue
                 text = text3;
@@ -130,11 +130,11 @@ public class Dialogue : Interactable
             else
             {
                 // if you have materials, read crafting script
-                if (GameDataManager.Data.inv["mosquitoPart"] >= 20 && GameDataManager.Data.inv["peanutButterToadLeg"] >= 5)
+                if (GameDataManager.Data.inv["mintyFowlLeg"] >= 15 && GameDataManager.Data.inv["snowCamelGland"] >= 3)
                 {
-                    GameDataManager.Data.inv["mosquitoPart"] -= 20;
-                    GameDataManager.Data.inv["peanutButterToadLeg"] -= 5;
-                    GameDataManager.Data.isPeanutButterShottyUnlocked = true;
+                    GameDataManager.Data.inv["mintyFowlLeg"] -= 15;
+                    GameDataManager.Data.inv["snowCamelGland"] -= 3;
+                    GameDataManager.Data.isCaneStrikerUnlocked = true;
                     text = text2;
                 }
                 else // if you don't, read initial script again
@@ -144,6 +144,7 @@ public class Dialogue : Interactable
             }
             break;
         default:
+            text = text1;
             break;
         }
         if (dialogueBox.status == "closed")

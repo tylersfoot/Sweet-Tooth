@@ -21,11 +21,19 @@
             "itemAmount": 0.0
         },
         {
-            "itemName": "snowCamelPart",
+            "itemName": "snowCamelGland",
             "itemAmount": 0.0
         },
         {
-            "itemName": "mosquitoPart",
+            "itemName": "mosquilateSac",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "caramelHoof",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "hardRightLolli",
             "itemAmount": 0.0
         }
     ]

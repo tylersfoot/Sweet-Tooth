@@ -18,8 +18,10 @@ public class GameData
         { "gummyBearHead", 0 },
         { "mintyFowlLeg", 0 },
         { "peanutButterToadLeg", 0 },
-        { "snowCamelPart", 0 },
-        { "mosquitoPart", 0 }
+        { "snowCamelGland", 0 },
+        { "mosquilateSac", 0 },
+        { "caramelHoof", 0 },
+        { "hardRightLolli", 0 }
     };
 
     public List<InventoryItem> inventory = new List<InventoryItem>();

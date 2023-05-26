@@ -25,6 +25,7 @@ public class GenericEnemyAI : MonoBehaviour
     private bool isDead;
     public string enemyName; // name of the enemy, ex: "crazyCorn"
     public bool canBeEaten; // after health is 0, eat enemy
+    public bool shouldBeEaten; // should you be able to eat this enemy
     
     
     private float randomZ;
@@ -143,14 +144,14 @@ public class GenericEnemyAI : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health <= 0 && shouldBeEaten)
         {
             canBeEaten = true;
         }
-        // else
-        // {
-        //     StartCoroutine(FlashRed(flashDuration));
-        // }
+        else
+        {
+            Death();
+        }
     }
 
     public void Eaten(float damage)
