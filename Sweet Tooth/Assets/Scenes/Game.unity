@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.69793296, g: 0.7887753, b: 0.62382984, a: 1}
+  m_IndirectSpecularColor: {r: 0.7782587, g: 0.72091687, b: 0.7953721, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22990,8 +22990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
-  image: {fileID: 580377363}
 --- !u!1 &582253155
 GameObject:
   m_ObjectHideFlags: 0
@@ -46242,6 +46240,13 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2095064291263974793}
+  - {fileID: 5781288487703676166}
+  - {fileID: 6494253473738547363}
+  - {fileID: 1083784432149777390}
+  - {fileID: 663140835511327518}
+  - {fileID: 7000869880298490713}
+  - {fileID: 2757431451308631136}
+  - {fileID: 7521182323538203166}
   m_Father: {fileID: 1720903568}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55546,9 +55551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c41f08973846429af681aea0a30c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0, z: 0, w: 0}
-  rect2props: {x: 0.000015258789, y: 0.0000076293945, z: 79.549515, w: 79.549515}
-  image: {fileID: 1510876773}
 --- !u!114 &1510876773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68651,13 +68653,6 @@ Transform:
   - {fileID: 2951998598128548596}
   - {fileID: 3201084754230127315}
   - {fileID: 1233955819}
-  - {fileID: 5781288487703676166}
-  - {fileID: 6494253473738547363}
-  - {fileID: 1083784432149777390}
-  - {fileID: 663140835511327518}
-  - {fileID: 7000869880298490713}
-  - {fileID: 2757431451308631136}
-  - {fileID: 7521182323538203166}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85864,13 +85859,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177931488694960548}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 11.266894, y: 14.832964, z: 1.5996373}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 195.87, y: 14.8, z: -60.78}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 12
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &683510121470537753
 Transform:
@@ -86195,7 +86190,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 1
-  itemPrefab: {fileID: 919132149155446097, guid: 59ae5951ed62f1a4896f89c0fff5dcea, type: 3}
+  itemPrefab: {fileID: 7145888616110180516}
   enemyName: GummyBear
   canBeEaten: 0
   shouldBeEaten: 0
@@ -86471,14 +86466,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306720444198850900}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.000000049701427, y: 4.8209095, z: -0.433005}
+  m_LocalRotation: {x: -0.47290996, y: -0.525696, z: -0.525696, w: 0.47290987}
+  m_LocalPosition: {x: 213.93, y: 8.3, z: -69.35}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -96.052}
 --- !u!4 &1096019855609888075
 Transform:
   m_ObjectHideFlags: 0
@@ -86831,8 +86826,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2247050294684743229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 161.77, y: 0, z: 20.9}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7553703878542588953}
@@ -87932,7 +87927,7 @@ MonoBehaviour:
   flashDuration: 2
   delaypatrol: 5
   delayattack: 3
-  itemPrefab: {fileID: 919132149155446097, guid: 80233b4af9244554387815838efdf37f, type: 3}
+  itemPrefab: {fileID: 3246969880591597274}
   enemyName: CaramelClops
   canBeEaten: 0
   shouldBeEaten: 0
@@ -88523,13 +88518,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3246969880591597274}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.8609715, y: 1.537975, z: 0.18731506}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 194.21, y: 5.32, z: -48.36}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 14
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2810288282789757745
 GameObject:
@@ -88901,7 +88896,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 4
-  itemPrefab: {fileID: 919132149155446097, guid: 3bb33cae176bf664c9cd6173f0fe0d41, type: 3}
+  itemPrefab: {fileID: 6588928515068026812}
   enemyName: SnowCamel
   canBeEaten: 0
   shouldBeEaten: 0
@@ -89349,7 +89344,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 1
-  itemPrefab: {fileID: 919132149155446097, guid: 5e7e2a9a0ac26204d8ceba458a212878, type: 3}
+  itemPrefab: {fileID: 177931488694960548}
   enemyName: SuckerPunch
   canBeEaten: 0
   shouldBeEaten: 0
@@ -90977,7 +90972,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 5
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
+  itemPrefab: {fileID: 7666189504815567331}
   enemyName: PeanutButterToad
   canBeEaten: 0
   shouldBeEaten: 0
@@ -91196,7 +91191,7 @@ Transform:
   m_GameObject: {fileID: 5415478422796933150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 206.61954, y: -0.000030517578, z: 77.09793}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4385557230255149626}
@@ -92312,7 +92307,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: 4f6e89736603f1d4094ae239bafdf644, type: 3}
+  itemPrefab: {fileID: 5867039730527910425}
   enemyName: MintyFowl
   canBeEaten: 0
   shouldBeEaten: 0
@@ -92776,13 +92771,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6588928515068026812}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.11004368, y: 0.23212226, z: -0.7733991}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 162.9, y: 10.3, z: -93.5}
+  m_LocalScale: {x: 150, y: 150, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 9
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5796733604132642530
 Transform:
@@ -93465,13 +93460,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867039730527910425}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 208.2, y: 12.16, z: -69.3}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 10
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6524680641147075408
 Transform:
@@ -94028,15 +94023,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7666189504815567331}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.8820843, z: -0, w: 0.47109175}
+  m_LocalPosition: {x: 213.45528, y: 11.1, z: -59.764244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6150140839920226364}
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -123.79, z: 0}
 --- !u!1 &7036213050414768798
 GameObject:
   m_ObjectHideFlags: 0
@@ -94194,7 +94189,7 @@ Transform:
   m_GameObject: {fileID: 8040690432710687580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 199.72029, y: 0, z: 180.30933}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760134114075324792}
@@ -94514,13 +94509,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7145888616110180516}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 225.159, y: 11.82, z: -68.652}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1720903568}
-  m_RootOrder: 15
+  m_Father: {fileID: 1233955819}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7531627198576332702
 Transform:
@@ -94897,6 +94892,10 @@ GameObject:
   - component: {fileID: 6150140839920226364}
   - component: {fileID: 3216943505155565218}
   - component: {fileID: 6458985370264566397}
+  - component: {fileID: 7867450866453913306}
+  - component: {fileID: 7867450866453913305}
+  - component: {fileID: 7867450866453913304}
+  - component: {fileID: 7867450866453913303}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -94904,6 +94903,62 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!135 &7867450866453913303
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867450866453913302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03243007
+  m_Center: {x: 0.0020433674, y: 0.002920481, z: -0.0004290332}
+--- !u!64 &7867450866453913304
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867450866453913302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
+--- !u!54 &7867450866453913305
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867450866453913302}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7867450866453913306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867450866453913302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: peanutButterToadLeg
 --- !u!1 &7894539063054469793
 GameObject:
   m_ObjectHideFlags: 0
@@ -95261,7 +95316,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: dea840b0bcf751b4aa9fa2753412364a, type: 3}
+  itemPrefab: {fileID: 306720444198850900}
   enemyName: Mosquilate
   canBeEaten: 0
   shouldBeEaten: 0
