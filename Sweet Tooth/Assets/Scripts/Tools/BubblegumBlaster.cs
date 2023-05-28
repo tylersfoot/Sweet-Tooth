@@ -59,6 +59,7 @@ public class BubblegumBlaster : MonoBehaviour
             projectileSpawn.rotation,
             GameObject.Find("Projectiles").transform
         );
+        newProjectile.SetActive(true);
         // apply a force to the projectile in the shoot point's forward direction with randomized spread
         Rigidbody projectileRb = newProjectile.GetComponent<Rigidbody>();
         projectileRb.AddRelativeForce(spreadVector * shootForce, ForceMode.Impulse);

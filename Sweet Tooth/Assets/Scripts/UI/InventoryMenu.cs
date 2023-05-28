@@ -55,8 +55,10 @@ public class InventoryMenu : MonoBehaviour
         Gummy Bear Heads: {GameDataManager.Data.inv["gummyBearHead"]}
         Minty Fowl Legs: {GameDataManager.Data.inv["mintyFowlLeg"]}
         Peanut Butter Toad Legs: {GameDataManager.Data.inv["peanutButterToadLeg"]}
-        Snow Camel Parts: {GameDataManager.Data.inv["snowCamelPart"]}
-        Mosquito Parts: {GameDataManager.Data.inv["mosquitoPart"]}
+        Snow Camel Glands: {GameDataManager.Data.inv["snowCamelGland"]}
+        Mosquilate Sacs: {GameDataManager.Data.inv["mosquilateSac"]}
+        Caramel Hoofs: {GameDataManager.Data.inv["caramelHoof"]}
+        Hard-Right Lollies: {GameDataManager.Data.inv["hardRightLolli"]}
         ";
 
         inventoryDisplay.text = text;
