@@ -30,9 +30,6 @@ public class GameOverMenu : MonoBehaviour
         // display death reason (get creative)
         switch (deathReason)
         {
-        case "damageCube":
-            deathDisplay = "You pressed the cube too many times, huh? Curiosity killed the cat... and you.";
-            break;
         case "crazyCorn":
             deathDisplay = "The crazy corn ate you. Good job.";
             break;
@@ -44,6 +41,22 @@ public class GameOverMenu : MonoBehaviour
             break;
         case "peanutButterToad":
             deathDisplay = "The peanut butter toad's tongue was too sticky, and you couldn't get away.";
+            break;
+        case "snowCamel":
+            deathDisplay = "";
+            break;
+        case "mosquilate":
+            deathDisplay = "";
+            break;
+        case "caramelClops":
+            deathDisplay = "";
+            break;
+        case "suckerpunch":
+            deathDisplay = "";
+            break;
+        
+        case "damageCube":
+            deathDisplay = "You pressed the cube too many times, huh? Curiosity killed the cat... and you.";
             break;
         case "mrKahooBadoo":
             deathDisplay = "Mr. Kahoo Badoo's dance moves were too much for you to handle.";

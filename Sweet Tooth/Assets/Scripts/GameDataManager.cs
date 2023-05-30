@@ -7,10 +7,10 @@ using System.Linq;
 [UnityEngine.Scripting.Preserve]
 public static class GameDataManager
 {
-    // private static readonly string SAVE_FILE_PATH = Application.persistentDataPath + "/gamedata.json";
+    private static readonly string SAVE_FILE_PATH = Application.persistentDataPath + "/gamedata.json";
     // only for testing purposes, change later to above code; 
     // above goes in AppData, below in the game directory
-    private static readonly string SAVE_FILE_PATH = Path.Combine(Application.dataPath, "gamedata.json");
+    // private static readonly string SAVE_FILE_PATH = Path.Combine(Application.dataPath, "gamedata.json");
 
     public static GameData Data { get; private set; } = new GameData();
 

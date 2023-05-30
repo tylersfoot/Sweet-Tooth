@@ -11,18 +11,9 @@ public class ItemDrop : MonoBehaviour
         // check if the player touches the object
         if (other.CompareTag("Player"))
         {
-
-            Dictionary<string, string> itemKeys = new Dictionary<string, string>() {
-                { "crazyCornChunk", "crazyCornChunk" },
-                { "gummyBearHead", "gummyBearHead" },
-                { "mintyFowlLeg", "mintyFowlLeg" },
-                { "peanutButterToadLeg", "peanutButterToadLeg" }
-            };
-
-            if (itemKeys.ContainsKey(item)) {
-                GameDataManager.Data.inv[itemKeys[item]] += 1;
+            if (GameDataManager.Data.inv.ContainsKey(item)) {
+                GameDataManager.Data.inv[item] += 1;
             }
-
             // remove gameobject
             Destroy(gameObject);
         }
