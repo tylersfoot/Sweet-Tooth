@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/tylersfoot/Sweet-Tooth">
-    <img src="assets/derek.png" alt="Logo" width="280" height="160">
+    <img src="assets/logo.png" alt="Logo" width="280" height="160">
   </a>
 
   <h1 align="center">Sweet Tooth</h3>
@@ -61,7 +61,7 @@
   </a>
 </div>
 
-**Sweet Tooth** is an action game set in a Candyland based world. The game features multiple biomes as well as delicious enemies that, when eaten, will grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different biomes to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
+**Sweet Tooth** is an action game set in a Candyland based world. The game features multiple biomes as well as delicious enemies that, when eaten, *will* grant the player abilties. The main mechanics of the game center around defeating enemies throughout the different biomes to both gain their abilties and unlock new ones, and create weapons in order to fight against the evil necromancer and his army of rotting candy.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

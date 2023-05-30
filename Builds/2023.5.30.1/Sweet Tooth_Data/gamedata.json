@@ -1,0 +1,40 @@
+{
+    "gameVersion": "Unknown",
+    "isPeanutButterShottyUnlocked": false,
+    "isCaneStrikerUnlocked": false,
+    "comingFromSave": false,
+    "inventory": [
+        {
+            "itemName": "crazyCornChunk",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "gummyBearHead",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "mintyFowlLeg",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "peanutButterToadLeg",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "snowCamelGland",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "mosquilateSac",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "caramelHoof",
+            "itemAmount": 0.0
+        },
+        {
+            "itemName": "hardRightLolli",
+            "itemAmount": 0.0
+        }
+    ]
+}
