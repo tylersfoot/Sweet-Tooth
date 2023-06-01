@@ -6,7 +6,6 @@ public class SoundManager : MonoBehaviour
 {
     public List<AudioSource> audioSources;
     public float audioSourceAmount; // number of audio sources, increase if too many sounds
-    public float volume;
 
     void Start()
     {
@@ -31,7 +30,7 @@ public class SoundManager : MonoBehaviour
 
         // play the sound using the available audio source
         availableAudioSource.clip = clip;
-        availableAudioSource.volume = volume;
+        availableAudioSource.volume = GameDataManager.Data.soundsVolume;
         availableAudioSource.Play();
     }
 
@@ -40,7 +39,7 @@ public class SoundManager : MonoBehaviour
         // update the volume of all the audio sources every frame based on the current value of the volume variable
         foreach (AudioSource audioSource in audioSources)
         {
-            audioSource.volume = volume;
+            audioSource.volume = GameDataManager.Data.soundsVolume;
         }
     }
 }

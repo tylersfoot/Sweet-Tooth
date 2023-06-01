@@ -84,6 +84,7 @@ public class HUD : MonoBehaviour
         // hides and locks the cursor when the game starts
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        GameDataManager.Data.gameVersion = version;
     }
 
     public void UpdateText(string promptMessage)

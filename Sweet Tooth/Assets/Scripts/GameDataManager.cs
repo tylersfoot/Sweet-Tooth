@@ -8,9 +8,6 @@ using System.Linq;
 public static class GameDataManager
 {
     private static readonly string SAVE_FILE_PATH = Application.persistentDataPath + "/gamedata.json";
-    // only for testing purposes, change later to above code; 
-    // above goes in AppData, below in the game directory
-    // private static readonly string SAVE_FILE_PATH = Path.Combine(Application.dataPath, "gamedata.json");
 
     public static GameData Data { get; private set; } = new GameData();
 
@@ -68,6 +65,7 @@ public static class GameDataManager
 
     public static void ClearSave()
     {
+        // THIS IS DEFAULT VALUES FOR EVERYTHING.
         // Data.playerLocation = new Vector3(0, 2, -70);
         Data.gameVersion = "Unknown";
         Data.isPeanutButterShottyUnlocked = false;
@@ -76,6 +74,14 @@ public static class GameDataManager
         {
             Data.inv[key] = 0;
         }
+
+        Data.mouseSmoothing = 100f;
+        Data.xSensitivity = 70f;
+        Data.ySensitivity = 70f;
+        Data.highQuality = false;
+        Data.isSilly = false;
+        Data.musicVolume = 0.2f;
+        Data.soundsVolume = 0.2f;
         
         SaveData();
     }

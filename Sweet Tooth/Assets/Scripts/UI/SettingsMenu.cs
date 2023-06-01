@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
     public PauseMenu pauseMenu; // currentScreen
     public PlayerLook playerLook; // xSensitivity, ySensitivity
     public SillyMode sillyMode; // sillyMode
-    public BGM BGM;
+    public Music music;
     public SoundManager soundManager;
     public GameObject globalVolume;
 
@@ -23,40 +23,42 @@ public class SettingsMenu : MonoBehaviour
     public TextMeshProUGUI ySensitivityDisplay;
     public Slider mouseSmoothingSlider;
     public TextMeshProUGUI mouseSmoothingDisplay;
-    public Slider BGMSlider;
-    public TextMeshProUGUI BGMDisplay;
-    public Slider SoundEffectSlider;
-    public TextMeshProUGUI SoundEffectDisplay;
+    public Slider MusicSlider;
+    public TextMeshProUGUI MusicDisplay;
+    public Slider SoundsSlider;
+    public TextMeshProUGUI SoundsDisplay;
 
     void Start()
     {
         canvas.SetActive(false);
-        SetXSensitivity(playerLook.xSensitivity);
-        SetYSensitivity(playerLook.ySensitivity);
-        SetMouseSmoothing(50/playerLook.mouseSmoothing);
-        BGMDisplay.text = "Music Volume: " + (BGM.volume*100).ToString("n0") + "%";
-        SoundEffectDisplay.text = "Effects Volume: " + (soundManager.volume*100).ToString("n0") + "%";
+        SetXSensitivity(GameDataManager.Data.xSensitivity);
+        SetYSensitivity(GameDataManager.Data.ySensitivity);
+        SetMouseSmoothing(50/GameDataManager.Data.mouseSmoothing);
+        toggleHighQuality(GameDataManager.Data.highQuality);
+        toggleSillyMode(GameDataManager.Data.isSilly);
+        SetMusicVolume(GameDataManager.Data.musicVolume);
+        SetSoundsVolume(GameDataManager.Data.soundsVolume);
     }
 
     public void SetXSensitivity(float xSens)
     {
         playerLook.changeSensitivity("x", xSens);
         xSensitivitySlider.value = xSens;
-        xSensitivityDisplay.text = "X Sensitivity: " + (playerLook.xSensitivity).ToString("n0");
+        xSensitivityDisplay.text = "X Sensitivity: " + (GameDataManager.Data.xSensitivity).ToString("n0");
     }
 
     public void SetYSensitivity(float ySens)
     {
         playerLook.changeSensitivity("y", ySens);
         ySensitivitySlider.value = ySens;
-        ySensitivityDisplay.text = "Y Sensitivity: " + (playerLook.ySensitivity).ToString("n0");
+        ySensitivityDisplay.text = "Y Sensitivity: " + (GameDataManager.Data.ySensitivity).ToString("n0");
     }
 
     public void SetMouseSmoothing(float mouseSmoothing)
     {
         // ranges from 0-10 to 10-1
         mouseSmoothing += 0.01f; // to prevent divide by 0
-        playerLook.mouseSmoothing = (1/mouseSmoothing)*50;
+        GameDataManager.Data.mouseSmoothing = (1/mouseSmoothing)*50;
         mouseSmoothing -= 0.01f;
         mouseSmoothingSlider.value = (mouseSmoothing);
         mouseSmoothingDisplay.text = "Mouse Smoothing: " + (mouseSmoothing).ToString("n2");
@@ -64,36 +66,31 @@ public class SettingsMenu : MonoBehaviour
 
     public void toggleHighQuality(bool highQuality)
     {
-        if (highQuality)
-        {
-            globalVolume.SetActive(true);
-        }
-        else
-        {
-            globalVolume.SetActive(false);
-        }
+        GameDataManager.Data.highQuality = highQuality;
+        globalVolume.SetActive(GameDataManager.Data.highQuality);
     }
 
     public void toggleSillyMode(bool isSilly)
     {
-        sillyMode.makeSilly(isSilly);
+        GameDataManager.Data.isSilly = isSilly;
+        sillyMode.makeSilly(GameDataManager.Data.isSilly);
     }
 
-    public void SetBGMVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        BGM.volume = volume;
-        BGMDisplay.text = "Music Volume: " + (volume*100).ToString("n0") + "%";
+        GameDataManager.Data.musicVolume = volume;
+        MusicDisplay.text = "Music Volume: " + (GameDataManager.Data.musicVolume*100).ToString("n0") + "%";
     }
 
-    public void SetEffectsVolume(float volume)
+    public void SetSoundsVolume(float volume)
     {
-        soundManager.volume = volume;
+        GameDataManager.Data.soundsVolume = volume;
         if (crazyCornAudio != null)
         {
-            crazyCornAudio.volume = volume;
+            crazyCornAudio.volume = GameDataManager.Data.soundsVolume;
         }
         
-        SoundEffectDisplay.text = "Effects Volume: " + (volume*100).ToString("n0") + "%";
+        SoundsDisplay.text = "Sounds Volume: " + (GameDataManager.Data.soundsVolume*100).ToString("n0") + "%";
     }
     
     public void Back()
