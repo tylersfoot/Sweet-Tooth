@@ -76,12 +76,13 @@ public static class GameDataManager
         }
 
         Data.mouseSmoothing = 100f;
-        Data.xSensitivity = 70f;
-        Data.ySensitivity = 70f;
+        Data.xSensitivity = 20f;
+        Data.ySensitivity = 20f;
         Data.highQuality = false;
         Data.isSilly = false;
-        Data.musicVolume = 0.2f;
-        Data.soundsVolume = 0.2f;
+        Data.fpsCounter = false;
+        Data.musicVolume = 0.05f;
+        Data.soundsVolume = 0.05f;
         
         SaveData();
     }

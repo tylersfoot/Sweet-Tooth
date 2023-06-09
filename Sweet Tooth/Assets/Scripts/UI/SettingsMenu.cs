@@ -36,6 +36,7 @@ public class SettingsMenu : MonoBehaviour
         SetMouseSmoothing(50/GameDataManager.Data.mouseSmoothing);
         toggleHighQuality(GameDataManager.Data.highQuality);
         toggleSillyMode(GameDataManager.Data.isSilly);
+        toggleFPSCounter(GameDataManager.Data.fpsCounter);
         SetMusicVolume(GameDataManager.Data.musicVolume);
         SetSoundsVolume(GameDataManager.Data.soundsVolume);
     }
@@ -74,6 +75,12 @@ public class SettingsMenu : MonoBehaviour
     {
         GameDataManager.Data.isSilly = isSilly;
         sillyMode.makeSilly(GameDataManager.Data.isSilly);
+    }
+
+    public void toggleFPSCounter(bool fpsCounter)
+    {
+        GameDataManager.Data.fpsCounter = fpsCounter;
+        // settings or something
     }
 
     public void SetMusicVolume(float volume)

@@ -38,6 +38,7 @@ public class GameData
     public float ySensitivity;
     public bool highQuality;
     public bool isSilly;
+    public bool fpsCounter;
     public float musicVolume;
     public float soundsVolume;
 

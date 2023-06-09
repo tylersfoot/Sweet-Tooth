@@ -172,15 +172,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Test"",
-                    ""type"": ""Button"",
-                    ""id"": ""8fd620b7-1bbf-4f2b-9e0a-3bd2b1b56ef0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Inventory"",
                     ""type"": ""Button"",
                     ""id"": ""33685014-37be-4938-a6b5-0cb941091981"",
@@ -378,6 +369,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f1db317c-c110-47af-ae1c-5cf43af94613"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""64933861-8f00-4a30-b59c-f23a24e98650"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
@@ -401,7 +403,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f23c4d45-cb59-4f5f-b311-e3b635c504b1"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -428,17 +430,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Ability"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""73cc7aec-f8bb-4b3c-80d5-a25e30c832be"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UseToolPrimary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -576,19 +567,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""489e6758-82f2-4474-b304-06b531a21605"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Test"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""7acdb2ac-0dcb-4194-b5a9-39109bc201f0"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1157,7 +1137,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_OnFoot_ToolFour = m_OnFoot.FindAction("Tool Four", throwIfNotFound: true);
         m_OnFoot_Scroll = m_OnFoot.FindAction("Scroll", throwIfNotFound: true);
         m_OnFoot_Reload = m_OnFoot.FindAction("Reload", throwIfNotFound: true);
-        m_OnFoot_Test = m_OnFoot.FindAction("Test", throwIfNotFound: true);
         m_OnFoot_Inventory = m_OnFoot.FindAction("Inventory", throwIfNotFound: true);
         m_OnFoot_EatAttack = m_OnFoot.FindAction("EatAttack", throwIfNotFound: true);
         // UI
@@ -1249,7 +1228,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_ToolFour;
     private readonly InputAction m_OnFoot_Scroll;
     private readonly InputAction m_OnFoot_Reload;
-    private readonly InputAction m_OnFoot_Test;
     private readonly InputAction m_OnFoot_Inventory;
     private readonly InputAction m_OnFoot_EatAttack;
     public struct OnFootActions
@@ -1272,7 +1250,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ToolFour => m_Wrapper.m_OnFoot_ToolFour;
         public InputAction @Scroll => m_Wrapper.m_OnFoot_Scroll;
         public InputAction @Reload => m_Wrapper.m_OnFoot_Reload;
-        public InputAction @Test => m_Wrapper.m_OnFoot_Test;
         public InputAction @Inventory => m_Wrapper.m_OnFoot_Inventory;
         public InputAction @EatAttack => m_Wrapper.m_OnFoot_EatAttack;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
@@ -1332,9 +1309,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
-            @Test.started += instance.OnTest;
-            @Test.performed += instance.OnTest;
-            @Test.canceled += instance.OnTest;
             @Inventory.started += instance.OnInventory;
             @Inventory.performed += instance.OnInventory;
             @Inventory.canceled += instance.OnInventory;
@@ -1393,9 +1367,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
-            @Test.started -= instance.OnTest;
-            @Test.performed -= instance.OnTest;
-            @Test.canceled -= instance.OnTest;
             @Inventory.started -= instance.OnInventory;
             @Inventory.performed -= instance.OnInventory;
             @Inventory.canceled -= instance.OnInventory;
@@ -1555,7 +1526,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnToolFour(InputAction.CallbackContext context);
         void OnScroll(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
-        void OnTest(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnEatAttack(InputAction.CallbackContext context);
     }

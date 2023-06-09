@@ -144,14 +144,18 @@ public class GenericEnemyAI : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0 && shouldBeEaten)
+        if (health <= 0)
         {
-            canBeEaten = true;
+            if (shouldBeEaten)
+            {
+                canBeEaten = true;
+            }
+            else
+            {
+                Death();
+            }
         }
-        else
-        {
-            Death();
-        }
+
     }
 
     public void Eaten(float damage)
@@ -172,7 +176,7 @@ public class GenericEnemyAI : MonoBehaviour
             isDead = true;
             GameObject itemDrop = Instantiate(
                 itemPrefab,
-                transform.position,
+                transform.position + Vector3.up * 10, // higher so it doesnt fall thru the ground
                 transform.rotation
             );
             itemDrop.SetActive(true);

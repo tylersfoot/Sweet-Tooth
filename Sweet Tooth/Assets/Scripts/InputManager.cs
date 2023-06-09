@@ -67,10 +67,6 @@ public class InputManager : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         ability = GetComponent<PlayerAbility>();
-
-        onFoot.Test.started += ctx => {
-            pauseMenu.LoadButton();
-        };
     
         // jump
         onFoot.Jump.started += ctx => {

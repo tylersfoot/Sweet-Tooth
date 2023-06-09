@@ -140,23 +140,27 @@ public class Tool : MonoBehaviour
 
     public void Reload()
     {
-        if (float.Parse(currentAmmoDisplay) < float.Parse(maxAmmoDisplay))
+        if (activeTool != "Hands")
         {
-            switch (activeTool)
+            if (float.Parse(currentAmmoDisplay) < float.Parse(maxAmmoDisplay))
             {
-            case "BubblegumBlaster":
-                bubblegumBlaster.currentAmmo = bubblegumBlaster.maxAmmo;
-                break;
-            case "PeanutBrittleShotty":
-                peanutBrittleShotty.currentAmmo = peanutBrittleShotty.maxAmmo;
-                break;
-            case "CaneStriker":
-                caneStriker.currentAmmo = caneStriker.maxAmmo;
-                break;
-            default:
-                break;
+                switch (activeTool)
+                {
+                case "BubblegumBlaster":
+                    bubblegumBlaster.currentAmmo = bubblegumBlaster.maxAmmo;
+                    break;
+                case "PeanutBrittleShotty":
+                    peanutBrittleShotty.currentAmmo = peanutBrittleShotty.maxAmmo;
+                    break;
+                case "CaneStriker":
+                    caneStriker.currentAmmo = caneStriker.maxAmmo;
+                    break;
+                default:
+                    break;
+                }
             }
         }
+
     }
 
     public void Despawn(GameObject obj, float timeSeconds)

@@ -41,7 +41,13 @@ public class HUD : MonoBehaviour
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
         // update the FPS text
-        fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
+        if (GameDataManager.Data.fpsCounter) {
+            fpsText.text = Mathf.RoundToInt(fps).ToString() + " FPS | " + version;
+        }
+        else
+        {
+            fpsText.text = "";
+        }
 
         // update ammo text
         if (tool.currentAmmoDisplay == "")
