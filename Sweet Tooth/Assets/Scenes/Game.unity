@@ -4024,44 +4024,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183688636}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
---- !u!21 &188097495
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/IndependentRoundedCorners
-  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
-    - _r: {r: 0, g: 0, b: 0, a: 0}
-    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
-  m_BuildTextureStacks: []
 --- !u!1 &192420102
 GameObject:
   m_ObjectHideFlags: 0
@@ -16394,13 +16356,13 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 400802293}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetEffectsVolume
+        m_MethodName: SetSoundsVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24228,6 +24190,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418516625}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
+--- !u!21 &419583136
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!21 &421165563
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/IndependentRoundedCorners
+  m_Shader: {fileID: 4800000, guid: d3beb88e61f88ca4393acdefb005fa70, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _halfSize: {r: 100, g: 12.5, b: 0, a: 0}
+    - _r: {r: 0, g: 0, b: 0, a: 0}
+    - _rect2props: {r: 0.000015258789, g: 0.0000076293945, b: 79.549515, a: 79.549515}
+  m_BuildTextureStacks: []
 --- !u!1 &421452513
 GameObject:
   m_ObjectHideFlags: 0
@@ -32705,7 +32741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 649433381}
+  m_Material: {fileID: 419583136}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -39111,42 +39147,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648562415}
   m_Mesh: {fileID: -5495902117074765545, guid: cec374c631c5f2042b4c8512c7ee0d78, type: 3}
---- !u!21 &649433381
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 550, g: 100, b: 0, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &650950533
 GameObject:
   m_ObjectHideFlags: 0
@@ -55389,13 +55389,13 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 400802293}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetBGMVolume
+        m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55805,7 +55805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233955819}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Drops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68749,7 +68749,7 @@ GameObject:
   - component: {fileID: 1438143149}
   - component: {fileID: 1438143151}
   - component: {fileID: 1438143150}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74803,7 +74803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 188097495}
+  m_Material: {fileID: 421165563}
   m_Color: {r: 1, g: 0.78679246, b: 0.8985209, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -78045,7 +78045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1720903568
 Transform:
   m_ObjectHideFlags: 0
@@ -99480,7 +99480,7 @@ Rigidbody:
   m_GameObject: {fileID: 66365283620768463}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -99683,7 +99683,7 @@ GameObject:
   - component: {fileID: 4511525486311658686}
   - component: {fileID: 4511525486311658685}
   - component: {fileID: 4511525486311658684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: HardRightLolli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99784,7 +99784,7 @@ GameObject:
   - component: {fileID: 4081874966124807246}
   - component: {fileID: 4081874966124807245}
   - component: {fileID: 4081874966124807244}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MosquilateSac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100335,7 +100335,7 @@ Rigidbody:
   m_GameObject: {fileID: 919132148493738736}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -100398,7 +100398,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 1
-  itemPrefab: {fileID: 919132149155446097, guid: 59ae5951ed62f1a4896f89c0fff5dcea, type: 3}
+  itemPrefab: {fileID: 7145888616110180516}
   enemyName: gummyBear
   canBeEaten: 0
   shouldBeEaten: 0
@@ -102187,14 +102187,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sightRange: 20
-  attackRange: 5
+  attackRange: 8
   walkPointRange: 40
   health: 150
   damage: 12
   flashDuration: 2
   delaypatrol: 5
   delayattack: 3
-  itemPrefab: {fileID: 919132149155446097, guid: 80233b4af9244554387815838efdf37f, type: 3}
+  itemPrefab: {fileID: 3246969880591597274}
   enemyName: caramelClops
   canBeEaten: 0
   shouldBeEaten: 0
@@ -102262,7 +102262,7 @@ Rigidbody:
   m_GameObject: {fileID: 2247050294684743229}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -103014,7 +103014,11 @@ GameObject:
   - component: {fileID: 1159032631531483727}
   - component: {fileID: 7631604213580580049}
   - component: {fileID: 2084861456414939150}
-  m_Layer: 0
+  - component: {fileID: 7631604213580580053}
+  - component: {fileID: 7631604213580580052}
+  - component: {fileID: 7631604213580580051}
+  - component: {fileID: 7631604213580580050}
+  m_Layer: 11
   m_Name: PeanutButterToadLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103047,7 +103051,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 120, y: 5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6072908690930592362}
   - {fileID: 2055397932741042577}
@@ -103132,7 +103136,7 @@ Rigidbody:
   m_GameObject: {fileID: 2575016345701146702}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -103181,7 +103185,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 4
-  itemPrefab: {fileID: 919132149155446097, guid: 3bb33cae176bf664c9cd6173f0fe0d41, type: 3}
+  itemPrefab: {fileID: 6588928515068026812}
   enemyName: snowCamel
   canBeEaten: 0
   shouldBeEaten: 0
@@ -103494,8 +103498,8 @@ Transform:
   m_GameObject: {fileID: 2821321767912370281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 135, y: 5, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5826634054545832525}
   - {fileID: 1737596767206322614}
@@ -103580,7 +103584,7 @@ Rigidbody:
   m_GameObject: {fileID: 2821321767912370281}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -103629,7 +103633,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 1
-  itemPrefab: {fileID: 919132149155446097, guid: 5e7e2a9a0ac26204d8ceba458a212878, type: 3}
+  itemPrefab: {fileID: 177931488694960548}
   enemyName: suckerPunch
   canBeEaten: 0
   shouldBeEaten: 0
@@ -103680,7 +103684,7 @@ GameObject:
   - component: {fileID: 3895457096315068178}
   - component: {fileID: 3895457096315068177}
   - component: {fileID: 3895457096315068176}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CaramelHoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104427,8 +104431,8 @@ Transform:
   m_GameObject: {fileID: 4479901525801695827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 115, y: 5, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5318974694420410487}
   - {fileID: 77045585838783372}
@@ -104502,10 +104506,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3246969880591597274}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.026156984
+  m_Radius: 0.035
   m_Center: {x: 0.0019708322, y: -0.0003767041, z: -0.0011340652}
 --- !u!64 &3895457096315068177
 MeshCollider:
@@ -104518,7 +104522,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 80233b4af9244554387815838efdf37f, type: 3}
 --- !u!54 &3895457096315068178
@@ -104549,7 +104553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: horseShoe
+  item: caramelHoof
 --- !u!114 &3897007324983457358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104695,10 +104699,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306720444198850900}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.044232927
+  m_Radius: 0.03
   m_Center: {x: 9.313226e-10, y: 0.000333853, z: 0.0024388647}
 --- !u!64 &4081874966124807245
 MeshCollider:
@@ -104711,7 +104715,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: dea840b0bcf751b4aa9fa2753412364a, type: 3}
 --- !u!54 &4081874966124807246
@@ -104742,7 +104746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: mosquitoSac
+  item: mosquilateSac
 --- !u!4 &4088363199262805823
 Transform:
   m_ObjectHideFlags: 0
@@ -105200,7 +105204,7 @@ Rigidbody:
   m_GameObject: {fileID: 4479901525801695827}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -105249,7 +105253,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 5
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
+  itemPrefab: {fileID: 2910110869763882149}
   enemyName: peanutButterToad
   canBeEaten: 0
   shouldBeEaten: 0
@@ -105301,10 +105305,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177931488694960548}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.060331967
+  m_Radius: 0.08
   m_Center: {x: -0.036098253, y: -0.0000000037252896, z: 0}
 --- !u!64 &4511525486311658685
 MeshCollider:
@@ -105317,7 +105321,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 5e7e2a9a0ac26204d8ceba458a212878, type: 3}
 --- !u!54 &4511525486311658686
@@ -105348,7 +105352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: sucker
+  item: hardRightLolli
 --- !u!4 &4534042045186348731
 Transform:
   m_ObjectHideFlags: 0
@@ -106535,7 +106539,7 @@ Rigidbody:
   m_GameObject: {fileID: 5415478422796933150}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -106584,7 +106588,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: 4f6e89736603f1d4094ae239bafdf644, type: 3}
+  itemPrefab: {fileID: 5867039730527910425}
   enemyName: mintyFowl
   canBeEaten: 0
   shouldBeEaten: 0
@@ -107191,7 +107195,7 @@ GameObject:
   - component: {fileID: 7894777939114815241}
   - component: {fileID: 7894777939114815240}
   - component: {fileID: 7894777939114815239}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MintyFowlLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107780,7 +107784,7 @@ GameObject:
   - component: {fileID: 7463758342594038438}
   - component: {fileID: 7463758342594038437}
   - component: {fileID: 7463758342594038436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SnowCamelGland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108359,7 +108363,7 @@ GameObject:
   - component: {fileID: 8659216631092668788}
   - component: {fileID: 8659216631092668787}
   - component: {fileID: 8659216631092668786}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GummyBearHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108391,8 +108395,8 @@ Transform:
   m_GameObject: {fileID: 8040690432710687580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 5, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1760134114075324792}
   - {fileID: 5813077733480561283}
@@ -108623,10 +108627,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6588928515068026812}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.040434334
+  m_Radius: 0.04
   m_Center: {x: -0.003235342, y: -0.0043440117, z: 0.0010614239}
 --- !u!64 &7463758342594038437
 MeshCollider:
@@ -108639,7 +108643,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 3bb33cae176bf664c9cd6173f0fe0d41, type: 3}
 --- !u!54 &7463758342594038438
@@ -108670,7 +108674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: camelGland
+  item: smowCamelGland
 --- !u!1 &7467007760448444166
 GameObject:
   m_ObjectHideFlags: 0
@@ -108842,6 +108846,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2910110869763882149}
   m_Mesh: {fileID: -5495902117074765545, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
+--- !u!135 &7631604213580580050
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910110869763882149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.035
+  m_Center: {x: 0.0020433674, y: 0.002920481, z: -0.0004290332}
+--- !u!64 &7631604213580580051
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910110869763882149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: b6ed6137ac2a4344db35ed392eec453f, type: 3}
+--- !u!54 &7631604213580580052
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910110869763882149}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7631604213580580053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910110869763882149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113d80d0feb90664cbd5cc269325a87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: peanutButterToadLeg
 --- !u!1 &7663209838328940535
 GameObject:
   m_ObjectHideFlags: 0
@@ -109107,10 +109167,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867039730527910425}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15709852
+  m_Radius: 0.2
   m_Center: {x: -0.00075501576, y: 0.00057867717, z: -0.051010918}
 --- !u!64 &7894777939114815240
 MeshCollider:
@@ -109123,7 +109183,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 4f6e89736603f1d4094ae239bafdf644, type: 3}
 --- !u!54 &7894777939114815241
@@ -109383,7 +109443,7 @@ Rigidbody:
   m_GameObject: {fileID: 8040690432710687580}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -109432,7 +109492,7 @@ MonoBehaviour:
   flashDuration: 1
   delaypatrol: 4
   delayattack: 2
-  itemPrefab: {fileID: 919132149155446097, guid: dea840b0bcf751b4aa9fa2753412364a, type: 3}
+  itemPrefab: {fileID: 306720444198850900}
   enemyName: mosquilate
   canBeEaten: 0
   shouldBeEaten: 0
@@ -110215,10 +110275,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7145888616110180516}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.014825446
+  m_Radius: 0.02
   m_Center: {x: 9.313226e-10, y: 0.0012545211, z: 0.0020092744}
 --- !u!64 &8659216631092668787
 MeshCollider:
@@ -110231,7 +110291,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 59ae5951ed62f1a4896f89c0fff5dcea, type: 3}
 --- !u!54 &8659216631092668788
@@ -110546,7 +110606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528571757988470570, guid: 56ae4e8ca78041c4ea5bd70e3ffde257, type: 3}
       propertyPath: damage
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6528571757988470570, guid: 56ae4e8ca78041c4ea5bd70e3ffde257, type: 3}
       propertyPath: pauseMenu
