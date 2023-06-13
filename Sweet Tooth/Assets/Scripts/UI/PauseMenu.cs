@@ -54,6 +54,15 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void InventoryButton()
+    {
+        if (currentScreen == "pauseMenu")
+        {
+            canvas.SetActive(false);
+            inventoryMenu.OnOpen();
+        }
+    }
+
     public void SettingsButton()
     {
         if (currentScreen == "pauseMenu")
@@ -67,19 +76,21 @@ public class PauseMenu : MonoBehaviour
     public void MainMenuButton()
     {
         // load main menu
-        SceneManager.LoadScene("MainMenu"); 
-    }
-
-    public void SaveButton()
-    {
         GameDataManager.SaveData();
         Debug.Log("Saved Data!");
+        SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadButton()
-    {
-        GameDataManager.LoadData();
-        Debug.Log("Loaded Data!");
-    }
+    // public void SaveButton()
+    // {
+    //     GameDataManager.SaveData();
+    //     Debug.Log("Saved Data!");
+    // }
+
+    // public void LoadButton()
+    // {
+    //     GameDataManager.LoadData();
+    //     Debug.Log("Loaded Data!");
+    // }
 }
 

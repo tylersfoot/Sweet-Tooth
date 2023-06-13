@@ -19,23 +19,26 @@ public class InventoryMenu : MonoBehaviour
     {
         if (pauseMenu.currentScreen != "gameOverMenu")
         {
-            if (!pauseMenu.isPaused)
-            {
-                // pauses the game and opens inventory
-                Time.timeScale = 0f;
-                canvas.SetActive(true);
-                pauseMenu.isPaused = true;
-                pauseMenu.currentScreen = "inventoryMenu";
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-            else
+            if (pauseMenu.isPaused)
             {
                 pauseMenu.ResumeButton();
             }
+            else
+            {
+                OnOpen();
+            }
         }
+    }
 
+    public void OnOpen()
+    {
+        Time.timeScale = 0f;
         UpdateInventoryText();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        pauseMenu.isPaused = true;
+        canvas.SetActive(true);
+        pauseMenu.currentScreen = "inventoryMenu";
     }
 
     public void Back()

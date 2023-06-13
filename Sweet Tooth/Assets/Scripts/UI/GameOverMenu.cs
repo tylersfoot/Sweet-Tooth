@@ -43,18 +43,17 @@ public class GameOverMenu : MonoBehaviour
             deathDisplay = "The peanut butter toad's tongue was too sticky, and you couldn't get away.";
             break;
         case "snowCamel":
-            deathDisplay = "";
+            deathDisplay = "The snow camel trampled you under its icy hooves.";
             break;
         case "mosquilate":
-            deathDisplay = "";
+            deathDisplay = "The mosquilate drained you dry and left you lifeless.";
             break;
         case "caramelClops":
-            deathDisplay = "";
+            deathDisplay = "The caramel clops stomped on you, leaving a sticky and sweet demise.";
             break;
         case "suckerpunch":
-            deathDisplay = "";
+            deathDisplay = "The suckerpunch knocked you out cold... permanently.";
             break;
-        
         case "damageCube":
             deathDisplay = "You pressed the cube too many times, huh? Curiosity killed the cat... and you.";
             break;
@@ -79,12 +78,17 @@ public class GameOverMenu : MonoBehaviour
     public void RespawnButton()
     {
         // restart scene for now
+        GameDataManager.Data.comingFromSave = true;
+        GameDataManager.SaveData();
+        Debug.Log("Saved Data!");
         SceneManager.LoadScene("Game");
     }
 
     public void MainMenuButton()
     {
         // load main menu
+        GameDataManager.SaveData();
+        Debug.Log("Saved Data!");
         SceneManager.LoadScene("MainMenu");
     }
 }
