@@ -100,7 +100,7 @@
 
 **Audacity 3.2.4**
 
-~~**FL Studio 20.8.4**~~
+~~**FL Studio 21**~~
 
 ~~**Aseprite 1.2.40**~~
 
