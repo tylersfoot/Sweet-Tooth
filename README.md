@@ -1,12 +1,11 @@
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
+[![Stars][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![Last Commit][lastcommit-shield]][issues-url]
 [![Commit Frequency][commitfrequency-shield]][issues-url]
-[![Stars][stars-shield]][issues-url]
 [![Files][files-shield]][issues-url]
 [![Repo Size][size-shield]][issues-url]
 [![Language][language-shield]][issues-url]
@@ -78,20 +77,6 @@
 
 **Visual Studio Code**
 
-* Extensions:
-  * Markdown All in One
-  * markdownlint
-  * Markdown
-  * GitLens
-  * Git Graph
-  * gitignore
-  * C#
-  * Better Comments
-  * Unity Code Snippets
-  * MonoBehaviour Snippets
-  * ShaderlabVSCode(Free)
-  * Unity Tools
-
 **Blender 3.4.1**
 
 **Paint.net 5.0.1**
@@ -100,10 +85,6 @@
 
 **Audacity 3.2.4**
 
-~~**FL Studio 21**~~
-
-~~**Aseprite 1.2.40**~~
-
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 <!-- GETTING STARTED -->
@@ -111,7 +92,7 @@
 
 ### Prerequisites
 
-This game has only been tested on Windows so far. The game (will) support both keyboard and controller, but it is heavily recommended to use keyboard and mouse. The game is not optimized, so it might run slow on laptops or older computers.
+This game has only been tested on Windows so far. The game (will) support both keyboard and controller, but it is heavily recommended to use keyboard and mouse. The game is not too optimized, so it might run slow on laptops or older computers.
 
 ### Installation
 
@@ -148,9 +129,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Tyler D. - [@tylersfoot8](https://twitter.com/tylersfoot8) - tylerdepa8@gmail.com - tylersfoot#8888
+Tyler - [@tylersfoot8](https://twitter.com/tylersfoot8) - tylersfoot8@gmail.com - @tylersfoot
 
-Brodie B. - brodiebest930@gmail.com - A Witty Gentleman#7979
+Brodie - brodiebest930@gmail.com - @awittygentleman
 
 Project Link: [https://github.com/tylersfoot/Sweet-Tooth](https://github.com/tylersfoot/Sweet-Tooth)
 
